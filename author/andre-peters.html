@@ -1,0 +1,387 @@
+
+<!DOCTYPE html>
+<html lang="de_de">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+
+    <link rel="stylesheet" type="text/css" href="../theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="../theme/pygments/github.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/solid.css">
+
+    <link rel="stylesheet" type="text/css" href="../static/custom.css">
+
+
+
+    <link rel="shortcut icon" href="http://127.0.0.1/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="http://127.0.0.1/images/favicon.png" type="image/x-icon">
+
+  
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#333">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#333">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Microsoft EDGE -->
+    <meta name="msapplication-TileColor" content="#333">
+
+ 
+
+    <meta name="author" content="André Peters" />
+    <meta name="description" content="" />
+  <meta property="og:site_name" content="debinux.de"/>
+  <meta property="og:type" content="blog"/>
+  <meta property="og:title" content="debinux.de"/>
+  <meta property="og:description" content=""/>
+  <meta property="og:locale" content="de_DE"/>
+  <meta property="og:url" content=".."/>
+  <meta property="og:image" content="http://127.0.0.1/images/logo.png">
+
+  <title>debinux.de &ndash; Artikel von André Peters:</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="../">
+        <img src="http://127.0.0.1/images/logo.png" alt="debinux.de" title="debinux.de">
+      </a>
+
+      <h1>
+        <a href="../">debinux.de</a>
+      </h1>
+
+<p>an admins notepad</p>
+
+      <nav>
+        <ul class="list">
+
+
+              <li>
+                <a target="_blank"
+                   href="../pages/impressum-datenschutz.html#impressum-datenschutz">
+                  Impressum & Datenschutz
+                </a>
+              </li>
+
+            <li>
+              <a target="_blank" href="https://mailcow.email/" >mailcow</a>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.servercow.de/" >Servercow</a>
+            </li>
+            <li>
+              <a target="_blank" href="https://github.com/andryyy" >André @ GitHub</a>
+            </li>
+            <li>
+              <a target="_blank" href="https://keybase.io/debinux" >Keybase.io/debinux</a>
+            </li>
+            <li>
+              <a target="_blank" href="/static/keys/0x91DFD03726232297.key" >PGP Public Key</a>
+            </li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="../">Home</a>
+
+      <a href="/archives.html">Archive</a>
+      <a href="/categories.html">Kategorien</a>
+      <a href="/tags.html">Stichw&ouml;rter</a>
+      <a href="/pages/impressum-datenschutz.html#impressum-datenschutz">Impressum / Datenschutz</a>
+
+
+    </nav>
+
+
+
+<article>
+  <header>
+    <h2><a href="../ocr-per-rechtsklick-auf-dokument-in-nemo-ausfuhren.html#ocr-per-rechtsklick-auf-dokument-in-nemo-ausfuhren">OCR per Rechtsklick auf Dokument in Nemo ausführen</a></h2>
+    <p>
+      Online seit Di 17 August 2021 in <a href="../category/linux.html">Linux</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="../tag/linux.html">linux</a>,              <a href="../tag/debian.html">debian</a>,              <a href="../tag/ocr.html">ocr</a>,              <a href="../tag/pdf.html">pdf</a>
+    </p>
+  </header>
+  <div>
+      <div><div class="highlight"><pre><span></span><code><span class="n">cd</span><span class="w"> </span><span class="o">~/</span><span class="p">.</span><span class="n">local</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">nemo</span><span class="o">/</span><span class="n">actions</span><span class="w"></span>
+<span class="n">cat</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">EOF</span><span class="w"></span>
+<span class="p">[</span><span class="n">Nemo</span><span class="w"> </span><span class="n">Action</span><span class="p">]</span><span class="w"></span>
+<span class="n">Active</span><span class="o">=</span><span class="nb">true</span><span class="w"></span>
+<span class="n">Name</span><span class="o">=</span><span class="n">OCR</span><span class="w"> </span><span class="n">zu</span><span class="w"> </span><span class="n">PDF</span><span class="w"> </span><span class="p">(</span><span class="n">deu</span><span class="p">)</span><span class="w"></span>
+<span class="n">Comment</span><span class="o">=</span><span class="n">OCR</span><span class="w"> </span><span class="n">auf</span><span class="w"> </span><span class="n">Dokument</span><span class="w"> </span><span class="n">ausführen</span><span class="w"> </span><span class="n">und</span><span class="w"> </span><span class="n">PDF</span><span class="w"> </span><span class="n">erstellen</span><span class="w"> </span><span class="p">(</span><span class="n">deu</span><span class="p">)</span><span class="w"></span>
+<span class="n">Exec</span><span class="o">=</span><span class="n">tesseract</span><span class="w"> </span><span class="s">&quot;%F&quot;</span><span class="w"> </span><span class="s">&quot;%F_deu_ocr&quot;</span><span class="w"> </span><span class="o">-</span><span class="n">l</span><span class="w"> </span><span class="n">deu</span><span class="w"> </span><span class="n">pdf</span><span class="w"></span>
+<span class="n">Icon</span><span class="o">-</span><span class="n">Name</span><span class="o">=</span><span class="n">pdf</span><span class="w"></span>
+<span class="n">Selection</span><span class="o">=</span><span class="n">s</span><span class="w"></span>
+<span class="n">Extensions</span><span class="o">=</span><span class="n">any</span><span class="p">;</span><span class="w"></span>
+<span class="n">Quote</span><span class="o">=</span><span class="kt">double</span><span class="w"></span>
+<span class="n">EscapeSpaces</span><span class="o">=</span><span class="nb">true</span><span class="w"></span>
+<span class="n">EOF</span><span class="w"></span>
+</code></pre></div>
+
+<p>Diese Action kann entsprechend auf Extensions …</p></div>
+        <br>
+        <a class="btn"
+           href="../ocr-per-rechtsklick-auf-dokument-in-nemo-ausfuhren.html#ocr-per-rechtsklick-auf-dokument-in-nemo-ausfuhren">
+          Weiterlesen
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="../heic-dateien-in-linux-mintubuntu-bildbetrachter-offnen.html#heic-dateien-in-linux-mintubuntu-bildbetrachter-offnen">HEIC Dateien in Linux Mint/Ubuntu Bildbetrachter öffnen</a></h2>
+    <p>
+      Online seit Di 17 August 2021 in <a href="../category/linux.html">Linux</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="../tag/linux.html">linux</a>,              <a href="../tag/debian.html">debian</a>,              <a href="../tag/ubuntu.html">ubuntu</a>,              <a href="../tag/heif.html">heif</a>,              <a href="../tag/heic.html">heic</a>
+    </p>
+  </header>
+  <div>
+      <div><div class="highlight"><pre><span></span><code>sudo apt install heif-gdk-pixbuf
+</code></pre></div>
+
+<p>Das war's schon.</p></div>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="../icloud-onedrive-attribut-always-keep-on-device-per-ps-setzen.html#icloud-onedrive-attribut-always-keep-on-device-per-ps-setzen">iCloud, OneDrive: Attribut "Always keep on device" per PS setzen</a></h2>
+    <p>
+      Online seit So 06 Juni 2021 in <a href="../category/windows.html">Windows</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="../tag/windows.html">windows</a>,              <a href="../tag/icloud.html">icloud</a>,              <a href="../tag/apple.html">apple</a>
+    </p>
+  </header>
+  <div>
+      <div><p>Da es scheinbar vorkommt, dass Dateien trotz Wunsch zur lokalen Verfügbarkeit nicht heruntergeladen werden, habe ich mir kurzerhand die Attribute der Dateien angeschaut, verglichen und festgestellt, dass OneDrive als auch iCloud das Attribut "525344" bzw. "0x00080420" setzen, wenn "Always keep on this device" gesetzt ist.</p>
+<p>Das Attribute für "Free up …</p></div>
+        <br>
+        <a class="btn"
+           href="../icloud-onedrive-attribut-always-keep-on-device-per-ps-setzen.html#icloud-onedrive-attribut-always-keep-on-device-per-ps-setzen">
+          Weiterlesen
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="../ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php.html#ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php">IPv6 Prefix via Nginx, LUA und einem einfachen Bash-Script ausgeben (ohne PHP)</a></h2>
+    <p>
+      Online seit Fr 30 April 2021 in <a href="../category/linux.html">Linux</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="../tag/linux.html">linux</a>,              <a href="../tag/nginx.html">nginx</a>,              <a href="../tag/lua.html">lua</a>,              <a href="../tag/ipv6.html">ipv6</a>
+    </p>
+  </header>
+  <div>
+      <div><p>Hi,</p>
+<p>ein Snippet (mal wieder). Daher ganz kurz und knapp.</p>
+<p>Unter Debian benötigt ihr die Pakete <code>nginx-full</code> sowie <code>subnetcalc</code>, da hier die entsprechenden LUA Module vorhanden sind.
+Wer ganz wild drauf ist, kompiliert es sich nach... :)</p>
+<p>In der entsprechenden Site-Konfiguration:</p>
+<div class="highlight"><pre><span></span><code>  location / {
+    default_type &#39;text/plain&#39;;
+    content_by_lua_block {
+        local handle = io.popen(&quot;/opt …</code></pre></div></div>
+        <br>
+        <a class="btn"
+           href="../ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php.html#ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php">
+          Weiterlesen
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="../firefox-einzelne-zonen-uber-ipv4-auflosen.html#firefox-einzelne-zonen-uber-ipv4-auflosen">Firefox: Einzelne Zonen über IPv4 auflösen</a></h2>
+    <p>
+      Online seit Fr 30 April 2021 in <a href="../category/firefox.html">Firefox</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="../tag/firefox.html">firefox</a>,              <a href="../tag/ipv4.html">ipv4</a>
+    </p>
+  </header>
+  <div>
+      <div><p>Hi,</p>
+<p>ein kleines Snippet...</p>
+<p>Zuerst <code>about:config</code> öffnen, anschließend:</p>
+<div class="highlight"><pre><span></span><code>network.dns.ipv4OnlyDomains = .netflix.com,.google.com
+</code></pre></div></div>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="../for-loop-zum-mounten-vor-chroot.html#for-loop-zum-mounten-vor-chroot">for-loop zum Mounten vor chroot</a></h2>
+    <p>
+      Online seit Do 01 April 2021 in <a href="../category/linux.html">Linux</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="../tag/linux.html">linux</a>
+    </p>
+  </header>
+  <div>
+      <div><div class="highlight"><pre><span></span><code># <span class="k">for</span> <span class="nv">i</span> <span class="nv">in</span> <span class="nv">proc</span> <span class="nv">sys</span> <span class="nv">dev</span><span class="c1">; do mount --rbind /$i /mnt/$i ; done</span>
+</code></pre></div>
+
+<p>Scharmlos geklaut aus dem SUSE Wiki. :)</p></div>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="../dateiberechtigungen-sichern.html#dateiberechtigungen-sichern">Dateiberechtigungen sichern</a></h2>
+    <p>
+      Online seit Di 16 Februar 2021 in <a href="../category/linux.html">Linux</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="../tag/linux.html">linux</a>,              <a href="../tag/acl.html">acl</a>,              <a href="../tag/backup.html">backup</a>
+    </p>
+  </header>
+  <div>
+      <div><p>Ein kleiner Helfer, der gerne beim Backup vergessen wird: <code>getfacl</code> - <em>get file acl</em>.
+Das Tool sichert die Dateiberechtigungen (auch rekursiv: -R):</p>
+<div class="highlight"><pre><span></span><code>getfacl -R /ein/pfad &gt; acl_ein_pfad_$(date +&quot;%d.%m.%Y_%H%M&quot;).acl
+</code></pre></div>
+
+<p>Und zurück:</p>
+<div class="highlight"><pre><span></span><code>setfacl --restore=datei.acl
+</code></pre></div>
+
+<p>Für Debian und Ubuntu lautet der Paketname "acl".</p></div>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="../windows-dns-cache-deaktivierenaktivieren.html#windows-dns-cache-deaktivierenaktivieren">Windows DNS Cache deaktivieren/aktivieren</a></h2>
+    <p>
+      Online seit Mo 01 Februar 2021 in <a href="../category/windows.html">Windows</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="../tag/windows.html">windows</a>,              <a href="../tag/dns.html">dns</a>
+    </p>
+  </header>
+  <div>
+      <div><p>Deaktivieren:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">reg</span> <span class="n">add</span> <span class="s">&quot;HKLM\System\CurrentControlSet\Services\Dnscache&quot;</span> <span class="o">/</span><span class="n">v</span> <span class="s">&quot;Start&quot;</span> <span class="o">/</span><span class="n">t</span> <span class="n">REG_DWORD</span> <span class="o">/</span><span class="n">d</span> <span class="s">&quot;4&quot;</span> <span class="o">/</span><span class="n">f</span>
+</code></pre></div>
+
+<p>Aktivieren:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">reg</span> <span class="n">add</span> <span class="s">&quot;HKLM\System\CurrentControlSet\Services\Dnscache&quot;</span> <span class="o">/</span><span class="n">v</span> <span class="s">&quot;Start&quot;</span> <span class="o">/</span><span class="n">t</span> <span class="n">REG_DWORD</span> <span class="o">/</span><span class="n">d</span> <span class="s">&quot;2&quot;</span> <span class="o">/</span><span class="n">f</span>
+</code></pre></div></div>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="../gocryptfs-kompilieren-fur-hw-beschleunigtes-aes-und-systemd-dienst-einrichten.html#gocryptfs-kompilieren-fur-hw-beschleunigtes-aes-und-systemd-dienst-einrichten">GoCryptFS kompilieren (für HW-beschleunigtes AES) und Systemd Dienst einrichten</a></h2>
+    <p>
+      Online seit Mo 10 August 2020 in <a href="../category/linux.html">Linux</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="../tag/linux.html">linux</a>,              <a href="../tag/crypt.html">crypt</a>
+    </p>
+  </header>
+  <div>
+      <div><p><strong>Wichtig</strong>: Nach der Initialisierung den Master-Key sicher speichern!</p>
+<div class="highlight"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="mf">1.</span><span class="w"></span>
+<span class="n">yum</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">openssl</span><span class="o">-</span><span class="n">devel</span><span class="w"> </span><span class="n">fuse</span><span class="w"></span>
+
+<span class="err">#</span><span class="w"> </span><span class="mf">2.</span><span class="w"></span>
+<span class="k">go</span><span class="w"> </span><span class="k">get</span><span class="w"> </span><span class="o">-</span><span class="n">d</span><span class="w"> </span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">rfjakob</span><span class="o">/</span><span class="n">gocryptfs</span><span class="w"></span>
+<span class="n">cd</span><span class="w"> </span><span class="err">$</span><span class="p">(</span><span class="k">go</span><span class="w"> </span><span class="n">env</span><span class="w"> </span><span class="n">GOPATH</span><span class="p">)</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">rfjakob</span><span class="o">/</span><span class="n">gocryptfs</span><span class="w"></span>
+<span class="p">.</span><span class="o">/</span><span class="n">build</span><span class="p">.</span><span class="n">bash</span><span class="w"></span>
+<span class="n">cp</span><span class="w"> </span><span class="n">gocryptfs</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="w"></span>
+
+<span class="err">#</span><span class="w"> </span><span class="mf">3.</span><span class="w"></span>
+<span class="n">mkdir</span><span class="w"> </span><span class="o">-</span><span class="n">p</span><span class="w"> </span><span class="o">/</span><span class="k">data</span><span class="o">/</span><span class="err">{</span><span class="n">crypted</span><span class="p">,</span><span class="n">decrypted</span><span class="err">}</span><span class="w"></span>
+
+<span class="err">#</span><span class="w"> </span><span class="mf">4.</span><span class="w"></span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="n"> ! -f /data/crypted/gocryptfs …</span></code></pre></div></div>
+        <br>
+        <a class="btn"
+           href="../gocryptfs-kompilieren-fur-hw-beschleunigtes-aes-und-systemd-dienst-einrichten.html#gocryptfs-kompilieren-fur-hw-beschleunigtes-aes-und-systemd-dienst-einrichten">
+          Weiterlesen
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="../rsyslog-via-udp-erhaltene-logs-in-eine-datei-schreiben.html#rsyslog-via-udp-erhaltene-logs-in-eine-datei-schreiben">Rsyslog: via UDP erhaltene Logs in eine Datei schreiben</a></h2>
+    <p>
+      Online seit Fr 29 Mai 2020 in <a href="../category/linux.html">Linux</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="../tag/linux.html">linux</a>,              <a href="../tag/rsyslog.html">rsyslog</a>
+    </p>
+  </header>
+  <div>
+      <div><div class="highlight"><pre><span></span><code><span class="o">$</span><span class="n">template</span> <span class="n">RemoteUDP</span><span class="p">,</span><span class="s2">&quot;/var/log/remote-udp.log&quot;</span>
+<span class="p">:</span><span class="n">inputname</span><span class="p">,</span> <span class="n">isequal</span><span class="p">,</span> <span class="s2">&quot;imudp&quot;</span> <span class="err">?</span><span class="n">RemoteUDP</span>
+<span class="o">&amp;</span> <span class="o">~</span>
+</code></pre></div>
+
+<p><code>&amp; ~</code> beendet die Verarbeitung der Regel.</p></div>
+  </div>
+</article>
+
+  <div class="pagination">
+    <a class="btn float-left" href="../author/andre-peters2.html">
+      <i class="fa fa-angle-left"></i> &Auml;ltere Artikel
+    </a>
+  </div>
+
+
+
+    <footer>
+<p>&copy; 2021 </p>
+<p>
+Gebaut mit <a href="http://getpelican.com" target="_blank">Pelican</a> und dem <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a>theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " debinux.de ",
+  "url" : "..",
+  "image": "http://127.0.0.1/images/logo.png",
+  "description": ""
+}
+</script>
+
+</body>
+</html>
