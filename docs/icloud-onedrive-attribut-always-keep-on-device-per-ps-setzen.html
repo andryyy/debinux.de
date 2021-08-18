@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="de_de">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+
+    <link rel="stylesheet" type="text/css" href="./theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="./theme/pygments/github.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/solid.css">
+
+    <link rel="stylesheet" type="text/css" href="./static/custom.css">
+
+
+
+    <link rel="shortcut icon" href="https://debinux.de/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="https://debinux.de/images/favicon.png" type="image/x-icon">
+
+  
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#333">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#333">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Microsoft EDGE -->
+    <meta name="msapplication-TileColor" content="#333">
+
+ 
+
+<meta name="author" content="André Peters" />
+<meta name="description" content="Da es scheinbar vorkommt, dass Dateien trotz Wunsch zur lokalen Verfügbarkeit nicht heruntergeladen werden, habe ich mir kurzerhand die Attribute der Dateien angeschaut, verglichen und festgestellt, dass OneDrive als auch iCloud das Attribut &#34;525344&#34; bzw. &#34;0x00080420&#34; setzen, wenn &#34;Always keep on this device&#34; gesetzt ist. Das Attribute für &#34;Free up …" />
+<meta name="keywords" content="windows, icloud, apple">
+
+
+  <meta property="og:site_name" content="debinux.de"/>
+  <meta property="og:title" content="iCloud, OneDrive: Attribut &#34;Always keep on device&#34; per PS setzen"/>
+  <meta property="og:description" content="Da es scheinbar vorkommt, dass Dateien trotz Wunsch zur lokalen Verfügbarkeit nicht heruntergeladen werden, habe ich mir kurzerhand die Attribute der Dateien angeschaut, verglichen und festgestellt, dass OneDrive als auch iCloud das Attribut &#34;525344&#34; bzw. &#34;0x00080420&#34; setzen, wenn &#34;Always keep on this device&#34; gesetzt ist. Das Attribute für &#34;Free up …"/>
+  <meta property="og:locale" content="de_DE"/>
+  <meta property="og:url" content="./icloud-onedrive-attribut-always-keep-on-device-per-ps-setzen.html"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2021-06-06 09:19:00+02:00"/>
+  <meta property="article:modified_time" content="2021-08-17 12:36:52.585299+02:00"/>
+  <meta property="article:author" content="./author/andre-peters.html">
+  <meta property="article:section" content="Windows"/>
+  <meta property="article:tag" content="windows"/>
+  <meta property="article:tag" content="icloud"/>
+  <meta property="article:tag" content="apple"/>
+  <meta property="og:image" content="https://debinux.de/images/logo.png">
+
+  <title>debinux.de &ndash; iCloud, OneDrive: Attribut &#34;Always keep on device&#34; per PS setzen</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="./">
+        <img src="https://debinux.de/images/logo.png" alt="" title="">
+      </a>
+
+      <h1>
+        <a href="./"></a>
+      </h1>
+
+
+
+      <nav>
+        <ul class="list">
+
+
+              <li>
+                <a target="_blank"
+                   href="./pages/impressum-datenschutz.html#impressum-datenschutz">
+                  Impressum & Datenschutz
+                </a>
+              </li>
+
+            <li>
+              <a target="_blank" href="https://mailcow.email/" >mailcow</a>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.servercow.de/" >Servercow</a>
+            </li>
+            <li>
+              <a target="_blank" href="https://github.com/andryyy" >André @ GitHub</a>
+            </li>
+            <li>
+              <a target="_blank" href="https://keybase.io/debinux" >Keybase.io/debinux</a>
+            </li>
+            <li>
+              <a target="_blank" href="/static/keys/0x91DFD03726232297.key" >PGP Public Key</a>
+            </li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="./">Home</a>
+
+      <a href="/archives.html">Archive</a>
+      <a href="/categories.html">Kategorien</a>
+      <a href="/tags.html">Stichw&ouml;rter</a>
+      <a href="/pages/impressum-datenschutz.html#impressum-datenschutz">Impressum / Datenschutz</a>
+
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="icloud-onedrive-attribut-always-keep-on-device-per-ps-setzen">iCloud, OneDrive: Attribut "Always keep on device" per PS setzen</h1>
+    <p>
+      Online seit So 06 Juni 2021 in <a href="./category/windows.html">Windows</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>Da es scheinbar vorkommt, dass Dateien trotz Wunsch zur lokalen Verfügbarkeit nicht heruntergeladen werden, habe ich mir kurzerhand die Attribute der Dateien angeschaut, verglichen und festgestellt, dass OneDrive als auch iCloud das Attribut "525344" bzw. "0x00080420" setzen, wenn "Always keep on this device" gesetzt ist.</p>
+<p>Das Attribute für "Free up space" ist demnach wohl "5248544" bzw. "0x5248544", das habe ich jedoch nicht weiter getestet.</p>
+<p>Um alle nicht sofort lokal verfügbaren Dateien anzupassen, habe ich mir folgendes Script erstellt:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">get</span><span class="o">-</span><span class="nv">childitem</span> <span class="mh">$e</span><span class="nv">nv</span>:<span class="nv">userprofile</span><span class="s1">&#39;</span><span class="s">\Pictures\iCloud Photos\Photos</span><span class="s1">&#39;</span> <span class="o">-</span><span class="nv">Force</span> <span class="o">-</span><span class="nv">File</span> <span class="o">-</span><span class="nv">Recurse</span> <span class="o">-</span><span class="k">Include</span> <span class="o">*</span><span class="nv">heic</span>,<span class="o">*</span><span class="nv">jpg</span>,<span class="o">*</span><span class="nv">jpeg</span>,<span class="o">*</span><span class="nv">png</span>,<span class="o">*</span><span class="nv">gif</span>,<span class="o">*</span><span class="nv">mp4</span>,<span class="o">*</span><span class="nv">mov</span> <span class="o">|</span> <span class="nv">where</span> <span class="nv">Attributes</span> <span class="o">-</span><span class="nv">ne</span> <span class="s1">&#39;</span><span class="s">525344</span><span class="s1">&#39;</span> <span class="o">|</span> <span class="nv">foreach</span> {
+    $<span class="nv">prop</span> <span class="o">=</span> <span class="nv">Get</span><span class="o">-</span><span class="nv">ItemProperty</span> <span class="o">-</span><span class="nv">Path</span> $<span class="nv">_</span>.<span class="nv">fullname</span>
+    $<span class="nv">prop</span>.<span class="nv">Attributes</span> <span class="o">=</span> $<span class="nv">prop</span>.<span class="nv">Attributes</span> <span class="o">-</span><span class="nv">bor</span> <span class="mi">525344</span>
+}
+</code></pre></div>
+
+<p>Ein Aufgabenplaner-Job könnte so aussehen:</p>
+<div class="highlight"><pre><span></span><code><span class="k">[...]</span>
+    <span class="na">&lt;Exec&gt;</span>
+      <span class="na">&lt;Command&gt;powershell&lt;/Command&gt;</span>
+      <span class="na">&lt;Arguments&gt;-executionpolicy bypass -file c:\fix_sync_icloud.ps1&lt;/Arguments&gt;</span>
+    <span class="na">&lt;/Exec&gt;</span>
+<span class="k">[...]</span>
+</code></pre></div>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="./tag/windows.html">windows</a>
+      <a href="./tag/icloud.html">icloud</a>
+      <a href="./tag/apple.html">apple</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>&copy; 2021 </p>
+<p>
+Gebaut mit <a href="http://getpelican.com" target="_blank">Pelican</a> und dem <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a>theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " debinux.de ",
+  "url" : ".",
+  "image": "https://debinux.de/images/logo.png",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="de_de">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+
+    <link rel="stylesheet" type="text/css" href="./theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="./theme/pygments/github.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/solid.css">
+
+    <link rel="stylesheet" type="text/css" href="./static/custom.css">
+
+
+
+    <link rel="shortcut icon" href="https://debinux.de/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="https://debinux.de/images/favicon.png" type="image/x-icon">
+
+  
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#333">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#333">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Microsoft EDGE -->
+    <meta name="msapplication-TileColor" content="#333">
+
+ 
+
+<meta name="author" content="André Peters" />
+<meta name="description" content="Wichtig: Nach der Initialisierung den Master-Key sicher speichern! # 1. yum install openssl-devel fuse # 2. go get -d github.com/rfjakob/gocryptfs cd $(go env GOPATH)/src/github.com/rfjakob/gocryptfs ./build.bash cp gocryptfs /usr/local/bin/ # 3. mkdir -p /data/{crypted,decrypted} # 4. if [ ! -f /data/crypted/gocryptfs …" />
+<meta name="keywords" content="linux, crypt">
+
+
+  <meta property="og:site_name" content="debinux.de"/>
+  <meta property="og:title" content="GoCryptFS kompilieren (für HW-beschleunigtes AES) und Systemd Dienst einrichten"/>
+  <meta property="og:description" content="Wichtig: Nach der Initialisierung den Master-Key sicher speichern! # 1. yum install openssl-devel fuse # 2. go get -d github.com/rfjakob/gocryptfs cd $(go env GOPATH)/src/github.com/rfjakob/gocryptfs ./build.bash cp gocryptfs /usr/local/bin/ # 3. mkdir -p /data/{crypted,decrypted} # 4. if [ ! -f /data/crypted/gocryptfs …"/>
+  <meta property="og:locale" content="de_DE"/>
+  <meta property="og:url" content="./gocryptfs-kompilieren-fur-hw-beschleunigtes-aes-und-systemd-dienst-einrichten.html"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2020-08-10 12:23:00+02:00"/>
+  <meta property="article:modified_time" content="2021-08-17 12:07:27.320522+02:00"/>
+  <meta property="article:author" content="./author/andre-peters.html">
+  <meta property="article:section" content="Linux"/>
+  <meta property="article:tag" content="linux"/>
+  <meta property="article:tag" content="crypt"/>
+  <meta property="og:image" content="https://debinux.de/images/logo.png">
+
+  <title>debinux.de &ndash; GoCryptFS kompilieren (für HW-beschleunigtes AES) und Systemd Dienst einrichten</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="./">
+        <img src="https://debinux.de/images/logo.png" alt="" title="">
+      </a>
+
+      <h1>
+        <a href="./"></a>
+      </h1>
+
+
+
+      <nav>
+        <ul class="list">
+
+
+              <li>
+                <a target="_blank"
+                   href="./pages/impressum-datenschutz.html#impressum-datenschutz">
+                  Impressum & Datenschutz
+                </a>
+              </li>
+
+            <li>
+              <a target="_blank" href="https://mailcow.email/" >mailcow</a>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.servercow.de/" >Servercow</a>
+            </li>
+            <li>
+              <a target="_blank" href="https://github.com/andryyy" >André @ GitHub</a>
+            </li>
+            <li>
+              <a target="_blank" href="https://keybase.io/debinux" >Keybase.io/debinux</a>
+            </li>
+            <li>
+              <a target="_blank" href="/static/keys/0x91DFD03726232297.key" >PGP Public Key</a>
+            </li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="./">Home</a>
+
+      <a href="/archives.html">Archive</a>
+      <a href="/categories.html">Kategorien</a>
+      <a href="/tags.html">Stichw&ouml;rter</a>
+      <a href="/pages/impressum-datenschutz.html#impressum-datenschutz">Impressum / Datenschutz</a>
+
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="gocryptfs-kompilieren-fur-hw-beschleunigtes-aes-und-systemd-dienst-einrichten">GoCryptFS kompilieren (für HW-beschleunigtes AES) und Systemd Dienst einrichten</h1>
+    <p>
+      Online seit Mo 10 August 2020 in <a href="./category/linux.html">Linux</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <p><strong>Wichtig</strong>: Nach der Initialisierung den Master-Key sicher speichern!</p>
+<div class="highlight"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="mf">1.</span><span class="w"></span>
+<span class="n">yum</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">openssl</span><span class="o">-</span><span class="n">devel</span><span class="w"> </span><span class="n">fuse</span><span class="w"></span>
+
+<span class="err">#</span><span class="w"> </span><span class="mf">2.</span><span class="w"></span>
+<span class="k">go</span><span class="w"> </span><span class="k">get</span><span class="w"> </span><span class="o">-</span><span class="n">d</span><span class="w"> </span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">rfjakob</span><span class="o">/</span><span class="n">gocryptfs</span><span class="w"></span>
+<span class="n">cd</span><span class="w"> </span><span class="err">$</span><span class="p">(</span><span class="k">go</span><span class="w"> </span><span class="n">env</span><span class="w"> </span><span class="n">GOPATH</span><span class="p">)</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">rfjakob</span><span class="o">/</span><span class="n">gocryptfs</span><span class="w"></span>
+<span class="p">.</span><span class="o">/</span><span class="n">build</span><span class="p">.</span><span class="n">bash</span><span class="w"></span>
+<span class="n">cp</span><span class="w"> </span><span class="n">gocryptfs</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="w"></span>
+
+<span class="err">#</span><span class="w"> </span><span class="mf">3.</span><span class="w"></span>
+<span class="n">mkdir</span><span class="w"> </span><span class="o">-</span><span class="n">p</span><span class="w"> </span><span class="o">/</span><span class="k">data</span><span class="o">/</span><span class="err">{</span><span class="n">crypted</span><span class="p">,</span><span class="n">decrypted</span><span class="err">}</span><span class="w"></span>
+
+<span class="err">#</span><span class="w"> </span><span class="mf">4.</span><span class="w"></span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="n"> ! -f /data/crypted/gocryptfs.conf </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="err">!</span><span class="w"> </span><span class="n">gocryptfs</span><span class="w"> </span><span class="o">-</span><span class="n">init</span><span class="w"> </span><span class="o">/</span><span class="k">data</span><span class="o">/</span><span class="n">crypted</span><span class="p">;</span><span class="w"> </span><span class="k">then</span><span class="w"></span>
+<span class="w">    </span><span class="n">echo</span><span class="w"> </span><span class="ss">&quot;cannot init /data/crypted directory, skipping&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="n">fi</span><span class="w"></span>
+<span class="k">else</span><span class="w"></span>
+<span class="w">  </span><span class="n">echo</span><span class="w"> </span><span class="ss">&quot;/data/crypted is an initialized gocryptfs directory&quot;</span><span class="w"></span>
+<span class="n">fi</span><span class="w"></span>
+
+<span class="err">#</span><span class="w"> </span><span class="mf">5.</span><span class="w"></span>
+<span class="n">systemctl</span><span class="w"> </span><span class="n">stop</span><span class="w"> </span><span class="n">gocryptfs</span><span class="w"></span>
+
+<span class="err">#</span><span class="w"> </span><span class="mf">6.</span><span class="w"></span>
+<span class="n">cat</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s1">&#39;EOF&#39;</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">systemd</span><span class="o">/</span><span class="k">system</span><span class="o">/</span><span class="n">gocryptfs</span><span class="p">.</span><span class="n">service</span><span class="w"></span>
+<span class="o">[</span><span class="n">Unit</span><span class="o">]</span><span class="w"></span>
+<span class="n">Description</span><span class="o">=</span><span class="n">gocryptfs</span><span class="w"> </span><span class="n">Mount</span><span class="w"> </span><span class="n">Unit</span><span class="w"></span>
+<span class="n">Requires</span><span class="o">=</span><span class="n">network</span><span class="p">.</span><span class="n">target</span><span class="w"> </span><span class="k">local</span><span class="o">-</span><span class="n">fs</span><span class="p">.</span><span class="n">target</span><span class="w"></span>
+<span class="k">After</span><span class="o">=</span><span class="n">network</span><span class="p">.</span><span class="n">target</span><span class="w"> </span><span class="k">local</span><span class="o">-</span><span class="n">fs</span><span class="p">.</span><span class="n">target</span><span class="w"></span>
+<span class="o">[</span><span class="n">Service</span><span class="o">]</span><span class="w"></span>
+<span class="n">Type</span><span class="o">=</span><span class="n">forking</span><span class="w"></span>
+<span class="n">ExecStart</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">gocryptfs</span><span class="w"> </span><span class="o">-</span><span class="n">extpass</span><span class="w"> </span><span class="ss">&quot;systemd-ask-password GoCryptFS:&quot;</span><span class="w"> </span><span class="o">-</span><span class="n">allow_other</span><span class="w"> </span><span class="o">/</span><span class="k">data</span><span class="o">/</span><span class="n">crypted</span><span class="o">/</span><span class="w"> </span><span class="o">/</span><span class="k">data</span><span class="o">/</span><span class="n">decrypted</span><span class="o">/</span><span class="w"></span>
+<span class="n">Restart</span><span class="o">=</span><span class="k">on</span><span class="o">-</span><span class="n">failure</span><span class="w"></span>
+<span class="n">RestartSec</span><span class="o">=</span><span class="mi">5</span><span class="w"></span>
+<span class="o">[</span><span class="n">Install</span><span class="o">]</span><span class="w"></span>
+<span class="n">WantedBy</span><span class="o">=</span><span class="n">multi</span><span class="o">-</span><span class="k">user</span><span class="p">.</span><span class="n">target</span><span class="w"></span>
+<span class="n">EOF</span><span class="w"></span>
+
+<span class="n">systemctl</span><span class="w"> </span><span class="n">daemon</span><span class="o">-</span><span class="n">reload</span><span class="w"></span>
+<span class="err">#</span><span class="w"> </span><span class="n">Do</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="k">start</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">boot</span><span class="w"></span>
+<span class="n">systemctl</span><span class="w"> </span><span class="n">disable</span><span class="w"> </span><span class="n">gocryptfs</span><span class="w"></span>
+
+<span class="err">#</span><span class="w"> </span><span class="mf">7.</span><span class="w"></span>
+<span class="n">until</span><span class="w"> </span><span class="n">systemctl</span><span class="w"> </span><span class="k">start</span><span class="w"> </span><span class="n">gocryptfs</span><span class="p">;</span><span class="w"> </span><span class="n">do</span><span class="w"></span>
+<span class="w">  </span><span class="n">sleep</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="n">done</span><span class="w"></span>
+</code></pre></div>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="./tag/linux.html">linux</a>
+      <a href="./tag/crypt.html">crypt</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>&copy; 2021 </p>
+<p>
+Gebaut mit <a href="http://getpelican.com" target="_blank">Pelican</a> und dem <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a>theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " debinux.de ",
+  "url" : ".",
+  "image": "https://debinux.de/images/logo.png",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

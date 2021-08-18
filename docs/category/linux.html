@@ -1,0 +1,410 @@
+
+<!DOCTYPE html>
+<html lang="de_de">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+
+    <link rel="stylesheet" type="text/css" href="../theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="../theme/pygments/github.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/solid.css">
+
+    <link rel="stylesheet" type="text/css" href="../static/custom.css">
+
+
+
+    <link rel="shortcut icon" href="https://debinux.de/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="https://debinux.de/images/favicon.png" type="image/x-icon">
+
+  
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#333">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#333">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Microsoft EDGE -->
+    <meta name="msapplication-TileColor" content="#333">
+
+ 
+
+    <meta name="author" content="André Peters" />
+    <meta name="description" content="" />
+  <meta property="og:site_name" content="debinux.de"/>
+  <meta property="og:type" content="blog"/>
+  <meta property="og:title" content="debinux.de"/>
+  <meta property="og:description" content=""/>
+  <meta property="og:locale" content="de_DE"/>
+  <meta property="og:url" content=".."/>
+  <meta property="og:image" content="https://debinux.de/images/logo.png">
+
+  <title>debinux.de &ndash; Kategorie Linux</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="../">
+        <img src="https://debinux.de/images/logo.png" alt="" title="">
+      </a>
+
+      <h1>
+        <a href="../"></a>
+      </h1>
+
+
+
+      <nav>
+        <ul class="list">
+
+
+              <li>
+                <a target="_blank"
+                   href="../pages/impressum-datenschutz.html#impressum-datenschutz">
+                  Impressum & Datenschutz
+                </a>
+              </li>
+
+            <li>
+              <a target="_blank" href="https://mailcow.email/" >mailcow</a>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.servercow.de/" >Servercow</a>
+            </li>
+            <li>
+              <a target="_blank" href="https://github.com/andryyy" >André @ GitHub</a>
+            </li>
+            <li>
+              <a target="_blank" href="https://keybase.io/debinux" >Keybase.io/debinux</a>
+            </li>
+            <li>
+              <a target="_blank" href="/static/keys/0x91DFD03726232297.key" >PGP Public Key</a>
+            </li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="../">Home</a>
+
+      <a href="/archives.html">Archive</a>
+      <a href="/categories.html">Kategorien</a>
+      <a href="/tags.html">Stichw&ouml;rter</a>
+      <a href="/pages/impressum-datenschutz.html#impressum-datenschutz">Impressum / Datenschutz</a>
+
+
+    </nav>
+
+
+
+<article>
+  <header>
+    <h2><a href="../ocr-per-rechtsklick-auf-dokument-in-nemo-ausfuhren.html#ocr-per-rechtsklick-auf-dokument-in-nemo-ausfuhren">OCR per Rechtsklick auf Dokument in Nemo ausführen</a></h2>
+    <p>
+      Online seit Di 17 August 2021 in <a href="../category/linux.html">Linux</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="../tag/linux.html">linux</a>,              <a href="../tag/debian.html">debian</a>,              <a href="../tag/ocr.html">ocr</a>,              <a href="../tag/pdf.html">pdf</a>
+    </p>
+  </header>
+  <div>
+      <div><div class="highlight"><pre><span></span><code><span class="n">cd</span><span class="w"> </span><span class="o">~/</span><span class="p">.</span><span class="n">local</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">nemo</span><span class="o">/</span><span class="n">actions</span><span class="w"></span>
+<span class="n">cat</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">EOF</span><span class="w"></span>
+<span class="p">[</span><span class="n">Nemo</span><span class="w"> </span><span class="n">Action</span><span class="p">]</span><span class="w"></span>
+<span class="n">Active</span><span class="o">=</span><span class="nb">true</span><span class="w"></span>
+<span class="n">Name</span><span class="o">=</span><span class="n">OCR</span><span class="w"> </span><span class="n">zu</span><span class="w"> </span><span class="n">PDF</span><span class="w"> </span><span class="p">(</span><span class="n">deu</span><span class="p">)</span><span class="w"></span>
+<span class="n">Comment</span><span class="o">=</span><span class="n">OCR</span><span class="w"> </span><span class="n">auf</span><span class="w"> </span><span class="n">Dokument</span><span class="w"> </span><span class="n">ausführen</span><span class="w"> </span><span class="n">und</span><span class="w"> </span><span class="n">PDF</span><span class="w"> </span><span class="n">erstellen</span><span class="w"> </span><span class="p">(</span><span class="n">deu</span><span class="p">)</span><span class="w"></span>
+<span class="n">Exec</span><span class="o">=</span><span class="n">tesseract</span><span class="w"> </span><span class="s">&quot;%F&quot;</span><span class="w"> </span><span class="s">&quot;%F_deu_ocr&quot;</span><span class="w"> </span><span class="o">-</span><span class="n">l</span><span class="w"> </span><span class="n">deu</span><span class="w"> </span><span class="n">pdf</span><span class="w"></span>
+<span class="n">Icon</span><span class="o">-</span><span class="n">Name</span><span class="o">=</span><span class="n">pdf</span><span class="w"></span>
+<span class="n">Selection</span><span class="o">=</span><span class="n">s</span><span class="w"></span>
+<span class="n">Extensions</span><span class="o">=</span><span class="n">any</span><span class="p">;</span><span class="w"></span>
+<span class="n">Quote</span><span class="o">=</span><span class="kt">double</span><span class="w"></span>
+<span class="n">EscapeSpaces</span><span class="o">=</span><span class="nb">true</span><span class="w"></span>
+<span class="n">EOF</span><span class="w"></span>
+</code></pre></div>
+
+<p>Diese Action kann entsprechend auf Extensions …</p></div>
+        <br>
+        <a class="btn"
+           href="../ocr-per-rechtsklick-auf-dokument-in-nemo-ausfuhren.html#ocr-per-rechtsklick-auf-dokument-in-nemo-ausfuhren">
+          Weiterlesen
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="../heic-dateien-in-linux-mintubuntu-bildbetrachter-offnen.html#heic-dateien-in-linux-mintubuntu-bildbetrachter-offnen">HEIC Dateien in Linux Mint/Ubuntu Bildbetrachter öffnen</a></h2>
+    <p>
+      Online seit Di 17 August 2021 in <a href="../category/linux.html">Linux</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="../tag/linux.html">linux</a>,              <a href="../tag/debian.html">debian</a>,              <a href="../tag/ubuntu.html">ubuntu</a>,              <a href="../tag/heif.html">heif</a>,              <a href="../tag/heic.html">heic</a>
+    </p>
+  </header>
+  <div>
+      <div><div class="highlight"><pre><span></span><code>sudo apt install heif-gdk-pixbuf
+</code></pre></div>
+
+<p>Das war's schon.</p></div>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="../ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php.html#ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php">IPv6 Prefix via Nginx, LUA und einem einfachen Bash-Script ausgeben (ohne PHP)</a></h2>
+    <p>
+      Online seit Fr 30 April 2021 in <a href="../category/linux.html">Linux</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="../tag/linux.html">linux</a>,              <a href="../tag/nginx.html">nginx</a>,              <a href="../tag/lua.html">lua</a>,              <a href="../tag/ipv6.html">ipv6</a>
+    </p>
+  </header>
+  <div>
+      <div><p>Hi,</p>
+<p>ein Snippet (mal wieder). Daher ganz kurz und knapp.</p>
+<p>Unter Debian benötigt ihr die Pakete <code>nginx-full</code> sowie <code>subnetcalc</code>, da hier die entsprechenden LUA Module vorhanden sind.
+Wer ganz wild drauf ist, kompiliert es sich nach... :)</p>
+<p>In der entsprechenden Site-Konfiguration:</p>
+<div class="highlight"><pre><span></span><code>  location / {
+    default_type &#39;text/plain&#39;;
+    content_by_lua_block {
+        local handle = io.popen(&quot;/opt …</code></pre></div></div>
+        <br>
+        <a class="btn"
+           href="../ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php.html#ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php">
+          Weiterlesen
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="../for-loop-zum-mounten-vor-chroot.html#for-loop-zum-mounten-vor-chroot">for-loop zum Mounten vor chroot</a></h2>
+    <p>
+      Online seit Do 01 April 2021 in <a href="../category/linux.html">Linux</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="../tag/linux.html">linux</a>
+    </p>
+  </header>
+  <div>
+      <div><div class="highlight"><pre><span></span><code># <span class="k">for</span> <span class="nv">i</span> <span class="nv">in</span> <span class="nv">proc</span> <span class="nv">sys</span> <span class="nv">dev</span><span class="c1">; do mount --rbind /$i /mnt/$i ; done</span>
+</code></pre></div>
+
+<p>Scharmlos geklaut aus dem SUSE Wiki. :)</p></div>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="../dateiberechtigungen-sichern.html#dateiberechtigungen-sichern">Dateiberechtigungen sichern</a></h2>
+    <p>
+      Online seit Di 16 Februar 2021 in <a href="../category/linux.html">Linux</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="../tag/linux.html">linux</a>,              <a href="../tag/acl.html">acl</a>,              <a href="../tag/backup.html">backup</a>
+    </p>
+  </header>
+  <div>
+      <div><p>Ein kleiner Helfer, der gerne beim Backup vergessen wird: <code>getfacl</code> - <em>get file acl</em>.
+Das Tool sichert die Dateiberechtigungen (auch rekursiv: -R):</p>
+<div class="highlight"><pre><span></span><code>getfacl -R /ein/pfad &gt; acl_ein_pfad_$(date +&quot;%d.%m.%Y_%H%M&quot;).acl
+</code></pre></div>
+
+<p>Und zurück:</p>
+<div class="highlight"><pre><span></span><code>setfacl --restore=datei.acl
+</code></pre></div>
+
+<p>Für Debian und Ubuntu lautet der Paketname "acl".</p></div>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="../gocryptfs-kompilieren-fur-hw-beschleunigtes-aes-und-systemd-dienst-einrichten.html#gocryptfs-kompilieren-fur-hw-beschleunigtes-aes-und-systemd-dienst-einrichten">GoCryptFS kompilieren (für HW-beschleunigtes AES) und Systemd Dienst einrichten</a></h2>
+    <p>
+      Online seit Mo 10 August 2020 in <a href="../category/linux.html">Linux</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="../tag/linux.html">linux</a>,              <a href="../tag/crypt.html">crypt</a>
+    </p>
+  </header>
+  <div>
+      <div><p><strong>Wichtig</strong>: Nach der Initialisierung den Master-Key sicher speichern!</p>
+<div class="highlight"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="mf">1.</span><span class="w"></span>
+<span class="n">yum</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">openssl</span><span class="o">-</span><span class="n">devel</span><span class="w"> </span><span class="n">fuse</span><span class="w"></span>
+
+<span class="err">#</span><span class="w"> </span><span class="mf">2.</span><span class="w"></span>
+<span class="k">go</span><span class="w"> </span><span class="k">get</span><span class="w"> </span><span class="o">-</span><span class="n">d</span><span class="w"> </span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">rfjakob</span><span class="o">/</span><span class="n">gocryptfs</span><span class="w"></span>
+<span class="n">cd</span><span class="w"> </span><span class="err">$</span><span class="p">(</span><span class="k">go</span><span class="w"> </span><span class="n">env</span><span class="w"> </span><span class="n">GOPATH</span><span class="p">)</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">rfjakob</span><span class="o">/</span><span class="n">gocryptfs</span><span class="w"></span>
+<span class="p">.</span><span class="o">/</span><span class="n">build</span><span class="p">.</span><span class="n">bash</span><span class="w"></span>
+<span class="n">cp</span><span class="w"> </span><span class="n">gocryptfs</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="w"></span>
+
+<span class="err">#</span><span class="w"> </span><span class="mf">3.</span><span class="w"></span>
+<span class="n">mkdir</span><span class="w"> </span><span class="o">-</span><span class="n">p</span><span class="w"> </span><span class="o">/</span><span class="k">data</span><span class="o">/</span><span class="err">{</span><span class="n">crypted</span><span class="p">,</span><span class="n">decrypted</span><span class="err">}</span><span class="w"></span>
+
+<span class="err">#</span><span class="w"> </span><span class="mf">4.</span><span class="w"></span>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="n"> ! -f /data/crypted/gocryptfs …</span></code></pre></div></div>
+        <br>
+        <a class="btn"
+           href="../gocryptfs-kompilieren-fur-hw-beschleunigtes-aes-und-systemd-dienst-einrichten.html#gocryptfs-kompilieren-fur-hw-beschleunigtes-aes-und-systemd-dienst-einrichten">
+          Weiterlesen
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="../rsyslog-via-udp-erhaltene-logs-in-eine-datei-schreiben.html#rsyslog-via-udp-erhaltene-logs-in-eine-datei-schreiben">Rsyslog: via UDP erhaltene Logs in eine Datei schreiben</a></h2>
+    <p>
+      Online seit Fr 29 Mai 2020 in <a href="../category/linux.html">Linux</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="../tag/linux.html">linux</a>,              <a href="../tag/rsyslog.html">rsyslog</a>
+    </p>
+  </header>
+  <div>
+      <div><div class="highlight"><pre><span></span><code><span class="o">$</span><span class="n">template</span> <span class="n">RemoteUDP</span><span class="p">,</span><span class="s2">&quot;/var/log/remote-udp.log&quot;</span>
+<span class="p">:</span><span class="n">inputname</span><span class="p">,</span> <span class="n">isequal</span><span class="p">,</span> <span class="s2">&quot;imudp&quot;</span> <span class="err">?</span><span class="n">RemoteUDP</span>
+<span class="o">&amp;</span> <span class="o">~</span>
+</code></pre></div>
+
+<p><code>&amp; ~</code> beendet die Verarbeitung der Regel.</p></div>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="../template-zammad-reverse-proxy-mit-apache.html#template-zammad-reverse-proxy-mit-apache">Template Zammad Reverse Proxy mit Apache</a></h2>
+    <p>
+      Online seit Do 16 Januar 2020 in <a href="../category/linux.html">Linux</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="../tag/linux.html">linux</a>,              <a href="../tag/apache2.html">apache2</a>,              <a href="../tag/zammad.html">zammad</a>
+    </p>
+  </header>
+  <div>
+      <div><div class="highlight"><pre><span></span><code><span class="nt">&lt;VirtualHost</span> <span class="err">*:80</span><span class="nt">&gt;</span>
+  ServerName ticket.domain.tld
+  RewriteEngine on
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^/?(.*) https://%{HTTP_HOST}/$1 [R=301,L]
+  ProxyPass / http://127.0.0.1:8090/
+  ProxyPassReverse / http://127.0.0.1:8090/
+  ProxyPreserveHost On
+  ProxyAddHeaders On
+  RequestHeader set X-Forwarded-Proto &quot;http&quot;
+<span class="nt">&lt;/VirtualHost&gt;</span>
+<span class="nt">&lt;VirtualHost</span> <span class="err">*:443</span><span class="nt">&gt;</span>
+  ServerName ticket.domain.tld
+  ProxyPass /ws ws …</code></pre></div></div>
+        <br>
+        <a class="btn"
+           href="../template-zammad-reverse-proxy-mit-apache.html#template-zammad-reverse-proxy-mit-apache">
+          Weiterlesen
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="../rspamd-subject-umschreiben-und-reply-to-hinzufugen.html#rspamd-subject-umschreiben-und-reply-to-hinzufugen">Rspamd: Subject umschreiben und Reply-To hinzufügen</a></h2>
+    <p>
+      Online seit Sa 28 Dezember 2019 in <a href="../category/linux.html">Linux</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="../tag/linux.html">linux</a>,              <a href="../tag/rspamd.html">rspamd</a>
+    </p>
+  </header>
+  <div>
+      <div><p>Ändert Subject auf "[Tag] Altes-Subject" und fügt einen Reply-To "moo@moo.com" hinzu.</p>
+<p>Die alten Headerfelder werden vorher entfernt.</p>
+<p>Nur ein Snippet.</p>
+<p><code>remove_headers { X = 0 }</code> sollte alle Header entfernen, nicht nur den ersten. Beim Subject und Reply-To eher unnötig.</p>
+<div class="highlight"><pre><span></span><code><span class="n">rspamd_config</span><span class="o">:</span><span class="n">register_symbol</span><span class="o">({</span>
+  <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;SUBJECT_REWRITE_ADD_HEADER&#39;</span><span class="o">,</span>
+  <span class="n">type</span> <span class="o">=</span> <span class="s1">&#39;postfilter&#39;</span><span class="o">,</span>
+  <span class="n">callback</span> <span class="o">=</span> <span class="kd">function</span><span class="o">(</span><span class="n">task</span><span class="o">)</span>
+    <span class="n">local</span> <span class="n">util …</span></code></pre></div></div>
+        <br>
+        <a class="btn"
+           href="../rspamd-subject-umschreiben-und-reply-to-hinzufugen.html#rspamd-subject-umschreiben-und-reply-to-hinzufugen">
+          Weiterlesen
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="../rspamd-ratelimit-uberschreitung-in-slack-channel-teilen.html#rspamd-ratelimit-uberschreitung-in-slack-channel-teilen">Rspamd: Ratelimit-Überschreitung in Slack Channel teilen</a></h2>
+    <p>
+      Online seit So 16 Dezember 2018 in <a href="../category/linux.html">Linux</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="../tag/linux.html">linux</a>,              <a href="../tag/rspamd.html">rspamd</a>
+    </p>
+  </header>
+  <div>
+      <div><p>Hallo,</p>
+<p>Long time no read.</p>
+<p>Mehr ein Snippet als ein echter Beitrag.</p>
+<p>Verwendet wird der der metadata_exporter von Rspamd. Eine Mail wird gesendet, wenn das Ratelimit auslöst und die Mail von einem authentifizierten Benutzer kommt. Das kann im LUA-Script entsprechend angepasst werden.</p>
+<p>Hier die "local.d/metadata_exporter.conf":</p>
+<div class="highlight"><pre><span></span><code><span class="n">rules</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">RLINFO …</span></code></pre></div></div>
+        <br>
+        <a class="btn"
+           href="../rspamd-ratelimit-uberschreitung-in-slack-channel-teilen.html#rspamd-ratelimit-uberschreitung-in-slack-channel-teilen">
+          Weiterlesen
+        </a>
+  </div>
+</article>
+
+  <div class="pagination">
+  </div>
+
+
+
+    <footer>
+<p>&copy; 2021 </p>
+<p>
+Gebaut mit <a href="http://getpelican.com" target="_blank">Pelican</a> und dem <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a>theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " debinux.de ",
+  "url" : "..",
+  "image": "https://debinux.de/images/logo.png",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

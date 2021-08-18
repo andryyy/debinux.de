@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="de_de">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+
+    <link rel="stylesheet" type="text/css" href="../theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="../theme/pygments/github.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/solid.css">
+
+    <link rel="stylesheet" type="text/css" href="../static/custom.css">
+
+
+
+    <link rel="shortcut icon" href="https://debinux.de/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="https://debinux.de/images/favicon.png" type="image/x-icon">
+
+  
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#333">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#333">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Microsoft EDGE -->
+    <meta name="msapplication-TileColor" content="#333">
+
+ 
+
+    <meta name="author" content="André Peters" />
+    <meta name="description" content="" />
+  <meta property="og:site_name" content="debinux.de"/>
+  <meta property="og:type" content="blog"/>
+  <meta property="og:title" content="debinux.de"/>
+  <meta property="og:description" content=""/>
+  <meta property="og:locale" content="de_DE"/>
+  <meta property="og:url" content=".."/>
+  <meta property="og:image" content="https://debinux.de/images/logo.png">
+
+  <title>debinux.de &ndash; Stichwort nginx</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="../">
+        <img src="https://debinux.de/images/logo.png" alt="" title="">
+      </a>
+
+      <h1>
+        <a href="../"></a>
+      </h1>
+
+
+
+      <nav>
+        <ul class="list">
+
+
+              <li>
+                <a target="_blank"
+                   href="../pages/impressum-datenschutz.html#impressum-datenschutz">
+                  Impressum & Datenschutz
+                </a>
+              </li>
+
+            <li>
+              <a target="_blank" href="https://mailcow.email/" >mailcow</a>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.servercow.de/" >Servercow</a>
+            </li>
+            <li>
+              <a target="_blank" href="https://github.com/andryyy" >André @ GitHub</a>
+            </li>
+            <li>
+              <a target="_blank" href="https://keybase.io/debinux" >Keybase.io/debinux</a>
+            </li>
+            <li>
+              <a target="_blank" href="/static/keys/0x91DFD03726232297.key" >PGP Public Key</a>
+            </li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="../">Home</a>
+
+      <a href="/archives.html">Archive</a>
+      <a href="/categories.html">Kategorien</a>
+      <a href="/tags.html">Stichw&ouml;rter</a>
+      <a href="/pages/impressum-datenschutz.html#impressum-datenschutz">Impressum / Datenschutz</a>
+
+
+    </nav>
+
+
+
+<article>
+  <header>
+    <h2><a href="../ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php.html#ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php">IPv6 Prefix via Nginx, LUA und einem einfachen Bash-Script ausgeben (ohne PHP)</a></h2>
+    <p>
+      Online seit Fr 30 April 2021 in <a href="../category/linux.html">Linux</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="../tag/linux.html">linux</a>,              <a href="../tag/nginx.html">nginx</a>,              <a href="../tag/lua.html">lua</a>,              <a href="../tag/ipv6.html">ipv6</a>
+    </p>
+  </header>
+  <div>
+      <div><p>Hi,</p>
+<p>ein Snippet (mal wieder). Daher ganz kurz und knapp.</p>
+<p>Unter Debian benötigt ihr die Pakete <code>nginx-full</code> sowie <code>subnetcalc</code>, da hier die entsprechenden LUA Module vorhanden sind.
+Wer ganz wild drauf ist, kompiliert es sich nach... :)</p>
+<p>In der entsprechenden Site-Konfiguration:</p>
+<div class="highlight"><pre><span></span><code>  location / {
+    default_type &#39;text/plain&#39;;
+    content_by_lua_block {
+        local handle = io.popen(&quot;/opt …</code></pre></div></div>
+        <br>
+        <a class="btn"
+           href="../ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php.html#ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php">
+          Weiterlesen
+        </a>
+  </div>
+</article>
+
+  <div class="pagination">
+  </div>
+
+
+
+    <footer>
+<p>&copy; 2021 </p>
+<p>
+Gebaut mit <a href="http://getpelican.com" target="_blank">Pelican</a> und dem <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a>theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " debinux.de ",
+  "url" : "..",
+  "image": "https://debinux.de/images/logo.png",
+  "description": ""
+}
+</script>
+
+</body>
+</html>
