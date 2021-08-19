@@ -29,3 +29,5 @@ sudo apt-get install tesseract-ocr tesseract-ocr-deu
 ```
 
 `tesseract-ocr-deu` steht dabei für das deutsche Sprachpaket.
+
+Mehr zu den Nemo Actions [hier](https://github.com/linuxmint/nemo/blob/master/files/usr/share/nemo/actions/sample.nemo_action).
