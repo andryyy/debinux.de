@@ -1,6 +1,7 @@
 Title: OCR per Rechtsklick auf Dokument in Nemo ausführen
 Category: Linux
 Date: 2021-08-17 12:35
+Modified: 2021-08-19 22:40
 Tags: linux, debian, ocr, pdf
 Authors: André Peters
 
