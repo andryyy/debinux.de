@@ -1,5 +1,5 @@
 aside div img {
-  max-width: -moz-available, -webkit-fill-available;
+  max-width: -moz-available;
   width: auto;
   border-radius: 0px;
 }
