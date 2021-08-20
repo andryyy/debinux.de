@@ -4,8 +4,8 @@
 AUTHOR = 'André Peters'
 SITENAME = 'debinux.de'
 SITEURL = 'https://debinux.de'
-#SITETITLE = "debinux.de"
-#SITESUBTITLE = "an admins notepad"
+SITETITLE = "debinux.de"
+SITESUBTITLE = "an admins notepad"
 FAVICON = SITEURL + "/images/favicon.png"
 SITELOGO = SITEURL + "/images/logo.png"
 PORT = 8000
