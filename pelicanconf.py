@@ -10,9 +10,10 @@ FAVICON = SITEURL + "/images/favicon.png"
 SITELOGO = SITEURL + "/images/logo.png"
 PORT = 8000
 
-STATIC_PATHS = ["extra/custom.css", "extra/keys", "images/"]
+STATIC_PATHS = ["extra/custom.css", "extra/keys", "images/", "extra/robots.txt"]
 EXTRA_PATH_METADATA = {
     "extra/custom.css": {"path": "static/custom.css"},
+    "extra/robots.txt": {"path": "robots.txt"},
     "extra/keys/": {"path": "static/keys/"}
 }
 CUSTOM_CSS = "static/custom.css"
