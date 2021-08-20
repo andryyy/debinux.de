@@ -9,19 +9,19 @@
     <meta name="robots" content="index, follow" />
 
 
-    <link rel="stylesheet" type="text/css" href="../theme/stylesheet/style.min.css">
+    <link rel="stylesheet" type="text/css" href="./theme/stylesheet/style.min.css">
 
 
     <link id="pygments-light-theme" rel="stylesheet" type="text/css"
-          href="../theme/pygments/github.min.css">
+          href="./theme/pygments/github.min.css">
 
-    <link rel="stylesheet" href="../theme/tipuesearch/tipuesearch.min.css" />
+    <link rel="stylesheet" href="./theme/tipuesearch/tipuesearch.min.css" />
 
-  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/fontawesome.css">
-  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/brands.css">
-  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/solid.css">
+  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/solid.css">
 
-    <link rel="stylesheet" type="text/css" href="../static/custom.css">
+    <link rel="stylesheet" type="text/css" href="./static/custom.css">
 
 
 
@@ -49,25 +49,25 @@
   <meta property="og:title" content="debinux.de"/>
   <meta property="og:description" content=""/>
   <meta property="og:locale" content="de_DE"/>
-  <meta property="og:url" content=".."/>
+  <meta property="og:url" content="."/>
   <meta property="og:image" content="https://debinux.de/images/logo.png">
 
-  <title>debinux.de &ndash; Stichwort ubuntu</title>
+  <title>debinux.deErgebnisse gefunden - debinux.de</title>
 
 </head>
 <body class="light-theme">
   <aside>
     <div>
-      <a href="../">
+      <a href="./">
         <img src="https://debinux.de/images/logo.png" alt="" title="">
       </a>
 
       <h1>
-        <a href="../"></a>
+        <a href="./"></a>
       </h1>
 
 
-        <form class="navbar-search" action="../search.html" role="search">
+        <form class="navbar-search" action="./search.html" role="search">
           <input type="text" name="q" id="tipue_search_input" placeholder="Suchbegriff eingeben...">
         </form>
 
@@ -77,7 +77,7 @@
 
               <li>
                 <a target="_blank"
-                   href="../pages/impressum-datenschutz.html#impressum-datenschutz">
+                   href="./pages/impressum-datenschutz.html#impressum-datenschutz">
                   Impressum & Datenschutz
                 </a>
               </li>
@@ -110,7 +110,7 @@
   <main>
 
     <nav>
-      <a href="../">Home</a>
+      <a href="./">Home</a>
 
       <a href="/archives.html">Archive</a>
       <a href="/categories.html">Kategorien</a>
@@ -120,30 +120,12 @@
 
     </nav>
 
-
-
-<article>
+<article class="single">
   <header>
-    <h2><a href="../heic-dateien-in-linux-mintubuntu-bildbetrachter-offnen.html#heic-dateien-in-linux-mintubuntu-bildbetrachter-offnen">HEIC Dateien in Linux Mint/Ubuntu Bildbetrachter öffnen</a></h2>
-    <p>
-      Online seit Di 17 August 2021 in <a href="../category/linux.html">Linux</a>
-
-          &#8226; Stichw&ouml;rter
-              <a href="../tag/linux.html">linux</a>,              <a href="../tag/debian.html">debian</a>,              <a href="../tag/ubuntu.html">ubuntu</a>,              <a href="../tag/heif.html">heif</a>,              <a href="../tag/heic.html">heic</a>
-    </p>
+    <h1 id="categories">Ergebnisse gefunden</h1>
   </header>
-  <div>
-      <div><div class="highlight"><pre><span></span><code>sudo apt install heif-gdk-pixbuf
-</code></pre></div>
-
-<p>Das war's schon.</p></div>
-  </div>
+  <div id="tipue_search_content"></div>
 </article>
-
-  <div class="pagination">
-  </div>
-
-
 
     <footer>
 <p>&copy; 2021 </p>
@@ -160,11 +142,24 @@ Gebaut mit <a href="http://getpelican.com" target="_blank">Pelican</a> und dem <
   "@context" : "http://schema.org",
   "@type" : "Blog",
   "name": " debinux.de ",
-  "url" : "..",
+  "url" : ".",
   "image": "https://debinux.de/images/logo.png",
   "description": ""
 }
 </script>
 
+<script src="./theme/tipuesearch/jquery.min.js"></script>
+<script src="./theme/tipuesearch/tipuesearch.min.js"></script>
+<script src="./theme/tipuesearch/tipuesearch_set.min.js"></script>
+<script src="./tipuesearch_content.js"></script>
+<script>
+  $(document).ready(function () {
+    $("#tipue_search_input").tipuesearch({
+      show: 10,
+      mode: "json",
+      contentLocation: "./tipuesearch_content.js",
+    });
+  });
+</script>
 </body>
 </html>
