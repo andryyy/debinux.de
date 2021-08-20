@@ -78,4 +78,6 @@ LINKS_IN_NEW_TAB = True
 
 USE_GOOGLE_FONTS = False
 
-SOCIAL = ("github", "https://github.com/andryyy")
+SOCIAL = (
+    ("github", "https://github.com/andryyy"),
+)
