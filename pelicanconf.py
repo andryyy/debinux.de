@@ -32,7 +32,6 @@ AUTHOR_FEED_RSS = None
 LINKS = (
           ('mailcow', 'https://mailcow.email/'),
           ('Servercow', 'https://www.servercow.de/'),
-          ('André @ GitHub', 'https://github.com/andryyy'),
           ('Keybase.io/debinux', 'https://keybase.io/debinux'),
           ('PGP Public Key', '/static/keys/0x91DFD03726232297.key')
         )
