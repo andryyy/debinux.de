@@ -7,7 +7,7 @@ SITEURL = 'https://debinux.de'
 SITETITLE = "debinux.de"
 SITESUBTITLE = "an admins notepad"
 FAVICON = SITEURL + "/images/favicon.png"
-SITELOGO = SITEURL + "/images/logo.png"
+SITELOGO = SITEURL + "/images/logo.svg"
 PORT = 8000
 
 STATIC_PATHS = ["extra/custom.css", "extra/keys", "images/", "extra/robots.txt"]
