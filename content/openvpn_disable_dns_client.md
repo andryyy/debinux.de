@@ -1,7 +1,7 @@
 Title: OpenVPN-Clients: DNS-Einstellungen und Routen ignorieren
 Category: Linux
-Date: 2021-08-22 16:44
-Modified: 2021-08-22 16:44
+Date: 2021-08-22 18:05
+Modified: 2021-08-22 18:05
 Tags: linux, openvpn, windows, dns
 Authors: André Peters
 

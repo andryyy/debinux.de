@@ -57,8 +57,6 @@ ROBOTS = "index, follow"
 
 COPYRIGHT_YEAR = 2021
 
-DEFAULT_DATE = "fs"
-
 PLUGINS = ["i18n_subsites", "tipue_search"]
 JINJA_ENVIRONMENT = {"extensions": ["jinja2.ext.i18n"]}
 
