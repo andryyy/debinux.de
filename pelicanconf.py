@@ -20,8 +20,6 @@ CUSTOM_CSS = "static/custom.css"
 
 PATH = 'content'
 
-LOAD_CONTENT_CACHE = False
-
 TIMEZONE = 'Europe/Berlin'
 
 # Feed generation is usually not desired when developing
@@ -81,3 +79,5 @@ SOCIAL = (
 )
 
 DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'authors', 'archives', 'search']
+
+GITHUB_CORNER_URL = "https://github.com/andryyy/debinux.de/tree/gh-pages/content"
