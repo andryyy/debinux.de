@@ -147,6 +147,28 @@
 </article>
 <article>
   <header>
+    <h2><a href="../openvpn-clients-dns-einstellungen-und-routen-ignorieren.html#openvpn-clients-dns-einstellungen-und-routen-ignorieren">OpenVPN-Clients: DNS-Einstellungen und Routen ignorieren</a></h2>
+    <p>
+      Online seit So 22 August 2021 in <a href="../category/linux.html">Linux</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="../tag/linux.html">linux</a>,              <a href="../tag/openvpn.html">openvpn</a>,              <a href="../tag/windows.html">windows</a>,              <a href="../tag/dns.html">dns</a>
+    </p>
+  </header>
+  <div>
+      <div><p>Es kann durchaus Vorteile haben viele oder gar alle Anfragen über einen vertrauten Tunnel zu schicken.</p>
+<p>Bevorzugen und empfehlen möchte ich, die weiterzuleitenden Zonen oder Hosts selber auszuwählen und an entsprechender Stelle einzupflegen (Stichwort DNS-Overrides).</p>
+<p>Weiterhin ist es ratsam nicht den gesamten Traffic über ein VPN-Profil zu jagen und stattdessen …</p></div>
+        <br>
+        <a class="btn"
+           href="../openvpn-clients-dns-einstellungen-und-routen-ignorieren.html#openvpn-clients-dns-einstellungen-und-routen-ignorieren">
+          Weiterlesen
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../firefox-next-ohne-branding-auf-linux-mint.html#firefox-next-ohne-branding-auf-linux-mint">Firefox Next ohne Branding auf Linux Mint</a></h2>
     <p>
       Online seit So 22 August 2021 in <a href="../category/linux.html">Linux</a>
@@ -331,39 +353,6 @@ Das Tool sichert die Dateiberechtigungen (auch rekursiv: -R):</p>
 </code></pre></div>
 
 <p><code>&amp; ~</code> beendet die Verarbeitung der Regel.</p></div>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../template-zammad-reverse-proxy-mit-apache.html#template-zammad-reverse-proxy-mit-apache">Template Zammad Reverse Proxy mit Apache</a></h2>
-    <p>
-      Online seit Do 16 Januar 2020 in <a href="../category/linux.html">Linux</a>
-
-          &#8226; Stichw&ouml;rter
-              <a href="../tag/linux.html">linux</a>,              <a href="../tag/apache2.html">apache2</a>,              <a href="../tag/zammad.html">zammad</a>
-    </p>
-  </header>
-  <div>
-      <div><div class="highlight"><pre><span></span><code><span class="nt">&lt;VirtualHost</span> <span class="err">*:80</span><span class="nt">&gt;</span>
-  ServerName ticket.domain.tld
-  RewriteEngine on
-  RewriteCond %{HTTPS} !=on
-  RewriteRule ^/?(.*) https://%{HTTP_HOST}/$1 [R=301,L]
-  ProxyPass / http://127.0.0.1:8090/
-  ProxyPassReverse / http://127.0.0.1:8090/
-  ProxyPreserveHost On
-  ProxyAddHeaders On
-  RequestHeader set X-Forwarded-Proto &quot;http&quot;
-<span class="nt">&lt;/VirtualHost&gt;</span>
-<span class="nt">&lt;VirtualHost</span> <span class="err">*:443</span><span class="nt">&gt;</span>
-  ServerName ticket.domain.tld
-  ProxyPass /ws ws …</code></pre></div></div>
-        <br>
-        <a class="btn"
-           href="../template-zammad-reverse-proxy-mit-apache.html#template-zammad-reverse-proxy-mit-apache">
-          Weiterlesen
-        </a>
   </div>
 </article>
 

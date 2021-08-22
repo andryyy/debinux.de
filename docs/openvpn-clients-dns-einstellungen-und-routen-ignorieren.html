@@ -43,17 +43,28 @@
 
  
 
-    <meta name="author" content="André Peters" />
-    <meta name="description" content="" />
+<meta name="author" content="André Peters" />
+<meta name="description" content="Es kann durchaus Vorteile haben viele oder gar alle Anfragen über einen vertrauten Tunnel zu schicken. Bevorzugen und empfehlen möchte ich, die weiterzuleitenden Zonen oder Hosts selber auszuwählen und an entsprechender Stelle einzupflegen (Stichwort DNS-Overrides). Weiterhin ist es ratsam nicht den gesamten Traffic über ein VPN-Profil zu jagen und stattdessen …" />
+<meta name="keywords" content="linux, openvpn, windows, dns">
+
+
   <meta property="og:site_name" content="debinux.de"/>
-  <meta property="og:type" content="blog"/>
-  <meta property="og:title" content="debinux.de"/>
-  <meta property="og:description" content=""/>
+  <meta property="og:title" content="OpenVPN-Clients: DNS-Einstellungen und Routen ignorieren"/>
+  <meta property="og:description" content="Es kann durchaus Vorteile haben viele oder gar alle Anfragen über einen vertrauten Tunnel zu schicken. Bevorzugen und empfehlen möchte ich, die weiterzuleitenden Zonen oder Hosts selber auszuwählen und an entsprechender Stelle einzupflegen (Stichwort DNS-Overrides). Weiterhin ist es ratsam nicht den gesamten Traffic über ein VPN-Profil zu jagen und stattdessen …"/>
   <meta property="og:locale" content="de_DE"/>
-  <meta property="og:url" content="."/>
+  <meta property="og:url" content="./openvpn-clients-dns-einstellungen-und-routen-ignorieren.html"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2021-08-22 16:44:00+02:00"/>
+  <meta property="article:modified_time" content="2021-08-22 16:44:00+02:00"/>
+  <meta property="article:author" content="./author/andre-peters.html">
+  <meta property="article:section" content="Linux"/>
+  <meta property="article:tag" content="linux"/>
+  <meta property="article:tag" content="openvpn"/>
+  <meta property="article:tag" content="windows"/>
+  <meta property="article:tag" content="dns"/>
   <meta property="og:image" content="https://debinux.de/images/logo.svg">
 
-  <title>debinux.de &ndash; Autoren</title>
+  <title>debinux.de &ndash; OpenVPN-Clients: DNS-Einstellungen und Routen ignorieren</title>
 
 </head>
 <body class="light-theme">
@@ -124,13 +135,45 @@
 
 <article class="single">
   <header>
-    <h1 id="authors">Autoren</h1>
+      
+    <h1 id="openvpn-clients-dns-einstellungen-und-routen-ignorieren">OpenVPN-Clients: DNS-Einstellungen und Routen ignorieren</h1>
+    <p>
+      Online seit So 22 August 2021 in <a href="./category/linux.html">Linux</a>
+
+    </p>
   </header>
+
+
   <div>
-    <ul class="list">
-      <li><a href="./author/andre-peters.html">André Peters</a> (16)</li>
-    </ul>
+    <p>Es kann durchaus Vorteile haben viele oder gar alle Anfragen über einen vertrauten Tunnel zu schicken.</p>
+<p>Bevorzugen und empfehlen möchte ich, die weiterzuleitenden Zonen oder Hosts selber auszuwählen und an entsprechender Stelle einzupflegen (Stichwort DNS-Overrides).</p>
+<p>Weiterhin ist es ratsam nicht den gesamten Traffic über ein VPN-Profil zu jagen und stattdessen auszuwählen, welche Routen man tatsächlich haben möchte.</p>
+<p>In einer OpenVPN-Konfigurationsdatei hängt ihr <strong>ab Version 2.4</strong> Folgendes an, um DNS-Servervorgaben zu unterbinden: <code>pull-filter ignore "dhcp-option DNS"</code></p>
+<p>"For the sake of completeness" noch das Filtern der Routen... :-)</p>
+<div class="highlight"><pre><span></span><code>pull-filter ignore redirect-gateway
+pull-filter ignore &quot;route &quot;
+</code></pre></div>
+
+<p>Es ist sogar möglich einzelne Routen - falls vorhanden - zu akzeptieren:</p>
+<div class="highlight"><pre><span></span><code>pull-filter accept &quot;route 192.168.&quot;
+</code></pre></div>
+
+<p>Ansonsten nehmt ihr den manuellen Weg und fügt die Routen selber hinzu.</p>
+<p>Die Sache erübrigt sich natürlich, wenn ihr den VPN-Server selber in der Hand habt...</p>
   </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="./tag/linux.html">linux</a>
+      <a href="./tag/openvpn.html">openvpn</a>
+      <a href="./tag/windows.html">windows</a>
+      <a href="./tag/dns.html">dns</a>
+    </p>
+  </div>
+
+
+
+
+
 </article>
 
     <footer>

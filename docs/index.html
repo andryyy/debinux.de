@@ -147,6 +147,28 @@
 </article>
 <article>
   <header>
+    <h2><a href="./openvpn-clients-dns-einstellungen-und-routen-ignorieren.html#openvpn-clients-dns-einstellungen-und-routen-ignorieren">OpenVPN-Clients: DNS-Einstellungen und Routen ignorieren</a></h2>
+    <p>
+      Online seit So 22 August 2021 in <a href="./category/linux.html">Linux</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="./tag/linux.html">linux</a>,              <a href="./tag/openvpn.html">openvpn</a>,              <a href="./tag/windows.html">windows</a>,              <a href="./tag/dns.html">dns</a>
+    </p>
+  </header>
+  <div>
+      <div><p>Es kann durchaus Vorteile haben viele oder gar alle Anfragen über einen vertrauten Tunnel zu schicken.</p>
+<p>Bevorzugen und empfehlen möchte ich, die weiterzuleitenden Zonen oder Hosts selber auszuwählen und an entsprechender Stelle einzupflegen (Stichwort DNS-Overrides).</p>
+<p>Weiterhin ist es ratsam nicht den gesamten Traffic über ein VPN-Profil zu jagen und stattdessen …</p></div>
+        <br>
+        <a class="btn"
+           href="./openvpn-clients-dns-einstellungen-und-routen-ignorieren.html#openvpn-clients-dns-einstellungen-und-routen-ignorieren">
+          Weiterlesen
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="./firefox-next-ohne-branding-auf-linux-mint.html#firefox-next-ohne-branding-auf-linux-mint">Firefox Next ohne Branding auf Linux Mint</a></h2>
     <p>
       Online seit So 22 August 2021 in <a href="./category/linux.html">Linux</a>
@@ -317,27 +339,6 @@ Das Tool sichert die Dateiberechtigungen (auch rekursiv: -R):</p>
 </code></pre></div>
 
 <p>Für Debian und Ubuntu lautet der Paketname "acl".</p></div>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="./windows-dns-cache-deaktivierenaktivieren.html#windows-dns-cache-deaktivierenaktivieren">Windows DNS Cache deaktivieren/aktivieren</a></h2>
-    <p>
-      Online seit Mo 01 Februar 2021 in <a href="./category/windows.html">Windows</a>
-
-          &#8226; Stichw&ouml;rter
-              <a href="./tag/windows.html">windows</a>,              <a href="./tag/dns.html">dns</a>
-    </p>
-  </header>
-  <div>
-      <div><p>Deaktivieren:</p>
-<div class="highlight"><pre><span></span><code><span class="kt">reg</span> <span class="n">add</span> <span class="s">&quot;HKLM\System\CurrentControlSet\Services\Dnscache&quot;</span> <span class="o">/</span><span class="n">v</span> <span class="s">&quot;Start&quot;</span> <span class="o">/</span><span class="n">t</span> <span class="n">REG_DWORD</span> <span class="o">/</span><span class="n">d</span> <span class="s">&quot;4&quot;</span> <span class="o">/</span><span class="n">f</span>
-</code></pre></div>
-
-<p>Aktivieren:</p>
-<div class="highlight"><pre><span></span><code><span class="kt">reg</span> <span class="n">add</span> <span class="s">&quot;HKLM\System\CurrentControlSet\Services\Dnscache&quot;</span> <span class="o">/</span><span class="n">v</span> <span class="s">&quot;Start&quot;</span> <span class="o">/</span><span class="n">t</span> <span class="n">REG_DWORD</span> <span class="o">/</span><span class="n">d</span> <span class="s">&quot;2&quot;</span> <span class="o">/</span><span class="n">f</span>
-</code></pre></div></div>
   </div>
 </article>
 

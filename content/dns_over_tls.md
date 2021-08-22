@@ -11,6 +11,8 @@ Da keiner Netzwerkschnüffler mag, verwendet man heute DNS-over-TLS. Neben einem
 
 Eine Liste zu pflegen wäre zu viel Aufwand und redundant. Schaut einfach [hier](https://www.startpage.com/sp/search?query=dns-over-tls+servers&language=deutsch).
 
-Privat vertraue ich meinem Netzwerk bis zur OPNsense. Ab hier geht es weiter via DNS-over-TLS. Mit OPNsense in der Version 21.7 gibt es nun auch die Möglichkeit einen Servernamen zu validieren: https://twitter.com/DKaufmann_/status/1421023327762751489
+Privat vertraue ich meinem Netzwerk bis zur OPNsense. Ab hier geht es weiter via DNS-over-TLS. Mit OPNsense in der Version 21.7 gibt es nun auch die Möglichkeit einen Servernamen zu validieren:
+
+[https://twitter.com/DKaufmann_/status/1421023327762751489](https://twitter.com/DKaufmann_/status/1421023327762751489)
 
 Da Mozilla DNS-over-HTTPS anstrebt, findet ihr in den Verbindungseinstellungen die Möglichkeit einen DNS-over-HTTPS Server zu hinterlegen, schöne Sache!
