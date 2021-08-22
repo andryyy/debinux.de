@@ -20,6 +20,8 @@ CUSTOM_CSS = "static/custom.css"
 
 PATH = 'content'
 
+LOAD_CONTENT_CACHE = False
+
 TIMEZONE = 'Europe/Berlin'
 
 # Feed generation is usually not desired when developing
