@@ -43,17 +43,28 @@
 
  
 
-    <meta name="author" content="André Peters" />
-    <meta name="description" content="" />
+<meta name="author" content="André Peters" />
+<meta name="description" content="Neben Suchanfragen via GET-Methode gehört auch DNS zu einem ewigen Klassiker für Daten-Leaks. Da keiner Netzwerkschnüffler mag, verwendet man heute DNS-over-TLS. Neben einem TLS-Kanal auf Port 853 funktioniert das übrigens auch mit etwas mehr Overhead über HTTPS, es scheint mir aber so, als sie hat sich alles in Richtung DNS-over-TLS …" />
+<meta name="keywords" content="linux, dns, tls, DoT">
+
+
   <meta property="og:site_name" content="debinux.de"/>
-  <meta property="og:type" content="blog"/>
-  <meta property="og:title" content="debinux.de"/>
-  <meta property="og:description" content=""/>
+  <meta property="og:title" content="DNS über TLS"/>
+  <meta property="og:description" content="Neben Suchanfragen via GET-Methode gehört auch DNS zu einem ewigen Klassiker für Daten-Leaks. Da keiner Netzwerkschnüffler mag, verwendet man heute DNS-over-TLS. Neben einem TLS-Kanal auf Port 853 funktioniert das übrigens auch mit etwas mehr Overhead über HTTPS, es scheint mir aber so, als sie hat sich alles in Richtung DNS-over-TLS …"/>
   <meta property="og:locale" content="de_DE"/>
-  <meta property="og:url" content="."/>
+  <meta property="og:url" content="./dns-uber-tls.html"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2021-08-22 16:44:00+02:00"/>
+  <meta property="article:modified_time" content="2021-08-22 16:44:00+02:00"/>
+  <meta property="article:author" content="./author/andre-peters.html">
+  <meta property="article:section" content="Linux"/>
+  <meta property="article:tag" content="linux"/>
+  <meta property="article:tag" content="dns"/>
+  <meta property="article:tag" content="tls"/>
+  <meta property="article:tag" content="DoT"/>
   <meta property="og:image" content="https://debinux.de/images/logo.svg">
 
-  <title>debinux.de &ndash; Autoren</title>
+  <title>debinux.de &ndash; DNS über TLS</title>
 
 </head>
 <body class="light-theme">
@@ -124,13 +135,35 @@
 
 <article class="single">
   <header>
-    <h1 id="authors">Autoren</h1>
+      
+    <h1 id="dns-uber-tls">DNS über TLS</h1>
+    <p>
+      Online seit So 22 August 2021 in <a href="./category/linux.html">Linux</a>
+
+    </p>
   </header>
+
+
   <div>
-    <ul class="list">
-      <li><a href="./author/andre-peters.html">André Peters</a> (15)</li>
-    </ul>
+    <p>Neben Suchanfragen via GET-Methode gehört auch DNS zu einem ewigen Klassiker für Daten-Leaks.</p>
+<p>Da keiner Netzwerkschnüffler mag, verwendet man heute DNS-over-TLS. Neben einem TLS-Kanal auf Port 853 funktioniert das übrigens auch mit etwas mehr Overhead über HTTPS, es scheint mir aber so, als sie hat sich alles in Richtung DNS-over-TLS entwickelt, hm, abwarten.</p>
+<p>Eine Liste zu pflegen wäre zu viel Aufwand und redundant. Schaut einfach <a href="https://www.startpage.com/sp/search?query=dns-over-tls+servers&amp;language=deutsch">hier</a>.</p>
+<p>Privat vertraue ich meinem Netzwerk bis zur OPNsense. Ab hier geht es weiter via DNS-over-TLS. Mit OPNsense in der Version 21.7 gibt es nun auch die Möglichkeit einen Servernamen zu validieren: https://twitter.com/DKaufmann_/status/1421023327762751489</p>
+<p>Da Mozilla DNS-over-HTTPS anstrebt, findet ihr in den Verbindungseinstellungen die Möglichkeit einen DNS-over-HTTPS Server zu hinterlegen, schöne Sache!</p>
   </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="./tag/linux.html">linux</a>
+      <a href="./tag/dns.html">dns</a>
+      <a href="./tag/tls.html">tls</a>
+      <a href="./tag/dot.html">DoT</a>
+    </p>
+  </div>
+
+
+
+
+
 </article>
 
     <footer>

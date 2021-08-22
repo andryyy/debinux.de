@@ -53,7 +53,7 @@
   <meta property="og:url" content=".."/>
   <meta property="og:image" content="https://debinux.de/images/logo.svg">
 
-  <title>debinux.de &ndash; Stichwort dns</title>
+  <title>debinux.de &ndash; Stichwort DoT</title>
 
 </head>
 <body class="light-theme">
@@ -142,27 +142,6 @@
            href="../dns-uber-tls.html#dns-uber-tls">
           Weiterlesen
         </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../windows-dns-cache-deaktivierenaktivieren.html#windows-dns-cache-deaktivierenaktivieren">Windows DNS Cache deaktivieren/aktivieren</a></h2>
-    <p>
-      Online seit Mo 01 Februar 2021 in <a href="../category/windows.html">Windows</a>
-
-          &#8226; Stichw&ouml;rter
-              <a href="../tag/windows.html">windows</a>,              <a href="../tag/dns.html">dns</a>
-    </p>
-  </header>
-  <div>
-      <div><p>Deaktivieren:</p>
-<div class="highlight"><pre><span></span><code><span class="kt">reg</span> <span class="n">add</span> <span class="s">&quot;HKLM\System\CurrentControlSet\Services\Dnscache&quot;</span> <span class="o">/</span><span class="n">v</span> <span class="s">&quot;Start&quot;</span> <span class="o">/</span><span class="n">t</span> <span class="n">REG_DWORD</span> <span class="o">/</span><span class="n">d</span> <span class="s">&quot;4&quot;</span> <span class="o">/</span><span class="n">f</span>
-</code></pre></div>
-
-<p>Aktivieren:</p>
-<div class="highlight"><pre><span></span><code><span class="kt">reg</span> <span class="n">add</span> <span class="s">&quot;HKLM\System\CurrentControlSet\Services\Dnscache&quot;</span> <span class="o">/</span><span class="n">v</span> <span class="s">&quot;Start&quot;</span> <span class="o">/</span><span class="n">t</span> <span class="n">REG_DWORD</span> <span class="o">/</span><span class="n">d</span> <span class="s">&quot;2&quot;</span> <span class="o">/</span><span class="n">f</span>
-</code></pre></div></div>
   </div>
 </article>
 

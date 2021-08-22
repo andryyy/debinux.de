@@ -126,6 +126,27 @@
 
 <article>
   <header>
+    <h2><a href="../dns-uber-tls.html#dns-uber-tls">DNS über TLS</a></h2>
+    <p>
+      Online seit So 22 August 2021 in <a href="../category/linux.html">Linux</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="../tag/linux.html">linux</a>,              <a href="../tag/dns.html">dns</a>,              <a href="../tag/tls.html">tls</a>,              <a href="../tag/dot.html">DoT</a>
+    </p>
+  </header>
+  <div>
+      <div><p>Neben Suchanfragen via GET-Methode gehört auch DNS zu einem ewigen Klassiker für Daten-Leaks.</p>
+<p>Da keiner Netzwerkschnüffler mag, verwendet man heute DNS-over-TLS. Neben einem TLS-Kanal auf Port 853 funktioniert das übrigens auch mit etwas mehr Overhead über HTTPS, es scheint mir aber so, als sie hat sich alles in Richtung DNS-over-TLS …</p></div>
+        <br>
+        <a class="btn"
+           href="../dns-uber-tls.html#dns-uber-tls">
+          Weiterlesen
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../firefox-next-ohne-branding-auf-linux-mint.html#firefox-next-ohne-branding-auf-linux-mint">Firefox Next ohne Branding auf Linux Mint</a></h2>
     <p>
       Online seit So 22 August 2021 in <a href="../category/linux.html">Linux</a>
@@ -341,34 +362,6 @@ Das Tool sichert die Dateiberechtigungen (auch rekursiv: -R):</p>
         <br>
         <a class="btn"
            href="../template-zammad-reverse-proxy-mit-apache.html#template-zammad-reverse-proxy-mit-apache">
-          Weiterlesen
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../rspamd-subject-umschreiben-und-reply-to-hinzufugen.html#rspamd-subject-umschreiben-und-reply-to-hinzufugen">Rspamd: Subject umschreiben und Reply-To hinzufügen</a></h2>
-    <p>
-      Online seit Sa 28 Dezember 2019 in <a href="../category/linux.html">Linux</a>
-
-          &#8226; Stichw&ouml;rter
-              <a href="../tag/linux.html">linux</a>,              <a href="../tag/rspamd.html">rspamd</a>
-    </p>
-  </header>
-  <div>
-      <div><p>Ändert Subject auf "[Tag] Altes-Subject" und fügt einen Reply-To "moo@moo.com" hinzu.</p>
-<p>Die alten Headerfelder werden vorher entfernt.</p>
-<p>Nur ein Snippet.</p>
-<p><code>remove_headers { X = 0 }</code> sollte alle Header entfernen, nicht nur den ersten. Beim Subject und Reply-To eher unnötig.</p>
-<div class="highlight"><pre><span></span><code><span class="n">rspamd_config</span><span class="o">:</span><span class="n">register_symbol</span><span class="o">({</span>
-  <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;SUBJECT_REWRITE_ADD_HEADER&#39;</span><span class="o">,</span>
-  <span class="n">type</span> <span class="o">=</span> <span class="s1">&#39;postfilter&#39;</span><span class="o">,</span>
-  <span class="n">callback</span> <span class="o">=</span> <span class="kd">function</span><span class="o">(</span><span class="n">task</span><span class="o">)</span>
-    <span class="n">local</span> <span class="n">util …</span></code></pre></div></div>
-        <br>
-        <a class="btn"
-           href="../rspamd-subject-umschreiben-und-reply-to-hinzufugen.html#rspamd-subject-umschreiben-und-reply-to-hinzufugen">
           Weiterlesen
         </a>
   </div>

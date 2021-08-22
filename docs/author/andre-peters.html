@@ -126,6 +126,27 @@
 
 <article>
   <header>
+    <h2><a href="../dns-uber-tls.html#dns-uber-tls">DNS über TLS</a></h2>
+    <p>
+      Online seit So 22 August 2021 in <a href="../category/linux.html">Linux</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="../tag/linux.html">linux</a>,              <a href="../tag/dns.html">dns</a>,              <a href="../tag/tls.html">tls</a>,              <a href="../tag/dot.html">DoT</a>
+    </p>
+  </header>
+  <div>
+      <div><p>Neben Suchanfragen via GET-Methode gehört auch DNS zu einem ewigen Klassiker für Daten-Leaks.</p>
+<p>Da keiner Netzwerkschnüffler mag, verwendet man heute DNS-over-TLS. Neben einem TLS-Kanal auf Port 853 funktioniert das übrigens auch mit etwas mehr Overhead über HTTPS, es scheint mir aber so, als sie hat sich alles in Richtung DNS-over-TLS …</p></div>
+        <br>
+        <a class="btn"
+           href="../dns-uber-tls.html#dns-uber-tls">
+          Weiterlesen
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../firefox-next-ohne-branding-auf-linux-mint.html#firefox-next-ohne-branding-auf-linux-mint">Firefox Next ohne Branding auf Linux Mint</a></h2>
     <p>
       Online seit So 22 August 2021 in <a href="../category/linux.html">Linux</a>
@@ -317,40 +338,6 @@ Das Tool sichert die Dateiberechtigungen (auch rekursiv: -R):</p>
 <p>Aktivieren:</p>
 <div class="highlight"><pre><span></span><code><span class="kt">reg</span> <span class="n">add</span> <span class="s">&quot;HKLM\System\CurrentControlSet\Services\Dnscache&quot;</span> <span class="o">/</span><span class="n">v</span> <span class="s">&quot;Start&quot;</span> <span class="o">/</span><span class="n">t</span> <span class="n">REG_DWORD</span> <span class="o">/</span><span class="n">d</span> <span class="s">&quot;2&quot;</span> <span class="o">/</span><span class="n">f</span>
 </code></pre></div></div>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../gocryptfs-kompilieren-fur-hw-beschleunigtes-aes-und-systemd-dienst-einrichten.html#gocryptfs-kompilieren-fur-hw-beschleunigtes-aes-und-systemd-dienst-einrichten">GoCryptFS kompilieren (für HW-beschleunigtes AES) und Systemd Dienst einrichten</a></h2>
-    <p>
-      Online seit Mo 10 August 2020 in <a href="../category/linux.html">Linux</a>
-
-          &#8226; Stichw&ouml;rter
-              <a href="../tag/linux.html">linux</a>,              <a href="../tag/crypt.html">crypt</a>
-    </p>
-  </header>
-  <div>
-      <div><p><strong>Wichtig</strong>: Nach der Initialisierung den Master-Key sicher speichern!</p>
-<div class="highlight"><pre><span></span><code><span class="err">#</span><span class="w"> </span><span class="mf">1.</span><span class="w"></span>
-<span class="n">yum</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">openssl</span><span class="o">-</span><span class="n">devel</span><span class="w"> </span><span class="n">fuse</span><span class="w"></span>
-
-<span class="err">#</span><span class="w"> </span><span class="mf">2.</span><span class="w"></span>
-<span class="k">go</span><span class="w"> </span><span class="k">get</span><span class="w"> </span><span class="o">-</span><span class="n">d</span><span class="w"> </span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">rfjakob</span><span class="o">/</span><span class="n">gocryptfs</span><span class="w"></span>
-<span class="n">cd</span><span class="w"> </span><span class="err">$</span><span class="p">(</span><span class="k">go</span><span class="w"> </span><span class="n">env</span><span class="w"> </span><span class="n">GOPATH</span><span class="p">)</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">rfjakob</span><span class="o">/</span><span class="n">gocryptfs</span><span class="w"></span>
-<span class="p">.</span><span class="o">/</span><span class="n">build</span><span class="p">.</span><span class="n">bash</span><span class="w"></span>
-<span class="n">cp</span><span class="w"> </span><span class="n">gocryptfs</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="w"></span>
-
-<span class="err">#</span><span class="w"> </span><span class="mf">3.</span><span class="w"></span>
-<span class="n">mkdir</span><span class="w"> </span><span class="o">-</span><span class="n">p</span><span class="w"> </span><span class="o">/</span><span class="k">data</span><span class="o">/</span><span class="err">{</span><span class="n">crypted</span><span class="p">,</span><span class="n">decrypted</span><span class="err">}</span><span class="w"></span>
-
-<span class="err">#</span><span class="w"> </span><span class="mf">4.</span><span class="w"></span>
-<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="n"> ! -f /data/crypted/gocryptfs …</span></code></pre></div></div>
-        <br>
-        <a class="btn"
-           href="../gocryptfs-kompilieren-fur-hw-beschleunigtes-aes-und-systemd-dienst-einrichten.html#gocryptfs-kompilieren-fur-hw-beschleunigtes-aes-und-systemd-dienst-einrichten">
-          Weiterlesen
-        </a>
   </div>
 </article>
 
