@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>debinux.de - André Peters</title><link>https://debinux.de/</link><description>an admins notepad</description><lastBuildDate>Mon, 23 Aug 2021 15:16:00 +0200</lastBuildDate><item><title>YogaDNS als flexibler DNS-Client für Windows mit DoH und DoT</title><link>https://debinux.de/yogadns-als-flexibler-dns-client-fur-windows-mit-doh-und-dot.html</link><description>&lt;p&gt;Gerade zufällig drüber gestolpert: &lt;a href="https://yogadns.com/"&gt;YogaDNS&lt;/a&gt;.&lt;/p&gt;
+<rss version="2.0"><channel><title>debinux.de - André Peters</title><link>https://debinux.de/</link><description>an admins notepad</description><lastBuildDate>Mon, 23 Aug 2021 20:31:00 +0200</lastBuildDate><item><title>Flatpak Cursor Theme lesbar machen</title><link>https://debinux.de/flatpak-cursor-theme-lesbar-machen.html</link><description>&lt;p&gt;Ein Quickie...&lt;/p&gt;
+&lt;p&gt;App-ID finden:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;~$ flatpak list --columns=name,application --app
+Name                          Application ID
+Delta Chat                    chat.delta.desktop
+Pinta                         com.github.PintaProject.Pinta
+PDF Arranger                  com.github.jeromerobert.pdfarranger
+Flameshot                     org.flameshot.Flameshot
+KeePassXC                     org.keepassxc.KeePassXC
+Telegram Desktop              org.telegram.desktop
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Im User-Kontext Zugriff auf &lt;code&gt;~/.icons&lt;/code&gt; geben: &lt;code&gt;flatpak --user …&lt;/code&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">André Peters</dc:creator><pubDate>Mon, 23 Aug 2021 20:31:00 +0200</pubDate><guid isPermaLink="false">tag:debinux.de,2021-08-23:/flatpak-cursor-theme-lesbar-machen.html</guid><category>Linux</category><category>linux</category><category>flatpak</category></item><item><title>YogaDNS als flexibler DNS-Client für Windows mit DoH und DoT</title><link>https://debinux.de/yogadns-als-flexibler-dns-client-fur-windows-mit-doh-und-dot.html</link><description>&lt;p&gt;Gerade zufällig drüber gestolpert: &lt;a href="https://yogadns.com/"&gt;YogaDNS&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Viel einfacher kann die Namensauflösung wohl kaum unter Windows gesteuert werden.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">André Peters</dc:creator><pubDate>Mon, 23 Aug 2021 15:16:00 +0200</pubDate><guid isPermaLink="false">tag:debinux.de,2021-08-23:/yogadns-als-flexibler-dns-client-fur-windows-mit-doh-und-dot.html</guid><category>Windows</category><category>windows</category><category>dns</category><category>tls</category></item><item><title>Flatpak-Anwendungen aus CLI verwenden</title><link>https://debinux.de/flatpak-anwendungen-aus-cli-verwenden.html</link><description>&lt;p&gt;Für mich primär aus einem Grund wichtig: Autostart und Keyboard Shortcuts.&lt;/p&gt;
 &lt;p&gt;Runtimes interessieren uns herzlich wenig, daher listen wir nur Anwendungen auf.&lt;/p&gt;
 &lt;p&gt;Der Scope ist per Standard &lt;code&gt;--system&lt;/code&gt;. Anwendungen, die in den User-Scope installiert wurden, seht ihr mit &lt;code&gt;--user&lt;/code&gt;.&lt;/p&gt;
