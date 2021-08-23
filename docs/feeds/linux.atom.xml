@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>debinux.de - Linux</title><link href="https://debinux.de/" rel="alternate"></link><link href="https://debinux.de/feeds/linux.atom.xml" rel="self"></link><id>https://debinux.de/</id><updated>2021-08-22T18:05:00+02:00</updated><subtitle>an admins notepad</subtitle><entry><title>OpenVPN-Clients: DNS-Einstellungen und Routen ignorieren</title><link href="https://debinux.de/openvpn-clients-dns-einstellungen-und-routen-ignorieren.html" rel="alternate"></link><published>2021-08-22T18:05:00+02:00</published><updated>2021-08-22T18:05:00+02:00</updated><author><name>André Peters</name></author><id>tag:debinux.de,2021-08-22:/openvpn-clients-dns-einstellungen-und-routen-ignorieren.html</id><summary type="html">&lt;p&gt;Es kann durchaus Vorteile haben viele oder gar alle Anfragen über einen vertrauten Tunnel zu schicken.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>debinux.de - Linux</title><link href="https://debinux.de/" rel="alternate"></link><link href="https://debinux.de/feeds/linux.atom.xml" rel="self"></link><id>https://debinux.de/</id><updated>2021-08-23T10:46:00+02:00</updated><subtitle>an admins notepad</subtitle><entry><title>Flatpak-Anwendungen aus CLI verwenden</title><link href="https://debinux.de/flatpak-anwendungen-aus-cli-verwenden.html" rel="alternate"></link><published>2021-08-23T10:46:00+02:00</published><updated>2021-08-23T10:46:00+02:00</updated><author><name>André Peters</name></author><id>tag:debinux.de,2021-08-23:/flatpak-anwendungen-aus-cli-verwenden.html</id><summary type="html">&lt;p&gt;Für mich primär aus einem Grund wichtig: Autostart und Keyboard Shortcuts.&lt;/p&gt;
+&lt;p&gt;Runtimes interessieren uns herzlich wenig, daher listen wir nur Anwendungen auf.&lt;/p&gt;
+&lt;p&gt;Der Scope ist per Standard &lt;code&gt;--system&lt;/code&gt;. Anwendungen, die in den User-Scope installiert wurden, seht ihr mit &lt;code&gt;--user&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;~$ flatpak list --columns=name,application --app
+Name                          Application ID
+Delta Chat …&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;Für mich primär aus einem Grund wichtig: Autostart und Keyboard Shortcuts.&lt;/p&gt;
+&lt;p&gt;Runtimes interessieren uns herzlich wenig, daher listen wir nur Anwendungen auf.&lt;/p&gt;
+&lt;p&gt;Der Scope ist per Standard &lt;code&gt;--system&lt;/code&gt;. Anwendungen, die in den User-Scope installiert wurden, seht ihr mit &lt;code&gt;--user&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;~$ flatpak list --columns=name,application --app
+Name                          Application ID
+Delta Chat                    chat.delta.desktop
+Pinta                         com.github.PintaProject.Pinta
+PDF Arranger                  com.github.jeromerobert.pdfarranger
+Flameshot                     org.flameshot.Flameshot
+KeePassXC                     org.keepassxc.KeePassXC
+Telegram Desktop              org.telegram.desktop
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Die Application ID ist relevant. Wir starten eine Anwendung wie folgt:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;flatpak run org.flameshot.Flameshot
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Parameter können beliebig angehangen werden. Im Fall von Flameshot etwa "gui":&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;flatpak run org.flameshot.Flameshot gui
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Kann auch als Alias verwendet (&lt;code&gt;alias flameshot="flatpak run org.flameshot.Flameshot gui"&lt;/code&gt;) und in die &lt;code&gt;~/.bashrc&lt;/code&gt; eingepflegt werden. Oder welcher Shell ihr auch treu seid...&lt;/p&gt;</content><category term="Linux"></category><category term="linux"></category><category term="flatpak"></category></entry><entry><title>OpenVPN-Clients: DNS-Einstellungen und Routen ignorieren</title><link href="https://debinux.de/openvpn-clients-dns-einstellungen-und-routen-ignorieren.html" rel="alternate"></link><published>2021-08-22T18:05:00+02:00</published><updated>2021-08-22T18:05:00+02:00</updated><author><name>André Peters</name></author><id>tag:debinux.de,2021-08-22:/openvpn-clients-dns-einstellungen-und-routen-ignorieren.html</id><summary type="html">&lt;p&gt;Es kann durchaus Vorteile haben viele oder gar alle Anfragen über einen vertrauten Tunnel zu schicken.&lt;/p&gt;
 &lt;p&gt;Bevorzugen und empfehlen möchte ich, die weiterzuleitenden Zonen oder Hosts selber auszuwählen und an entsprechender Stelle einzupflegen (Stichwort DNS-Overrides).&lt;/p&gt;
 &lt;p&gt;Weiterhin ist es ratsam nicht den gesamten Traffic über ein VPN-Profil zu jagen und stattdessen …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Es kann durchaus Vorteile haben viele oder gar alle Anfragen über einen vertrauten Tunnel zu schicken.&lt;/p&gt;
 &lt;p&gt;Bevorzugen und empfehlen möchte ich, die weiterzuleitenden Zonen oder Hosts selber auszuwählen und an entsprechender Stelle einzupflegen (Stichwort DNS-Overrides).&lt;/p&gt;

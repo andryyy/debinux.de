@@ -126,6 +126,31 @@
 
 <article>
   <header>
+    <h2><a href="../flatpak-anwendungen-aus-cli-verwenden.html#flatpak-anwendungen-aus-cli-verwenden">Flatpak-Anwendungen aus CLI verwenden</a></h2>
+    <p>
+      Online seit Mo 23 August 2021 in <a href="../category/linux.html">Linux</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="../tag/linux.html">linux</a>,              <a href="../tag/flatpak.html">flatpak</a>
+    </p>
+  </header>
+  <div>
+      <div><p>Für mich primär aus einem Grund wichtig: Autostart und Keyboard Shortcuts.</p>
+<p>Runtimes interessieren uns herzlich wenig, daher listen wir nur Anwendungen auf.</p>
+<p>Der Scope ist per Standard <code>--system</code>. Anwendungen, die in den User-Scope installiert wurden, seht ihr mit <code>--user</code>.</p>
+<div class="highlight"><pre><span></span><code>~$ flatpak list --columns=name,application --app
+Name                          Application ID
+Delta Chat …</code></pre></div></div>
+        <br>
+        <a class="btn"
+           href="../flatpak-anwendungen-aus-cli-verwenden.html#flatpak-anwendungen-aus-cli-verwenden">
+          Weiterlesen
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../openvpn-clients-dns-einstellungen-und-routen-ignorieren.html#openvpn-clients-dns-einstellungen-und-routen-ignorieren">OpenVPN-Clients: DNS-Einstellungen und Routen ignorieren</a></h2>
     <p>
       Online seit So 22 August 2021 in <a href="../category/linux.html">Linux</a>
@@ -333,26 +358,6 @@ Das Tool sichert die Dateiberechtigungen (auch rekursiv: -R):</p>
            href="../gocryptfs-kompilieren-fur-hw-beschleunigtes-aes-und-systemd-dienst-einrichten.html#gocryptfs-kompilieren-fur-hw-beschleunigtes-aes-und-systemd-dienst-einrichten">
           Weiterlesen
         </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../rsyslog-via-udp-erhaltene-logs-in-eine-datei-schreiben.html#rsyslog-via-udp-erhaltene-logs-in-eine-datei-schreiben">Rsyslog: via UDP erhaltene Logs in eine Datei schreiben</a></h2>
-    <p>
-      Online seit Fr 29 Mai 2020 in <a href="../category/linux.html">Linux</a>
-
-          &#8226; Stichw&ouml;rter
-              <a href="../tag/linux.html">linux</a>,              <a href="../tag/rsyslog.html">rsyslog</a>
-    </p>
-  </header>
-  <div>
-      <div><div class="highlight"><pre><span></span><code><span class="o">$</span><span class="n">template</span> <span class="n">RemoteUDP</span><span class="p">,</span><span class="s2">&quot;/var/log/remote-udp.log&quot;</span>
-<span class="p">:</span><span class="n">inputname</span><span class="p">,</span> <span class="n">isequal</span><span class="p">,</span> <span class="s2">&quot;imudp&quot;</span> <span class="err">?</span><span class="n">RemoteUDP</span>
-<span class="o">&amp;</span> <span class="o">~</span>
-</code></pre></div>
-
-<p><code>&amp; ~</code> beendet die Verarbeitung der Regel.</p></div>
   </div>
 </article>
 

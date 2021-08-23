@@ -126,6 +126,30 @@
 
 <article>
   <header>
+    <h2><a href="./dateiberechtigungen-sichern.html#dateiberechtigungen-sichern">Dateiberechtigungen sichern</a></h2>
+    <p>
+      Online seit Di 16 Februar 2021 in <a href="./category/linux.html">Linux</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="./tag/linux.html">linux</a>,              <a href="./tag/acl.html">acl</a>,              <a href="./tag/backup.html">backup</a>
+    </p>
+  </header>
+  <div>
+      <div><p>Ein kleiner Helfer, der gerne beim Backup vergessen wird: <code>getfacl</code> - <em>get file acl</em>.
+Das Tool sichert die Dateiberechtigungen (auch rekursiv: -R):</p>
+<div class="highlight"><pre><span></span><code>getfacl -R /ein/pfad &gt; acl_ein_pfad_$(date +&quot;%d.%m.%Y_%H%M&quot;).acl
+</code></pre></div>
+
+<p>Und zurück:</p>
+<div class="highlight"><pre><span></span><code>setfacl --restore=datei.acl
+</code></pre></div>
+
+<p>Für Debian und Ubuntu lautet der Paketname "acl".</p></div>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="./windows-dns-cache-deaktivierenaktivieren.html#windows-dns-cache-deaktivierenaktivieren">Windows DNS Cache deaktivieren/aktivieren</a></h2>
     <p>
       Online seit Mo 01 Februar 2021 in <a href="./category/windows.html">Windows</a>

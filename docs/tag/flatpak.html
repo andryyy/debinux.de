@@ -9,19 +9,19 @@
     <meta name="robots" content="index, follow" />
 
 
-    <link rel="stylesheet" type="text/css" href="./theme/stylesheet/style.min.css">
+    <link rel="stylesheet" type="text/css" href="../theme/stylesheet/style.min.css">
 
 
     <link id="pygments-light-theme" rel="stylesheet" type="text/css"
-          href="./theme/pygments/github.min.css">
+          href="../theme/pygments/github.min.css">
 
-    <link rel="stylesheet" href="./theme/tipuesearch/tipuesearch.min.css" />
+    <link rel="stylesheet" href="../theme/tipuesearch/tipuesearch.min.css" />
 
-  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/fontawesome.css">
-  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/brands.css">
-  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/solid.css">
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/solid.css">
 
-    <link rel="stylesheet" type="text/css" href="./static/custom.css">
+    <link rel="stylesheet" type="text/css" href="../static/custom.css">
 
     <link href="https://debinux.de/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="debinux.de Atom">
 
@@ -50,25 +50,25 @@
   <meta property="og:title" content="debinux.de"/>
   <meta property="og:description" content=""/>
   <meta property="og:locale" content="de_DE"/>
-  <meta property="og:url" content="."/>
+  <meta property="og:url" content=".."/>
   <meta property="og:image" content="https://debinux.de/images/logo.svg">
 
-  <title>debinux.de &ndash; Autoren</title>
+  <title>debinux.de &ndash; Stichwort flatpak</title>
 
 </head>
 <body class="light-theme">
   <aside>
     <div>
-      <a href="./">
+      <a href="../">
         <img src="https://debinux.de/images/logo.svg" alt="debinux.de" title="debinux.de" width="542px" height="420px">
       </a>
 
       <h1>
-        <a href="./">debinux.de</a>
+        <a href="../">debinux.de</a>
       </h1>
 
 <p>an admins notepad</p>
-        <form class="navbar-search" action="./search.html" role="search">
+        <form class="navbar-search" action="../search.html" role="search">
           <input type="text" name="q" id="tipue_search_input" placeholder="Suchbegriff eingeben...">
         </form>
 
@@ -78,7 +78,7 @@
 
               <li>
                 <a target="_blank"
-                   href="./pages/impressum-datenschutz.html#impressum-datenschutz">
+                   href="../pages/impressum-datenschutz.html#impressum-datenschutz">
                   Impressum & Datenschutz
                 </a>
               </li>
@@ -111,7 +111,7 @@
   <main>
 
     <nav>
-      <a href="./">Home</a>
+      <a href="../">Home</a>
 
       <a href="/archives.html">Archive</a>
       <a href="/categories.html">Kategorien</a>
@@ -122,16 +122,37 @@
 
     </nav>
 
-<article class="single">
+
+
+<article>
   <header>
-    <h1 id="authors">Autoren</h1>
+    <h2><a href="../flatpak-anwendungen-aus-cli-verwenden.html#flatpak-anwendungen-aus-cli-verwenden">Flatpak-Anwendungen aus CLI verwenden</a></h2>
+    <p>
+      Online seit Mo 23 August 2021 in <a href="../category/linux.html">Linux</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="../tag/linux.html">linux</a>,              <a href="../tag/flatpak.html">flatpak</a>
+    </p>
   </header>
   <div>
-    <ul class="list">
-      <li><a href="./author/andre-peters.html">André Peters</a> (17)</li>
-    </ul>
+      <div><p>Für mich primär aus einem Grund wichtig: Autostart und Keyboard Shortcuts.</p>
+<p>Runtimes interessieren uns herzlich wenig, daher listen wir nur Anwendungen auf.</p>
+<p>Der Scope ist per Standard <code>--system</code>. Anwendungen, die in den User-Scope installiert wurden, seht ihr mit <code>--user</code>.</p>
+<div class="highlight"><pre><span></span><code>~$ flatpak list --columns=name,application --app
+Name                          Application ID
+Delta Chat …</code></pre></div></div>
+        <br>
+        <a class="btn"
+           href="../flatpak-anwendungen-aus-cli-verwenden.html#flatpak-anwendungen-aus-cli-verwenden">
+          Weiterlesen
+        </a>
   </div>
 </article>
+
+  <div class="pagination">
+  </div>
+
+
 
     <footer>
 <p>&copy; 2021 </p>
@@ -148,7 +169,7 @@ Gebaut mit <a href="http://getpelican.com" target="_blank">Pelican</a> und dem <
   "@context" : "http://schema.org",
   "@type" : "Blog",
   "name": " debinux.de ",
-  "url" : ".",
+  "url" : "..",
   "image": "https://debinux.de/images/logo.svg",
   "description": ""
 }
