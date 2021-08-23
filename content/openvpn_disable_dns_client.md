@@ -13,7 +13,7 @@ Weiterhin ist es ratsam nicht den gesamten Traffic über ein VPN-Profil zu jagen
 
 In einer OpenVPN-Konfigurationsdatei hängt ihr **ab Version 2.4** Folgendes an, um DNS-Servervorgaben zu unterbinden: `pull-filter ignore "dhcp-option DNS"`
 
-"For the sake of completeness" noch das Filtern der Routen... :-)
+"For the sake of completeness" noch das Filtern der Routen... :)
 
 ```
 pull-filter ignore redirect-gateway
