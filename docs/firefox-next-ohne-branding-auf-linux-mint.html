@@ -55,7 +55,7 @@
   <meta property="og:url" content="./firefox-next-ohne-branding-auf-linux-mint.html"/>
   <meta property="og:type" content="article"/>
   <meta property="article:published_time" content="2021-08-22 16:21:00+02:00"/>
-  <meta property="article:modified_time" content="2021-08-22 16:21:00+02:00"/>
+  <meta property="article:modified_time" content="2021-08-23 13:05:00+02:00"/>
   <meta property="article:author" content="./author/andre-peters.html">
   <meta property="article:section" content="Linux"/>
   <meta property="article:tag" content="linux"/>
@@ -155,8 +155,11 @@
 # <span class="nv">Vorhandene</span> <span class="nv">lokale</span> <span class="nv">Daten</span> <span class="nv">l</span>ö<span class="nv">schen</span>, <span class="nv">falls</span> <span class="nv">gew</span>ü<span class="nv">nscht</span>
 <span class="nv">cd</span> <span class="c1">; rm -rf .mozilla .cache/mozilla</span>
 
-# <span class="nv">Linux</span> <span class="nv">Mint</span> <span class="nv">Branding</span> <span class="nv">entfernen</span>
+# <span class="nv">Linux</span> <span class="nv">Mint</span> <span class="nv">Branding</span><span class="o">-</span><span class="nv">Reste</span> <span class="nv">entfernen</span>
 <span class="nv">sudo</span> <span class="nv">rm</span> <span class="o">-</span><span class="nv">rf</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">lib</span><span class="o">/</span><span class="nv">firefox</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">lib</span><span class="o">/</span><span class="nv">firefox</span><span class="o">-</span><span class="nv">addons</span><span class="o">/</span>
+
+# <span class="nv">Neues</span> <span class="nv">Branding</span> <span class="nv">verhindern</span> <span class="ss">(</span><span class="nv">wird</span> <span class="nv">IMMER</span> <span class="nv">angewendet</span>, <span class="nv">wenn</span> <span class="nv">Datei</span> <span class="nv">vorhanden</span><span class="o">!</span> <span class="nv">Daher</span> <span class="nv">l</span>ö<span class="nv">schen</span><span class="o">!</span><span class="ss">)</span>
+<span class="nv">sudo</span> <span class="nv">mv</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">share</span><span class="o">/</span><span class="nv">ubuntu</span><span class="o">-</span><span class="nv">system</span><span class="o">-</span><span class="nv">adjustments</span> <span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">share</span><span class="o">/</span><span class="nv">ubuntu</span><span class="o">-</span><span class="nv">system</span><span class="o">-</span><span class="nv">adjustments_BACKUP</span>
 
 # <span class="nv">Repository</span> <span class="nv">hinzuf</span>ü<span class="nv">gen</span>
 <span class="nv">sudo</span> <span class="nv">add</span><span class="o">-</span><span class="nv">apt</span><span class="o">-</span><span class="nv">repository</span> <span class="nv">ppa</span>:<span class="nv">mozillateam</span><span class="o">/</span><span class="nv">firefox</span><span class="o">-</span><span class="k">next</span>

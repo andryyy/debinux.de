@@ -1,7 +1,7 @@
 Title: Firefox Next ohne Branding auf Linux Mint
 Category: Linux
 Date: 2021-08-22 16:21
-Modified: 2021-08-22 16:21
+Modified: 2021-08-23 13:05
 Tags: linux, mint, firefox
 Authors: André Peters
 
@@ -19,8 +19,11 @@ sudo apt purge firefox 'firefox-locale*' xul-ext-ubufox
 # Vorhandene lokale Daten löschen, falls gewünscht
 cd ; rm -rf .mozilla .cache/mozilla
 
-# Linux Mint Branding entfernen
+# Linux Mint Branding-Reste entfernen
 sudo rm -rf /usr/lib/firefox /usr/lib/firefox-addons/
+
+# Neues Branding verhindern (wird IMMER angewendet, wenn Datei vorhanden! Daher löschen!)
+sudo mv /usr/share/ubuntu-system-adjustments /usr/share/ubuntu-system-adjustments_BACKUP
 
 # Repository hinzufügen
 sudo add-apt-repository ppa:mozillateam/firefox-next

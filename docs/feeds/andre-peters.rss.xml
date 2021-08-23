@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>debinux.de - André Peters</title><link>https://debinux.de/</link><description>an admins notepad</description><lastBuildDate>Mon, 23 Aug 2021 10:46:00 +0200</lastBuildDate><item><title>Flatpak-Anwendungen aus CLI verwenden</title><link>https://debinux.de/flatpak-anwendungen-aus-cli-verwenden.html</link><description>&lt;p&gt;Für mich primär aus einem Grund wichtig: Autostart und Keyboard Shortcuts.&lt;/p&gt;
+<rss version="2.0"><channel><title>debinux.de - André Peters</title><link>https://debinux.de/</link><description>an admins notepad</description><lastBuildDate>Mon, 23 Aug 2021 13:05:00 +0200</lastBuildDate><item><title>Flatpak-Anwendungen aus CLI verwenden</title><link>https://debinux.de/flatpak-anwendungen-aus-cli-verwenden.html</link><description>&lt;p&gt;Für mich primär aus einem Grund wichtig: Autostart und Keyboard Shortcuts.&lt;/p&gt;
 &lt;p&gt;Runtimes interessieren uns herzlich wenig, daher listen wir nur Anwendungen auf.&lt;/p&gt;
 &lt;p&gt;Der Scope ist per Standard &lt;code&gt;--system&lt;/code&gt;. Anwendungen, die in den User-Scope installiert wurden, seht ihr mit &lt;code&gt;--user&lt;/code&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;~$ flatpak list --columns=name,application --app
