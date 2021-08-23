@@ -23,7 +23,7 @@ cd ; rm -rf .mozilla .cache/mozilla
 sudo rm -rf /usr/lib/firefox /usr/lib/firefox-addons/
 
 # Neues Branding verhindern (wird IMMER angewendet, wenn Datei vorhanden! Daher löschen!)
-sudo mv /usr/share/ubuntu-system-adjustments /usr/share/ubuntu-system-adjustments_BACKUP
+sudo mv /usr/share/ubuntu-system-adjustments/firefox/ /usr/share/ubuntu-system-adjustments/firefox_backup
 
 # Repository hinzufügen
 sudo add-apt-repository ppa:mozillateam/firefox-next
