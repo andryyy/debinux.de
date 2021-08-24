@@ -1,4 +1,4 @@
-Title: Flatpak Cursor Theme lesbar machen
+Title: Flatpak: Cursor Theme für Apps lesbar machen
 Category: Linux
 Date: 2021-08-23 20:31
 Tags: linux, flatpak
