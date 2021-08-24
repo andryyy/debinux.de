@@ -81,3 +81,9 @@ SOCIAL = (
 DIRECT_TEMPLATES = ['index', 'tags', 'categories', 'authors', 'archives', 'search']
 
 GITHUB_CORNER_URL = "https://github.com/andryyy/debinux.de/tree/gh-pages/content"
+
+CC_LICENSE = {
+    "name": "Creative Commons Attribution-ShareAlike",
+    "version": "4.0",
+    "slug": "by-sa"
+}
