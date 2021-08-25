@@ -6,6 +6,6 @@ Authors: André Peters
 
 Ein Quickie.
 
-Einen FS-Check sowie die Reparatur erzwingen. Geht mit `touch /forcefsck`, klar, oft viel angenehmer: Über die Boot-Parameter des Kernels.
+Einen FS-Check sowie die Reparatur erzwingen. Geht mit `touch /forcefsck`, klar, oft viel angenehmer: über die Boot-Parameter des Kernels.
 
 In Grub den Boot-Parameter ändern und `fsck.mode=force fsck.repair=yes` anhängen, booten, happy sein.
