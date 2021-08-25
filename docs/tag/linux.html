@@ -126,6 +126,23 @@
 
 <article>
   <header>
+    <h2><a href="../fsck-via-boot-parameter.html#fsck-via-boot-parameter">fsck via Boot-Parameter</a></h2>
+    <p>
+      Online seit Mi 25 August 2021 in <a href="../category/linux.html">Linux</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="../tag/linux.html">linux</a>,              <a href="../tag/fsck.html">fsck</a>
+    </p>
+  </header>
+  <div>
+      <div><p>Ein Quickie.</p>
+<p>Einen FS-Check sowie die Reparatur erzwingen. Geht mit <code>touch /forcefsck</code>, klar, oft viel angenehmer: Über die Boot-Parameter des Kernels.</p>
+<p>In Grub den Boot-Parameter ändern und <code>fsck.mode=force fsck.repair=yes</code> anhängen, booten, happy sein.</p></div>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../flatpak-cursor-theme-fur-apps-lesbar-machen.html#flatpak-cursor-theme-fur-apps-lesbar-machen">Flatpak: Cursor Theme für Apps lesbar machen</a></h2>
     <p>
       Online seit Mo 23 August 2021 in <a href="../category/linux.html">Linux</a>
@@ -332,30 +349,6 @@ Wer ganz wild drauf ist, kompiliert es sich nach... :)</p>
 </code></pre></div>
 
 <p>Scharmlos geklaut aus dem SUSE Wiki. :)</p></div>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../dateiberechtigungen-sichern.html#dateiberechtigungen-sichern">Dateiberechtigungen sichern</a></h2>
-    <p>
-      Online seit Di 16 Februar 2021 in <a href="../category/linux.html">Linux</a>
-
-          &#8226; Stichw&ouml;rter
-              <a href="../tag/linux.html">linux</a>,              <a href="../tag/acl.html">acl</a>,              <a href="../tag/backup.html">backup</a>
-    </p>
-  </header>
-  <div>
-      <div><p>Ein kleiner Helfer, der gerne beim Backup vergessen wird: <code>getfacl</code> - <em>get file acl</em>.
-Das Tool sichert die Dateiberechtigungen (auch rekursiv: -R):</p>
-<div class="highlight"><pre><span></span><code>getfacl -R /ein/pfad &gt; acl_ein_pfad_$(date +&quot;%d.%m.%Y_%H%M&quot;).acl
-</code></pre></div>
-
-<p>Und zurück:</p>
-<div class="highlight"><pre><span></span><code>setfacl --restore=datei.acl
-</code></pre></div>
-
-<p>Für Debian und Ubuntu lautet der Paketname "acl".</p></div>
   </div>
 </article>
 

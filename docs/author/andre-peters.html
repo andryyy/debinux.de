@@ -126,6 +126,23 @@
 
 <article>
   <header>
+    <h2><a href="../fsck-via-boot-parameter.html#fsck-via-boot-parameter">fsck via Boot-Parameter</a></h2>
+    <p>
+      Online seit Mi 25 August 2021 in <a href="../category/linux.html">Linux</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="../tag/linux.html">linux</a>,              <a href="../tag/fsck.html">fsck</a>
+    </p>
+  </header>
+  <div>
+      <div><p>Ein Quickie.</p>
+<p>Einen FS-Check sowie die Reparatur erzwingen. Geht mit <code>touch /forcefsck</code>, klar, oft viel angenehmer: Über die Boot-Parameter des Kernels.</p>
+<p>In Grub den Boot-Parameter ändern und <code>fsck.mode=force fsck.repair=yes</code> anhängen, booten, happy sein.</p></div>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../flatpak-cursor-theme-fur-apps-lesbar-machen.html#flatpak-cursor-theme-fur-apps-lesbar-machen">Flatpak: Cursor Theme für Apps lesbar machen</a></h2>
     <p>
       Online seit Mo 23 August 2021 in <a href="../category/linux.html">Linux</a>
@@ -321,34 +338,6 @@ Delta Chat …</code></pre></div></div>
         <br>
         <a class="btn"
            href="../icloud-onedrive-attribut-always-keep-on-device-per-ps-setzen.html#icloud-onedrive-attribut-always-keep-on-device-per-ps-setzen">
-          Weiterlesen
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php.html#ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php">IPv6 Prefix via Nginx, LUA und einem einfachen Bash-Script ausgeben (ohne PHP)</a></h2>
-    <p>
-      Online seit Fr 30 April 2021 in <a href="../category/linux.html">Linux</a>
-
-          &#8226; Stichw&ouml;rter
-              <a href="../tag/linux.html">linux</a>,              <a href="../tag/nginx.html">nginx</a>,              <a href="../tag/lua.html">lua</a>,              <a href="../tag/ipv6.html">ipv6</a>
-    </p>
-  </header>
-  <div>
-      <div><p>Hi,</p>
-<p>ein Snippet (mal wieder). Daher ganz kurz und knapp.</p>
-<p>Unter Debian benötigt ihr die Pakete <code>nginx-full</code> sowie <code>subnetcalc</code>, da hier die entsprechenden LUA Module vorhanden sind.
-Wer ganz wild drauf ist, kompiliert es sich nach... :)</p>
-<p>In der entsprechenden Site-Konfiguration:</p>
-<div class="highlight"><pre><span></span><code>  location / {
-    default_type &#39;text/plain&#39;;
-    content_by_lua_block {
-        local handle = io.popen(&quot;/opt …</code></pre></div></div>
-        <br>
-        <a class="btn"
-           href="../ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php.html#ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php">
           Weiterlesen
         </a>
   </div>
