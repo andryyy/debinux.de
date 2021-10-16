@@ -4,7 +4,7 @@ Date: 2021-10-16 22:15
 Tags: linux, ubuntu, appimage
 Authors: André Peters
 
-Ob AppImages, Flatpak oder Snap; es gilt die Übersicht zu behalten.
+Ob AppImage, Flatpak oder Snap; es gilt die Übersicht zu behalten.
 
 Was bei Flatpak und Snap noch aus dem CLI relativ komfortabel gelingt, wird bei AppImages kompliziert.
 
