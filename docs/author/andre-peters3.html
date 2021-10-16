@@ -9,19 +9,19 @@
     <meta name="robots" content="index, follow" />
 
 
-    <link rel="stylesheet" type="text/css" href="./theme/stylesheet/style.min.css">
+    <link rel="stylesheet" type="text/css" href="../theme/stylesheet/style.min.css">
 
 
     <link id="pygments-light-theme" rel="stylesheet" type="text/css"
-          href="./theme/pygments/github.min.css">
+          href="../theme/pygments/github.min.css">
 
-    <link rel="stylesheet" href="./theme/tipuesearch/tipuesearch.min.css" />
+    <link rel="stylesheet" href="../theme/tipuesearch/tipuesearch.min.css" />
 
-  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/fontawesome.css">
-  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/brands.css">
-  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/solid.css">
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/solid.css">
 
-    <link rel="stylesheet" type="text/css" href="./static/custom.css">
+    <link rel="stylesheet" type="text/css" href="../static/custom.css">
 
     <link href="https://debinux.de/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="debinux.de Atom">
 
@@ -50,25 +50,25 @@
   <meta property="og:title" content="debinux.de"/>
   <meta property="og:description" content=""/>
   <meta property="og:locale" content="de_DE"/>
-  <meta property="og:url" content="."/>
+  <meta property="og:url" content=".."/>
   <meta property="og:image" content="https://debinux.de/images/robot.svg">
 
-  <title>debinux.de &ndash; Kategorien</title>
+  <title>debinux.de &ndash; Artikel von André Peters:</title>
 
 </head>
 <body class="light-theme">
   <aside>
     <div>
-      <a href="./">
+      <a href="../">
         <img src="https://debinux.de/images/robot.svg" alt="debinux.de" title="debinux.de" width="542px" height="420px">
       </a>
 
       <h1>
-        <a href="./">debinux.de</a>
+        <a href="../">debinux.de</a>
       </h1>
 
 <p>an admins notepad</p>
-        <form class="navbar-search" action="./search.html" role="search">
+        <form class="navbar-search" action="../search.html" role="search">
           <input type="text" name="q" id="tipue_search_input" placeholder="Suchbegriff eingeben...">
         </form>
 
@@ -78,7 +78,7 @@
 
               <li>
                 <a target="_blank"
-                   href="./pages/impressum-datenschutz.html#impressum-datenschutz">
+                   href="../pages/impressum-datenschutz.html#impressum-datenschutz">
                   Impressum & Datenschutz
                 </a>
               </li>
@@ -111,7 +111,7 @@
   <main>
 
     <nav>
-      <a href="./">Home</a>
+      <a href="../">Home</a>
 
       <a href="/archives.html">Archive</a>
       <a href="/categories.html">Kategorien</a>
@@ -122,24 +122,41 @@
 
     </nav>
 
-<article class="single">
+
+
+<article>
   <header>
-    <h1 id="categories">Kategorien</h1>
+    <h2><a href="../rspamd-ratelimit-uberschreitung-in-slack-channel-teilen.html#rspamd-ratelimit-uberschreitung-in-slack-channel-teilen">Rspamd: Ratelimit-Überschreitung in Slack Channel teilen</a></h2>
+    <p>
+      Online seit So 16 Dezember 2018 in <a href="../category/linux.html">Linux</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="../tag/linux.html">linux</a>,              <a href="../tag/rspamd.html">rspamd</a>
+    </p>
   </header>
   <div>
-    <ul class="list">
-      <li>
-        <a href="./category/firefox.html">Firefox</a> (1)
-      </li>
-      <li>
-        <a href="./category/linux.html">Linux</a> (17)
-      </li>
-      <li>
-        <a href="./category/windows.html">Windows</a> (3)
-      </li>
-    </ul>
+      <div><p>Hallo,</p>
+<p>Long time no read.</p>
+<p>Mehr ein Snippet als ein echter Beitrag.</p>
+<p>Verwendet wird der der metadata_exporter von Rspamd. Eine Mail wird gesendet, wenn das Ratelimit auslöst und die Mail von einem authentifizierten Benutzer kommt. Das kann im LUA-Script entsprechend angepasst werden.</p>
+<p>Hier die "local.d/metadata_exporter.conf":</p>
+<div class="highlight"><pre><span></span><code><span class="n">rules</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">RLINFO …</span></code></pre></div></div>
+        <br>
+        <a class="btn"
+           href="../rspamd-ratelimit-uberschreitung-in-slack-channel-teilen.html#rspamd-ratelimit-uberschreitung-in-slack-channel-teilen">
+          Weiterlesen
+        </a>
   </div>
 </article>
+
+  <div class="pagination">
+    <a class="btn float-right" href="../author/andre-peters2.html">
+      Neuere Artikel <i class="fa fa-angle-right"></i>
+    </a>
+  </div>
+
+
 
     <footer>
 <p>
@@ -169,7 +186,7 @@ Gebaut mit <a href="http://getpelican.com" target="_blank">Pelican</a> und dem <
   "@context" : "http://schema.org",
   "@type" : "Blog",
   "name": " debinux.de ",
-  "url" : ".",
+  "url" : "..",
   "image": "https://debinux.de/images/robot.svg",
   "description": ""
 }

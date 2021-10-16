@@ -43,17 +43,27 @@
 
  
 
-    <meta name="author" content="André Peters" />
-    <meta name="description" content="" />
+<meta name="author" content="André Peters" />
+<meta name="description" content="Ob AppImages, Flatpak oder Snap; es gilt die Übersicht zu behalten. Was bei Flatpak und Snap noch aus dem CLI relativ komfortabel gelingt, wird bei AppImages kompliziert. Ein guter Tipp ist bauh, das sich schnell als Python Anwendung installieren lässt. Ich habe dafür ein virtualenv unter ~/virtualenvs/bauh verwendet. Wichtig …" />
+<meta name="keywords" content="linux, ubuntu, appimage">
+
+
   <meta property="og:site_name" content="debinux.de"/>
-  <meta property="og:type" content="blog"/>
-  <meta property="og:title" content="debinux.de"/>
-  <meta property="og:description" content=""/>
+  <meta property="og:title" content="AppImages mit bauh installieren und verwalten"/>
+  <meta property="og:description" content="Ob AppImages, Flatpak oder Snap; es gilt die Übersicht zu behalten. Was bei Flatpak und Snap noch aus dem CLI relativ komfortabel gelingt, wird bei AppImages kompliziert. Ein guter Tipp ist bauh, das sich schnell als Python Anwendung installieren lässt. Ich habe dafür ein virtualenv unter ~/virtualenvs/bauh verwendet. Wichtig …"/>
   <meta property="og:locale" content="de_DE"/>
-  <meta property="og:url" content="."/>
+  <meta property="og:url" content="./appimages-mit-bauh-installieren-und-verwalten.html"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2021-10-16 22:15:00+02:00"/>
+  <meta property="article:modified_time" content=""/>
+  <meta property="article:author" content="./author/andre-peters.html">
+  <meta property="article:section" content="Linux"/>
+  <meta property="article:tag" content="linux"/>
+  <meta property="article:tag" content="ubuntu"/>
+  <meta property="article:tag" content="appimage"/>
   <meta property="og:image" content="https://debinux.de/images/robot.svg">
 
-  <title>debinux.de &ndash; Kategorien</title>
+  <title>debinux.de &ndash; AppImages mit bauh installieren und verwalten</title>
 
 </head>
 <body class="light-theme">
@@ -124,21 +134,43 @@
 
 <article class="single">
   <header>
-    <h1 id="categories">Kategorien</h1>
+      
+    <h1 id="appimages-mit-bauh-installieren-und-verwalten">AppImages mit bauh installieren und verwalten</h1>
+    <p>
+      Online seit Sa 16 Oktober 2021 in <a href="./category/linux.html">Linux</a>
+
+    </p>
   </header>
+
+
   <div>
-    <ul class="list">
-      <li>
-        <a href="./category/firefox.html">Firefox</a> (1)
-      </li>
-      <li>
-        <a href="./category/linux.html">Linux</a> (17)
-      </li>
-      <li>
-        <a href="./category/windows.html">Windows</a> (3)
-      </li>
-    </ul>
+    <p>Ob AppImages, Flatpak oder Snap; es gilt die Übersicht zu behalten.</p>
+<p>Was bei Flatpak und Snap noch aus dem CLI relativ komfortabel gelingt, wird bei AppImages kompliziert.</p>
+<p>Ein guter Tipp ist <a href="https://github.com/vinifmor/bauh#installation">bauh</a>, das sich schnell als Python Anwendung installieren lässt.</p>
+<p>Ich habe dafür ein virtualenv unter ~/virtualenvs/bauh verwendet. Wichtig ist, dass die Abhängigkeiten aus der Installationsanleitung vorab installiert wurden.</p>
+<div class="highlight"><pre><span></span><code>virtualenv ~/virtualenvs/bauh
+cd ~/virtualenvs/bauh ; source bin/activate
+pip3 install bauh
+</code></pre></div>
+
+<p>Das kann man individuell handhaben. Ich denke, hier hat jeder seine eigene Struktur gefunden.</p>
+<p>Unter <code>~/virtualenvs/bauh/bin/bauh</code> findet sich in meinem Fall nun die Binary, mit der ich einfach ein AppImage "installiere".</p>
+<p>Installieren bedeutet in diesem Fall, dass das AppImage nach <code>~/.local/share/bauh/appimage/installed/</code> kopiert und unter <code>~/.local/bin/</code> entsprechende Links angelegt werden.
+Im "local share" findet sich zudem ein extrahiertes Logo und Metadaten in Form von JSON.</p>
+<p>Praktisch ist, dass bauh Starter unter <code>.local/share/applications/</code> einrichtet, die bequem im Startmenü auffindbar werden.</p>
   </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="./tag/linux.html">linux</a>
+      <a href="./tag/ubuntu.html">ubuntu</a>
+      <a href="./tag/appimage.html">appimage</a>
+    </p>
+  </div>
+
+
+
+
+
 </article>
 
     <footer>
