@@ -10,7 +10,7 @@ Was bei Flatpak und Snap noch aus dem CLI relativ komfortabel gelingt, wird bei 
 
 Ein guter Tipp ist [bauh](https://github.com/vinifmor/bauh#installation), das sich schnell als Python Anwendung installieren lässt.
 
-Ich habe dafür ein virtualenv unter ~/virtualenvs/bauh verwendet. Wichtig ist, dass die Abhängigkeiten aus der Installationsanleitung vorab installiert wurden.
+Ich habe dafür ein virtualenv unter `~/virtualenvs/bauh` verwendet. Wichtig ist, dass die Abhängigkeiten aus der Installationsanleitung vorab installiert wurden.
 
 ```
 virtualenv ~/virtualenvs/bauh
