@@ -1,13 +1,13 @@
 Title: OCR per Rechtsklick auf Dokument in Nemo ausführen
 Category: Linux
 Date: 2021-08-17 12:35
-Modified: 2021-08-20 09:23
+Modified: 2021-11-01 10:07
 Tags: linux, debian, ocr, pdf
 Authors: André Peters
 
 ## Was passiert?
 
-Es wird eine Rechtsklick-Aktion zu Nemo (Linux Mint Datei-Manager) hinzugfügt, die eine oder mehrere Bilder (Scans) zu PDFs konvertiert, OCR (Texterkennung) ausführt und anschließend:
+Es wird eine Rechtsklick-Aktion zu Nemo (Linux Mint Datei-Manager) hinzugfügt, die eine oder mehrere Bilder (Scans) begradigt, zu PDFs konvertiert, OCR (Texterkennung) ausführt und anschließend:
 
 - pro Bild eine PDF erstellt und behält.
 - alle PDFs zu einer großen PDF zusammenführt.
@@ -27,10 +27,14 @@ shift
 while ((${#})); do
   IFS=';' read -a files <<<"${1}"
   for word in "${files[@]}"; do
-    tesseract "${word}" "${word}_ocr" -l deu pdf
+    deskew -b ffffff "${word}" -o "${word}_deskew.jpg"
+    tesseract "${word}_deskew.jpg" "${word}_ocr" -l deu pdf
+    rm "${word}_deskew.jpg"
   done
   shift
 done
+
+# Auskommentieren, wenn keine kombinierte PDF benötigt wird.
 pdftk *_ocr.pdf cat output combined_$(date +"%Y_%m_%d_%I_%M").pdf
 ```
 
@@ -63,5 +67,7 @@ sudo apt-get install tesseract-ocr tesseract-ocr-deu pdftk
 ```
 
 `tesseract-ocr-deu` steht dabei für das deutsche Sprachpaket. Mit `pdftk` werden PDFs verändert - in dem Fall zusammengefügt.
+
+`deskew` findet ihr [hier](https://github.com/galfar/deskew/releases). Einfach entpacken und die `deskew` Datei aus dem `Bin` Verzeichnis nach, beispielsweise, `/usr/local/bin` kopieren und ausführbar markieren.
 
 Mehr zu den Nemo Actions [hier](https://github.com/linuxmint/nemo/blob/master/files/usr/share/nemo/actions/sample.nemo_action).

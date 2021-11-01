@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>debinux.de</title><link href="https://debinux.de/" rel="alternate"></link><link href="https://debinux.de/feeds/all-de_de.atom.xml" rel="self"></link><id>https://debinux.de/</id><updated>2021-10-16T22:15:00+02:00</updated><subtitle>an admins notepad</subtitle><entry><title>AppImages mit bauh installieren und verwalten</title><link href="https://debinux.de/appimages-mit-bauh-installieren-und-verwalten.html" rel="alternate"></link><published>2021-10-16T22:15:00+02:00</published><updated>2021-10-16T22:15:00+02:00</updated><author><name>André Peters</name></author><id>tag:debinux.de,2021-10-16:/appimages-mit-bauh-installieren-und-verwalten.html</id><summary type="html">&lt;p&gt;Ob AppImage, Flatpak oder Snap; es gilt die Übersicht zu behalten.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>debinux.de</title><link href="https://debinux.de/" rel="alternate"></link><link href="https://debinux.de/feeds/all-de_de.atom.xml" rel="self"></link><id>https://debinux.de/</id><updated>2021-11-01T10:07:00+01:00</updated><subtitle>an admins notepad</subtitle><entry><title>AppImages mit bauh installieren und verwalten</title><link href="https://debinux.de/appimages-mit-bauh-installieren-und-verwalten.html" rel="alternate"></link><published>2021-10-16T22:15:00+02:00</published><updated>2021-10-16T22:15:00+02:00</updated><author><name>André Peters</name></author><id>tag:debinux.de,2021-10-16:/appimages-mit-bauh-installieren-und-verwalten.html</id><summary type="html">&lt;p&gt;Ob AppImage, Flatpak oder Snap; es gilt die Übersicht zu behalten.&lt;/p&gt;
 &lt;p&gt;Was bei Flatpak und Snap noch aus dem CLI relativ komfortabel gelingt, wird bei AppImages kompliziert.&lt;/p&gt;
 &lt;p&gt;Ein guter Tipp ist &lt;a href="https://github.com/vinifmor/bauh#installation"&gt;bauh&lt;/a&gt;, das sich schnell als Python Anwendung installieren lässt.&lt;/p&gt;
 &lt;p&gt;Ich habe dafür ein virtualenv unter &lt;code&gt;~/virtualenvs/bauh&lt;/code&gt; verwendet. Wichtig …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Ob AppImage, Flatpak oder Snap; es gilt die Übersicht zu behalten.&lt;/p&gt;
@@ -119,14 +119,14 @@ pull-filter ignore &amp;quot;route &amp;quot;
 &lt;span class="nv"&gt;Pin&lt;/span&gt;: &lt;span class="nv"&gt;release&lt;/span&gt; &lt;span class="nv"&gt;o&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;LP&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;PPA&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;mozillateam&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;firefox&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;next&lt;/span&gt;
 &lt;span class="nv"&gt;Pin&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nv"&gt;Priority&lt;/span&gt;: &lt;span class="mi"&gt;800&lt;/span&gt;
 &lt;span class="nv"&gt;EOF&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Linux"></category><category term="linux"></category><category term="mint"></category><category term="firefox"></category></entry><entry><title>OCR per Rechtsklick auf Dokument in Nemo ausführen</title><link href="https://debinux.de/ocr-per-rechtsklick-auf-dokument-in-nemo-ausfuhren.html" rel="alternate"></link><published>2021-08-17T12:35:00+02:00</published><updated>2021-08-20T09:23:00+02:00</updated><author><name>André Peters</name></author><id>tag:debinux.de,2021-08-17:/ocr-per-rechtsklick-auf-dokument-in-nemo-ausfuhren.html</id><summary type="html">&lt;h2&gt;Was passiert?&lt;/h2&gt;
-&lt;p&gt;Es wird eine Rechtsklick-Aktion zu Nemo (Linux Mint Datei-Manager) hinzugfügt, die eine oder mehrere Bilder (Scans) zu PDFs konvertiert, OCR (Texterkennung) ausführt und anschließend:&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Linux"></category><category term="linux"></category><category term="mint"></category><category term="firefox"></category></entry><entry><title>OCR per Rechtsklick auf Dokument in Nemo ausführen</title><link href="https://debinux.de/ocr-per-rechtsklick-auf-dokument-in-nemo-ausfuhren.html" rel="alternate"></link><published>2021-08-17T12:35:00+02:00</published><updated>2021-11-01T10:07:00+01:00</updated><author><name>André Peters</name></author><id>tag:debinux.de,2021-08-17:/ocr-per-rechtsklick-auf-dokument-in-nemo-ausfuhren.html</id><summary type="html">&lt;h2&gt;Was passiert?&lt;/h2&gt;
+&lt;p&gt;Es wird eine Rechtsklick-Aktion zu Nemo (Linux Mint Datei-Manager) hinzugfügt, die eine oder mehrere Bilder (Scans) begradigt, zu PDFs konvertiert, OCR (Texterkennung) ausführt und anschließend:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;pro Bild eine PDF erstellt und behält.&lt;/li&gt;
 &lt;li&gt;alle PDFs zu einer großen PDF zusammenführt.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Das ist, was ich benötige. Wenn ihr die einzelnen PDFs …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Was passiert?&lt;/h2&gt;
-&lt;p&gt;Es wird eine Rechtsklick-Aktion zu Nemo (Linux Mint Datei-Manager) hinzugfügt, die eine oder mehrere Bilder (Scans) zu PDFs konvertiert, OCR (Texterkennung) ausführt und anschließend:&lt;/p&gt;
+&lt;p&gt;Das ist, was ich benötige. Wenn ihr die einzelnen …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Was passiert?&lt;/h2&gt;
+&lt;p&gt;Es wird eine Rechtsklick-Aktion zu Nemo (Linux Mint Datei-Manager) hinzugfügt, die eine oder mehrere Bilder (Scans) begradigt, zu PDFs konvertiert, OCR (Texterkennung) ausführt und anschließend:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;pro Bild eine PDF erstellt und behält.&lt;/li&gt;
 &lt;li&gt;alle PDFs zu einer großen PDF zusammenführt.&lt;/li&gt;
@@ -146,7 +146,11 @@ pull-filter ignore &amp;quot;route &amp;quot;
 &lt;span class="normal"&gt;10&lt;/span&gt;
 &lt;span class="normal"&gt;11&lt;/span&gt;
 &lt;span class="normal"&gt;12&lt;/span&gt;
-&lt;span class="normal"&gt;13&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class="normal"&gt;13&lt;/span&gt;
+&lt;span class="normal"&gt;14&lt;/span&gt;
+&lt;span class="normal"&gt;15&lt;/span&gt;
+&lt;span class="normal"&gt;16&lt;/span&gt;
+&lt;span class="normal"&gt;17&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
 
 &lt;span class="nb"&gt;cd&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
 &lt;span class="nb"&gt;shift&lt;/span&gt;
@@ -154,10 +158,14 @@ pull-filter ignore &amp;quot;route &amp;quot;
 &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="o"&gt;((&lt;/span&gt;&lt;span class="si"&gt;${#}&lt;/span&gt;&lt;span class="o"&gt;))&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
   &lt;span class="nv"&gt;IFS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;;&amp;#39;&lt;/span&gt; &lt;span class="nb"&gt;read&lt;/span&gt; -a files &lt;span class="o"&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;1&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
   &lt;span class="k"&gt;for&lt;/span&gt; word &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;files&lt;/span&gt;&lt;span class="p"&gt;[@]&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
-    tesseract &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;word&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;word&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;_ocr&amp;quot;&lt;/span&gt; -l deu pdf
+    deskew -b ffffff &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;word&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; -o &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;word&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;_deskew.jpg&amp;quot;&lt;/span&gt;
+    tesseract &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;word&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;_deskew.jpg&amp;quot;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;word&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;_ocr&amp;quot;&lt;/span&gt; -l deu pdf
+    rm &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;word&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;_deskew.jpg&amp;quot;&lt;/span&gt;
   &lt;span class="k"&gt;done&lt;/span&gt;
   &lt;span class="nb"&gt;shift&lt;/span&gt;
 &lt;span class="k"&gt;done&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Auskommentieren, wenn keine kombinierte PDF benötigt wird.&lt;/span&gt;
 pdftk *_ocr.pdf cat output combined_&lt;span class="k"&gt;$(&lt;/span&gt;date +&lt;span class="s2"&gt;&amp;quot;%Y_%m_%d_%I_%M&amp;quot;&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;.pdf
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
@@ -184,6 +192,7 @@ pdftk *_ocr.pdf cat output combined_&lt;span class="k"&gt;$(&lt;/span&gt;date +&
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;code&gt;tesseract-ocr-deu&lt;/code&gt; steht dabei für das deutsche Sprachpaket. Mit &lt;code&gt;pdftk&lt;/code&gt; werden PDFs verändert - in dem Fall zusammengefügt.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;deskew&lt;/code&gt; findet ihr &lt;a href="https://github.com/galfar/deskew/releases"&gt;hier&lt;/a&gt;. Einfach entpacken und die &lt;code&gt;deskew&lt;/code&gt; Datei aus dem &lt;code&gt;Bin&lt;/code&gt; Verzeichnis nach, beispielsweise, &lt;code&gt;/usr/local/bin&lt;/code&gt; kopieren und ausführbar markieren.&lt;/p&gt;
 &lt;p&gt;Mehr zu den Nemo Actions &lt;a href="https://github.com/linuxmint/nemo/blob/master/files/usr/share/nemo/actions/sample.nemo_action"&gt;hier&lt;/a&gt;.&lt;/p&gt;</content><category term="Linux"></category><category term="linux"></category><category term="debian"></category><category term="ocr"></category><category term="pdf"></category></entry><entry><title>HEIC Dateien in Linux Mint/Ubuntu Bildbetrachter öffnen</title><link href="https://debinux.de/heic-dateien-in-linux-mintubuntu-bildbetrachter-offnen.html" rel="alternate"></link><published>2021-08-17T11:15:00+02:00</published><updated>2021-08-17T11:15:00+02:00</updated><author><name>André Peters</name></author><id>tag:debinux.de,2021-08-17:/heic-dateien-in-linux-mintubuntu-bildbetrachter-offnen.html</id><content type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt install heif-gdk-pixbuf
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
