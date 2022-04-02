@@ -126,6 +126,34 @@
 
 <article>
   <header>
+    <h2><a href="../ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php.html#ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php">IPv6 Prefix via Nginx, LUA und einem einfachen Bash-Script ausgeben (ohne PHP)</a></h2>
+    <p>
+      Online seit Fr 30 April 2021 in <a href="../category/linux.html">Linux</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="../tag/linux.html">linux</a>,              <a href="../tag/nginx.html">nginx</a>,              <a href="../tag/lua.html">lua</a>,              <a href="../tag/ipv6.html">ipv6</a>
+    </p>
+  </header>
+  <div>
+      <div><p>Hi,</p>
+<p>ein Snippet (mal wieder). Daher ganz kurz und knapp.</p>
+<p>Unter Debian benötigt ihr die Pakete <code>nginx-full</code> sowie <code>subnetcalc</code>, da hier die entsprechenden LUA Module vorhanden sind.
+Wer ganz wild drauf ist, kompiliert es sich nach... :)</p>
+<p>In der entsprechenden Site-Konfiguration:</p>
+<div class="highlight"><pre><span></span><code>  location / {
+    default_type &#39;text/plain&#39;;
+    content_by_lua_block {
+        local handle = io.popen(&quot;/opt …</code></pre></div></div>
+        <br>
+        <a class="btn"
+           href="../ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php.html#ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php">
+          Weiterlesen
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../for-loop-zum-mounten-vor-chroot.html#for-loop-zum-mounten-vor-chroot">for-loop zum Mounten vor chroot</a></h2>
     <p>
       Online seit Do 01 April 2021 in <a href="../category/linux.html">Linux</a>

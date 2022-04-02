@@ -1,13 +1,12 @@
 Title: Wenn AnyDesk unter Ubuntu Jammy (Beta) nicht startet...
-Category: Linux, AnyDesk
+Category: Linux
 Date: 2022-04-02 12:54
 Modified: 2022-04-02 12:54
-Tags: linux, debian, ubuntu, heif, heic
+Tags: linux, ubuntu, anydesk
 Authors: André Peters
 
-Dann solltet ihr auf eine angepasste Version von AnyDesk für Jammy warten oder eben `libpangox-1.0-0` nachinstallieren.
+...solltet ihr auf eine angepasste Version von AnyDesk für Jammy warten oder eben `libpangox-1.0-0` nachinstallieren.
 
-Meist
 ```
 cd
 wget http://de.archive.ubuntu.com/ubuntu/pool/universe/p/pangox-compat/libpangox-1.0-0_0.0.2-5ubuntu1_amd64.deb
