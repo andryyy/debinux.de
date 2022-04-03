@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>debinux.de - André Peters</title><link>https://debinux.de/</link><description>an admins notepad</description><lastBuildDate>Sat, 02 Apr 2022 12:54:00 +0200</lastBuildDate><item><title>Wenn AnyDesk unter Ubuntu Jammy (Beta) nicht startet...</title><link>https://debinux.de/wenn-anydesk-unter-ubuntu-jammy-beta-nicht-startet.html</link><description>&lt;p&gt;...solltet ihr auf eine angepasste Version von AnyDesk für Jammy warten oder eben &lt;code&gt;libpangox-1.0-0&lt;/code&gt; nachinstallieren.&lt;/p&gt;
+<rss version="2.0"><channel><title>debinux.de - André Peters</title><link>https://debinux.de/</link><description>an admins notepad</description><lastBuildDate>Sun, 03 Apr 2022 10:23:00 +0200</lastBuildDate><item><title>Wenn AnyDesk unter Ubuntu Jammy (Beta) nicht startet</title><link>https://debinux.de/wenn-anydesk-unter-ubuntu-jammy-beta-nicht-startet.html</link><description>&lt;p&gt;...solltet ihr auf eine angepasste Version von AnyDesk für Jammy warten oder eben &lt;code&gt;libpangox-1.0-0&lt;/code&gt; nachinstallieren.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;cd
 wget http://de.archive.ubuntu.com/ubuntu/pool/universe/p/pangox-compat/libpangox-1.0-0_0.0.2-5ubuntu1_amd64.deb
 dpkg -i libpangox-1.0-0_0.0.2-5ubuntu1_amd64.deb

@@ -1,7 +1,7 @@
-Title: Wenn AnyDesk unter Ubuntu Jammy (Beta) nicht startet...
+Title: Wenn AnyDesk unter Ubuntu Jammy (Beta) nicht startet
 Category: Linux
 Date: 2022-04-02 12:54
-Modified: 2022-04-02 12:54
+Modified: 2022-04-03 10:23
 Tags: linux, ubuntu, anydesk
 Authors: André Peters
 
