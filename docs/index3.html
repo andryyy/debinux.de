@@ -126,6 +126,39 @@
 
 <article>
   <header>
+    <h2><a href="./template-zammad-reverse-proxy-mit-apache.html#template-zammad-reverse-proxy-mit-apache">Template Zammad Reverse Proxy mit Apache</a></h2>
+    <p>
+      Online seit Do 16 Januar 2020 in <a href="./category/linux.html">Linux</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="./tag/linux.html">linux</a>,              <a href="./tag/apache2.html">apache2</a>,              <a href="./tag/zammad.html">zammad</a>
+    </p>
+  </header>
+  <div>
+      <div><div class="highlight"><pre><span></span><code><span class="nt">&lt;VirtualHost</span> <span class="err">*:80</span><span class="nt">&gt;</span>
+  ServerName ticket.domain.tld
+  RewriteEngine on
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^/?(.*) https://%{HTTP_HOST}/$1 [R=301,L]
+  ProxyPass / http://127.0.0.1:8090/
+  ProxyPassReverse / http://127.0.0.1:8090/
+  ProxyPreserveHost On
+  ProxyAddHeaders On
+  RequestHeader set X-Forwarded-Proto &quot;http&quot;
+<span class="nt">&lt;/VirtualHost&gt;</span>
+<span class="nt">&lt;VirtualHost</span> <span class="err">*:443</span><span class="nt">&gt;</span>
+  ServerName ticket.domain.tld
+  ProxyPass /ws ws …</code></pre></div></div>
+        <br>
+        <a class="btn"
+           href="./template-zammad-reverse-proxy-mit-apache.html#template-zammad-reverse-proxy-mit-apache">
+          Weiterlesen
+        </a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="./rspamd-subject-umschreiben-und-reply-to-hinzufugen.html#rspamd-subject-umschreiben-und-reply-to-hinzufugen">Rspamd: Subject umschreiben und Reply-To hinzufügen</a></h2>
     <p>
       Online seit Sa 28 Dezember 2019 in <a href="./category/linux.html">Linux</a>

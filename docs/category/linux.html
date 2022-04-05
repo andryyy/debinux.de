@@ -126,33 +126,6 @@
 
 <article>
   <header>
-    <h2><a href="../wenn-anydesk-unter-ubuntu-jammy-beta-nicht-startet.html#wenn-anydesk-unter-ubuntu-jammy-beta-nicht-startet">Wenn AnyDesk unter Ubuntu Jammy (Beta) nicht startet</a></h2>
-    <p>
-      Online seit Sa 02 April 2022 in <a href="../category/linux.html">Linux</a>
-
-          &#8226; Stichw&ouml;rter
-              <a href="../tag/linux.html">linux</a>,              <a href="../tag/ubuntu.html">ubuntu</a>,              <a href="../tag/anydesk.html">anydesk</a>
-    </p>
-  </header>
-  <div>
-      <div><p>...solltet ihr auf eine angepasste Version von AnyDesk für Jammy warten oder eben <code>libpangox-1.0-0</code> nachinstallieren.</p>
-<div class="highlight"><pre><span></span><code>cd
-wget http://de.archive.ubuntu.com/ubuntu/pool/universe/p/pangox-compat/libpangox-1.0-0_0.0.2-5ubuntu1_amd64.deb
-dpkg -i libpangox-1.0-0_0.0.2-5ubuntu1_amd64.deb
-</code></pre></div>
-
-<p>Das war's schon.</p>
-<p>Das ist nicht die feine Art, denkt …</p></div>
-        <br>
-        <a class="btn"
-           href="../wenn-anydesk-unter-ubuntu-jammy-beta-nicht-startet.html#wenn-anydesk-unter-ubuntu-jammy-beta-nicht-startet">
-          Weiterlesen
-        </a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
     <h2><a href="../appimages-mit-bauh-installieren-und-verwalten.html#appimages-mit-bauh-installieren-und-verwalten">AppImages mit bauh installieren und verwalten</a></h2>
     <p>
       Online seit Sa 16 Oktober 2021 in <a href="../category/linux.html">Linux</a>
@@ -354,6 +327,34 @@ Delta Chat …</code></pre></div></div>
 </code></pre></div>
 
 <p>Das war's schon.</p></div>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="../ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php.html#ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php">IPv6 Prefix via Nginx, LUA und einem einfachen Bash-Script ausgeben (ohne PHP)</a></h2>
+    <p>
+      Online seit Fr 30 April 2021 in <a href="../category/linux.html">Linux</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="../tag/linux.html">linux</a>,              <a href="../tag/nginx.html">nginx</a>,              <a href="../tag/lua.html">lua</a>,              <a href="../tag/ipv6.html">ipv6</a>
+    </p>
+  </header>
+  <div>
+      <div><p>Hi,</p>
+<p>ein Snippet (mal wieder). Daher ganz kurz und knapp.</p>
+<p>Unter Debian benötigt ihr die Pakete <code>nginx-full</code> sowie <code>subnetcalc</code>, da hier die entsprechenden LUA Module vorhanden sind.
+Wer ganz wild drauf ist, kompiliert es sich nach... :)</p>
+<p>In der entsprechenden Site-Konfiguration:</p>
+<div class="highlight"><pre><span></span><code>  location / {
+    default_type &#39;text/plain&#39;;
+    content_by_lua_block {
+        local handle = io.popen(&quot;/opt …</code></pre></div></div>
+        <br>
+        <a class="btn"
+           href="../ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php.html#ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php">
+          Weiterlesen
+        </a>
   </div>
 </article>
 

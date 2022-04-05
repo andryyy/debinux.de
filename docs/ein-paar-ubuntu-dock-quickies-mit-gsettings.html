@@ -9,17 +9,17 @@
     <meta name="robots" content="index, follow" />
 
 
-    <link rel="stylesheet" type="text/css" href="../theme/stylesheet/style.min.css">
+    <link rel="stylesheet" type="text/css" href="./theme/stylesheet/style.min.css">
 
 
     <link id="pygments-light-theme" rel="stylesheet" type="text/css"
-          href="../theme/pygments/github.min.css">
+          href="./theme/pygments/github.min.css">
 
-    <link rel="stylesheet" href="../theme/tipuesearch/tipuesearch.min.css" />
+    <link rel="stylesheet" href="./theme/tipuesearch/tipuesearch.min.css" />
 
-  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/fontawesome.css">
-  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/brands.css">
-  <link rel="stylesheet" type="text/css" href="../theme/font-awesome/css/solid.css">
+  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/solid.css">
 
   <link rel="stylesheet" type="text/css" href="/static/custom.css">
 
@@ -43,32 +43,42 @@
 
  
 
-    <meta name="author" content="André Peters" />
-    <meta name="description" content="" />
+<meta name="author" content="André Peters" />
+<meta name="description" content="Etwas, an das ich mich bei Ubuntu nie gewöhnt habe, ist das Verhalten der Icons im Dock per Standard. Vielleicht ist das Folgende für den ein oder anderen Leser ebenfalls brauchbar. # Den Modifier auf ALT zurückstellen (sonst: Super) gsettings set org.gnome.desktop.wm.preferences mouse-button-modifier &#39;&lt;Alt&gt;&#39; # Fenster mit Modifier …" />
+<meta name="keywords" content="linux, gsettings, dock">
+
+
   <meta property="og:site_name" content="debinux.de"/>
-  <meta property="og:type" content="blog"/>
-  <meta property="og:title" content="debinux.de"/>
-  <meta property="og:description" content=""/>
+  <meta property="og:title" content="Ein paar Ubuntu Dock Quickies mit gsettings"/>
+  <meta property="og:description" content="Etwas, an das ich mich bei Ubuntu nie gewöhnt habe, ist das Verhalten der Icons im Dock per Standard. Vielleicht ist das Folgende für den ein oder anderen Leser ebenfalls brauchbar. # Den Modifier auf ALT zurückstellen (sonst: Super) gsettings set org.gnome.desktop.wm.preferences mouse-button-modifier &#39;&lt;Alt&gt;&#39; # Fenster mit Modifier …"/>
   <meta property="og:locale" content="de_DE"/>
-  <meta property="og:url" content=".."/>
+  <meta property="og:url" content="./ein-paar-ubuntu-dock-quickies-mit-gsettings.html"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2022-04-05 07:10:00+02:00"/>
+  <meta property="article:modified_time" content=""/>
+  <meta property="article:author" content="./author/andre-peters.html">
+  <meta property="article:section" content="Linux, Ubuntu"/>
+  <meta property="article:tag" content="linux"/>
+  <meta property="article:tag" content="gsettings"/>
+  <meta property="article:tag" content="dock"/>
   <meta property="og:image" content="https://debinux.de/images/robot.svg">
 
-  <title>debinux.de &ndash; Stichwort anydesk</title>
+  <title>debinux.de &ndash; Ein paar Ubuntu Dock Quickies mit gsettings</title>
 
 </head>
 <body class="light-theme">
   <aside>
     <div>
-      <a href="../">
+      <a href="./">
         <img src="https://debinux.de/images/robot.svg" alt="debinux.de" title="debinux.de" width="542px" height="420px">
       </a>
 
       <h1>
-        <a href="../">debinux.de</a>
+        <a href="./">debinux.de</a>
       </h1>
 
 <p>an admins notepad</p>
-        <form class="navbar-search" action="../search.html" role="search">
+        <form class="navbar-search" action="./search.html" role="search">
           <input type="text" name="q" id="tipue_search_input" placeholder="Suchbegriff eingeben...">
         </form>
 
@@ -78,7 +88,7 @@
 
               <li>
                 <a target="_blank"
-                   href="../pages/impressum-datenschutz.html#impressum-datenschutz">
+                   href="./pages/impressum-datenschutz.html#impressum-datenschutz">
                   Impressum & Datenschutz
                 </a>
               </li>
@@ -111,7 +121,7 @@
   <main>
 
     <nav>
-      <a href="../">Home</a>
+      <a href="./">Home</a>
 
       <a href="/archives.html">Archive</a>
       <a href="/categories.html">Kategorien</a>
@@ -122,39 +132,49 @@
 
     </nav>
 
-
-
-<article>
+<article class="single">
   <header>
-    <h2><a href="../wenn-anydesk-unter-ubuntu-jammy-beta-nicht-startet.html#wenn-anydesk-unter-ubuntu-jammy-beta-nicht-startet">Wenn AnyDesk unter Ubuntu Jammy (Beta) nicht startet</a></h2>
+      
+    <h1 id="ein-paar-ubuntu-dock-quickies-mit-gsettings">Ein paar Ubuntu Dock Quickies mit gsettings</h1>
     <p>
-      Online seit Sa 02 April 2022 in <a href="../category/linux-ubuntu.html">Linux, Ubuntu</a>
+      Online seit Di 05 April 2022 in <a href="./category/linux-ubuntu.html">Linux, Ubuntu</a>
 
-          &#8226; Stichw&ouml;rter
-              <a href="../tag/linux.html">linux</a>,              <a href="../tag/ubuntu.html">ubuntu</a>,              <a href="../tag/anydesk.html">anydesk</a>
     </p>
   </header>
+
+
   <div>
-      <div><p>...solltet ihr auf eine angepasste Version von AnyDesk für Jammy warten oder eben <code>libpangox-1.0-0</code> nachinstallieren.</p>
-<div class="highlight"><pre><span></span><code>cd
-wget http://de.archive.ubuntu.com/ubuntu/pool/universe/p/pangox-compat/libpangox-1.0-0_0.0.2-5ubuntu1_amd64.deb
-dpkg -i libpangox-1.0-0_0.0.2-5ubuntu1_amd64.deb
+    <p>Etwas, an das ich mich bei Ubuntu nie gewöhnt habe, ist das Verhalten der Icons im Dock per Standard.</p>
+<p>Vielleicht ist das Folgende für den ein oder anderen Leser ebenfalls brauchbar.</p>
+<div class="highlight"><pre><span></span><code># Den Modifier auf ALT zurückstellen (sonst: Super)
+gsettings set org.gnome.desktop.wm.preferences mouse-button-modifier &#39;&lt;Alt&gt;&#39;
+
+# Fenster mit Modifier und rechter Maustaste in ihrer Größe ändern
+gsettings set org.gnome.desktop.wm.preferences resize-with-right-button true
+
+# Durch einen Klick auf ein Icon im Dock die App minimieren
+gsettings set org.gnome.shell.extensions.dash-to-dock click-action &#39;minimize&#39;
+
+# Durch Scrollen auf einem Icon im Dock durch offene Fenster navigieren
+gsettings set org.gnome.shell.extensions.dash-to-dock scroll-action &#39;cycle-windows&#39;
+
+# Lediglich Icons des aktiven Desktops anzeigen
+gsettings set org.gnome.shell.extensions.dash-to-dock isolate-workspaces true
 </code></pre></div>
-
-<p>Das war's schon.</p>
-<p>Das ist nicht die feine Art, denkt …</p></div>
-        <br>
-        <a class="btn"
-           href="../wenn-anydesk-unter-ubuntu-jammy-beta-nicht-startet.html#wenn-anydesk-unter-ubuntu-jammy-beta-nicht-startet">
-          Weiterlesen
-        </a>
   </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="./tag/linux.html">linux</a>
+      <a href="./tag/gsettings.html">gsettings</a>
+      <a href="./tag/dock.html">dock</a>
+    </p>
+  </div>
+
+
+
+
+
 </article>
-
-  <div class="pagination">
-  </div>
-
-
 
     <footer>
 <p>
@@ -184,7 +204,7 @@ Gebaut mit <a href="http://getpelican.com" target="_blank">Pelican</a> und dem <
   "@context" : "http://schema.org",
   "@type" : "Blog",
   "name": " debinux.de ",
-  "url" : "..",
+  "url" : ".",
   "image": "https://debinux.de/images/robot.svg",
   "description": ""
 }

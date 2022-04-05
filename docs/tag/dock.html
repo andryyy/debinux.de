@@ -53,7 +53,7 @@
   <meta property="og:url" content=".."/>
   <meta property="og:image" content="https://debinux.de/images/robot.svg">
 
-  <title>debinux.de &ndash; Stichwort anydesk</title>
+  <title>debinux.de &ndash; Stichwort dock</title>
 
 </head>
 <body class="light-theme">
@@ -126,26 +126,24 @@
 
 <article>
   <header>
-    <h2><a href="../wenn-anydesk-unter-ubuntu-jammy-beta-nicht-startet.html#wenn-anydesk-unter-ubuntu-jammy-beta-nicht-startet">Wenn AnyDesk unter Ubuntu Jammy (Beta) nicht startet</a></h2>
+    <h2><a href="../ein-paar-ubuntu-dock-quickies-mit-gsettings.html#ein-paar-ubuntu-dock-quickies-mit-gsettings">Ein paar Ubuntu Dock Quickies mit gsettings</a></h2>
     <p>
-      Online seit Sa 02 April 2022 in <a href="../category/linux-ubuntu.html">Linux, Ubuntu</a>
+      Online seit Di 05 April 2022 in <a href="../category/linux-ubuntu.html">Linux, Ubuntu</a>
 
           &#8226; Stichw&ouml;rter
-              <a href="../tag/linux.html">linux</a>,              <a href="../tag/ubuntu.html">ubuntu</a>,              <a href="../tag/anydesk.html">anydesk</a>
+              <a href="../tag/linux.html">linux</a>,              <a href="../tag/gsettings.html">gsettings</a>,              <a href="../tag/dock.html">dock</a>
     </p>
   </header>
   <div>
-      <div><p>...solltet ihr auf eine angepasste Version von AnyDesk für Jammy warten oder eben <code>libpangox-1.0-0</code> nachinstallieren.</p>
-<div class="highlight"><pre><span></span><code>cd
-wget http://de.archive.ubuntu.com/ubuntu/pool/universe/p/pangox-compat/libpangox-1.0-0_0.0.2-5ubuntu1_amd64.deb
-dpkg -i libpangox-1.0-0_0.0.2-5ubuntu1_amd64.deb
-</code></pre></div>
+      <div><p>Etwas, an das ich mich bei Ubuntu nie gewöhnt habe, ist das Verhalten der Icons im Dock per Standard.</p>
+<p>Vielleicht ist das Folgende für den ein oder anderen Leser ebenfalls brauchbar.</p>
+<div class="highlight"><pre><span></span><code># Den Modifier auf ALT zurückstellen (sonst: Super)
+gsettings set org.gnome.desktop.wm.preferences mouse-button-modifier &#39;&lt;Alt&gt;&#39;
 
-<p>Das war's schon.</p>
-<p>Das ist nicht die feine Art, denkt …</p></div>
+# Fenster mit Modifier …</code></pre></div></div>
         <br>
         <a class="btn"
-           href="../wenn-anydesk-unter-ubuntu-jammy-beta-nicht-startet.html#wenn-anydesk-unter-ubuntu-jammy-beta-nicht-startet">
+           href="../ein-paar-ubuntu-dock-quickies-mit-gsettings.html#ein-paar-ubuntu-dock-quickies-mit-gsettings">
           Weiterlesen
         </a>
   </div>
