@@ -126,6 +126,26 @@
 
 <article>
   <header>
+    <h2><a href="../rsyslog-via-udp-erhaltene-logs-in-eine-datei-schreiben.html#rsyslog-via-udp-erhaltene-logs-in-eine-datei-schreiben">Rsyslog: via UDP erhaltene Logs in eine Datei schreiben</a></h2>
+    <p>
+      Online seit Fr 29 Mai 2020 in <a href="../category/linux.html">Linux</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="../tag/linux.html">linux</a>,              <a href="../tag/rsyslog.html">rsyslog</a>
+    </p>
+  </header>
+  <div>
+      <div><div class="highlight"><pre><span></span><code><span class="o">$</span><span class="n">template</span> <span class="n">RemoteUDP</span><span class="p">,</span><span class="s2">&quot;/var/log/remote-udp.log&quot;</span>
+<span class="p">:</span><span class="n">inputname</span><span class="p">,</span> <span class="n">isequal</span><span class="p">,</span> <span class="s2">&quot;imudp&quot;</span> <span class="err">?</span><span class="n">RemoteUDP</span>
+<span class="o">&amp;</span> <span class="o">~</span>
+</code></pre></div>
+
+<p><code>&amp; ~</code> beendet die Verarbeitung der Regel.</p></div>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../template-zammad-reverse-proxy-mit-apache.html#template-zammad-reverse-proxy-mit-apache">Template Zammad Reverse Proxy mit Apache</a></h2>
     <p>
       Online seit Do 16 Januar 2020 in <a href="../category/linux.html">Linux</a>
