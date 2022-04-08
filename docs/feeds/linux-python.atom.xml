@@ -11,7 +11,7 @@ pip install pyudev
 &lt;span class="normal"&gt; 2&lt;/span&gt;
 &lt;span class="normal"&gt; 3&lt;/span&gt;
 &lt;span class="normal"&gt; 4&lt;/span&gt;
-&lt;span class="normal"&gt; 5 …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</summary><content type="html">&lt;p&gt;Kommt her, meine Kinder, und nehmt euch einen Aluhut.&lt;/p&gt;
+&lt;span class="normal"&gt; 5 ...&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;a class="read-more" href="/pushover-benachrichtigung-bei-usb-anschluss.html"&gt;&lt;span&gt;weiterlesen&lt;/span&gt;&lt;/a&gt;&lt;/table&gt;</summary><content type="html">&lt;p&gt;Kommt her, meine Kinder, und nehmt euch einen Aluhut.&lt;/p&gt;
 &lt;p&gt;Mal nicht zu Hause und besorgt, dass jemand den Computer infiltriert?&lt;/p&gt;
 &lt;p&gt;Ganz schnell und easy, so getestet auf einem Ubuntu Jammy:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt install python3-pip

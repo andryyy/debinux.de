@@ -136,12 +136,12 @@
   </header>
   <div>
       <div><h2>Was passiert?</h2>
-<p>Es wird eine Rechtsklick-Aktion zu Nemo (Linux Mint Datei-Manager) hinzugfügt, die eine oder mehrere Bilder (Scans) begradigt, zu PDFs konvertiert, OCR (Texterkennung) ausführt und anschließend:</p>
+<p>Es wird eine Rechtsklick-Aktion zu Nemo (Linux Mint Datei-Manager) hinzugf&#252;gt, die eine oder mehrere Bilder (Scans) begradigt, zu PDFs konvertiert, OCR (Texterkennung) ausf&#252;hrt und anschlie&#223;end:</p>
 <ul>
-<li>pro Bild eine PDF erstellt und behält.</li>
-<li>alle PDFs zu einer großen PDF zusammenführt.</li>
+<li>pro Bild eine PDF erstellt und beh&#228;lt.</li>
+<li>alle PDFs zu einer gro&#223;en PDF zusammenf&#252;hrt.</li>
 </ul>
-<p>Das ist, was ich benötige. Wenn ihr die einzelnen …</p></div>
+<p>Das ist, was ich ben&#246;tige. Wenn ihr die einzelnen ...<a class="read-more" href="/ocr-per-rechtsklick-auf-dokument-in-nemo-ausfuhren.html"><span>weiterlesen</span></a></p></div>
         <br>
         <a class="btn"
            href="../ocr-per-rechtsklick-auf-dokument-in-nemo-ausfuhren.html#ocr-per-rechtsklick-auf-dokument-in-nemo-ausfuhren">
@@ -182,13 +182,13 @@
   <div>
       <div><p>Hi,</p>
 <p>ein Snippet (mal wieder). Daher ganz kurz und knapp.</p>
-<p>Unter Debian benötigt ihr die Pakete <code>nginx-full</code> sowie <code>subnetcalc</code>, da hier die entsprechenden LUA Module vorhanden sind.
+<p>Unter Debian ben&#246;tigt ihr die Pakete <code>nginx-full</code> sowie <code>subnetcalc</code>, da hier die entsprechenden LUA Module vorhanden sind.
 Wer ganz wild drauf ist, kompiliert es sich nach... :)</p>
 <p>In der entsprechenden Site-Konfiguration:</p>
 <div class="highlight"><pre><span></span><code>  location / {
-    default_type &#39;text/plain&#39;;
+    default_type 'text/plain';
     content_by_lua_block {
-        local handle = io.popen(&quot;/opt …</code></pre></div></div>
+        local handle = io.popen("/opt ...</code></pre><a class="read-more" href="/ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php.html"><span>weiterlesen</span></a></div></div>
         <br>
         <a class="btn"
            href="../ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php.html#ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php">
@@ -264,7 +264,7 @@ Das Tool sichert die Dateiberechtigungen (auch rekursiv: -R):</p>
 <span class="n">mkdir</span><span class="w"> </span><span class="o">-</span><span class="n">p</span><span class="w"> </span><span class="o">/</span><span class="k">data</span><span class="o">/</span><span class="err">{</span><span class="n">crypted</span><span class="p">,</span><span class="n">decrypted</span><span class="err">}</span><span class="w"></span>
 
 <span class="err">#</span><span class="w"> </span><span class="mf">4.</span><span class="w"></span>
-<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="n"> ! -f /data/crypted/gocryptfs …</span></code></pre></div></div>
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="n"> ! -f /data/crypted/gocryptfs ...</span></code></pre><a class="read-more" href="/gocryptfs-kompilieren-fur-hw-beschleunigtes-aes-und-systemd-dienst-einrichten.html"><span>weiterlesen</span></a></div></div>
         <br>
         <a class="btn"
            href="../gocryptfs-kompilieren-fur-hw-beschleunigtes-aes-und-systemd-dienst-einrichten.html#gocryptfs-kompilieren-fur-hw-beschleunigtes-aes-und-systemd-dienst-einrichten">
@@ -313,11 +313,11 @@ Das Tool sichert die Dateiberechtigungen (auch rekursiv: -R):</p>
   ProxyPassReverse / http://127.0.0.1:8090/
   ProxyPreserveHost On
   ProxyAddHeaders On
-  RequestHeader set X-Forwarded-Proto &quot;http&quot;
+  RequestHeader set X-Forwarded-Proto "http"
 <span class="nt">&lt;/VirtualHost&gt;</span>
 <span class="nt">&lt;VirtualHost</span> <span class="err">*:443</span><span class="nt">&gt;</span>
   ServerName ticket.domain.tld
-  ProxyPass /ws ws …</code></pre></div></div>
+  ProxyPass /ws ws ...</code></pre><a class="read-more" href="/template-zammad-reverse-proxy-mit-apache.html"><span>weiterlesen</span></a></div></div>
         <br>
         <a class="btn"
            href="../template-zammad-reverse-proxy-mit-apache.html#template-zammad-reverse-proxy-mit-apache">
@@ -337,15 +337,15 @@ Das Tool sichert die Dateiberechtigungen (auch rekursiv: -R):</p>
     </p>
   </header>
   <div>
-      <div><p>Ändert Subject auf "[Tag] Altes-Subject" und fügt einen Reply-To "moo@moo.com" hinzu.</p>
+      <div><p>&#196;ndert Subject auf "[Tag] Altes-Subject" und f&#252;gt einen Reply-To "moo@moo.com" hinzu.</p>
 <p>Die alten Headerfelder werden vorher entfernt.</p>
 <p>Nur ein Snippet.</p>
-<p><code>remove_headers { X = 0 }</code> sollte alle Header entfernen, nicht nur den ersten. Beim Subject und Reply-To eher unnötig.</p>
+<p><code>remove_headers { X = 0 }</code> sollte alle Header entfernen, nicht nur den ersten. Beim Subject und Reply-To eher unn&#246;tig.</p>
 <div class="highlight"><pre><span></span><code><span class="n">rspamd_config</span><span class="o">:</span><span class="n">register_symbol</span><span class="o">({</span>
-  <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;SUBJECT_REWRITE_ADD_HEADER&#39;</span><span class="o">,</span>
-  <span class="n">type</span> <span class="o">=</span> <span class="s1">&#39;postfilter&#39;</span><span class="o">,</span>
+  <span class="n">name</span> <span class="o">=</span> <span class="s1">'SUBJECT_REWRITE_ADD_HEADER'</span><span class="o">,</span>
+  <span class="n">type</span> <span class="o">=</span> <span class="s1">'postfilter'</span><span class="o">,</span>
   <span class="n">callback</span> <span class="o">=</span> <span class="kd">function</span><span class="o">(</span><span class="n">task</span><span class="o">)</span>
-    <span class="n">local</span> <span class="n">util …</span></code></pre></div></div>
+    <span class="n">local</span> <span class="n">util ...</span></code></pre><a class="read-more" href="/rspamd-subject-umschreiben-und-reply-to-hinzufugen.html"><span>weiterlesen</span></a></div></div>
         <br>
         <a class="btn"
            href="../rspamd-subject-umschreiben-und-reply-to-hinzufugen.html#rspamd-subject-umschreiben-und-reply-to-hinzufugen">
@@ -368,10 +368,10 @@ Das Tool sichert die Dateiberechtigungen (auch rekursiv: -R):</p>
       <div><p>Hallo,</p>
 <p>Long time no read.</p>
 <p>Mehr ein Snippet als ein echter Beitrag.</p>
-<p>Verwendet wird der der metadata_exporter von Rspamd. Eine Mail wird gesendet, wenn das Ratelimit auslöst und die Mail von einem authentifizierten Benutzer kommt. Das kann im LUA-Script entsprechend angepasst werden.</p>
+<p>Verwendet wird der der metadata_exporter von Rspamd. Eine Mail wird gesendet, wenn das Ratelimit ausl&#246;st und die Mail von einem authentifizierten Benutzer kommt. Das kann im LUA-Script entsprechend angepasst werden.</p>
 <p>Hier die "local.d/metadata_exporter.conf":</p>
 <div class="highlight"><pre><span></span><code><span class="n">rules</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">RLINFO …</span></code></pre></div></div>
+<span class="w">  </span><span class="n">RLINFO ...</span></code></pre><a class="read-more" href="/rspamd-ratelimit-uberschreitung-in-slack-channel-teilen.html"><span>weiterlesen</span></a></div></div>
         <br>
         <a class="btn"
            href="../rspamd-ratelimit-uberschreitung-in-slack-channel-teilen.html#rspamd-ratelimit-uberschreitung-in-slack-channel-teilen">
@@ -390,7 +390,7 @@ Das Tool sichert die Dateiberechtigungen (auch rekursiv: -R):</p>
 
     <footer>
 <p>
-  &copy; 2021  - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.en_US" target="_blank">Creative Commons Attribution-ShareAlike</a>
+  &copy; 2022  - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.en_US" target="_blank">Creative Commons Attribution-ShareAlike</a>
 </p>
 <p>
 Gebaut mit <a href="http://getpelican.com" target="_blank">Pelican</a> und dem <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a>theme

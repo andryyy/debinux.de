@@ -44,13 +44,13 @@
  
 
 <meta name="author" content="André Peters" />
-<meta name="description" content="Hi, ein Snippet (mal wieder). Daher ganz kurz und knapp. Unter Debian benötigt ihr die Pakete nginx-full sowie subnetcalc, da hier die entsprechenden LUA Module vorhanden sind. Wer ganz wild drauf ist, kompiliert es sich nach... :) In der entsprechenden Site-Konfiguration: location / { default_type &#39;text/plain&#39;; content_by_lua_block { local handle = io.popen(&#34;/opt …" />
+<meta name="description" content="Hi, ein Snippet (mal wieder). Daher ganz kurz und knapp. Unter Debian benötigt ihr die Pakete nginx-full sowie subnetcalc, da hier die entsprechenden LUA Module vorhanden sind. Wer ganz wild drauf ist, kompiliert es sich nach... :) In der entsprechenden Site-Konfiguration: location / { default_type &#39;text/plain&#39;; content_by_lua_block { local handle = io.popen(&#34;/opt ...weiterlesen" />
 <meta name="keywords" content="linux, nginx, lua, ipv6">
 
 
   <meta property="og:site_name" content="debinux.de"/>
   <meta property="og:title" content="IPv6 Prefix via Nginx, LUA und einem einfachen Bash-Script ausgeben (ohne PHP)"/>
-  <meta property="og:description" content="Hi, ein Snippet (mal wieder). Daher ganz kurz und knapp. Unter Debian benötigt ihr die Pakete nginx-full sowie subnetcalc, da hier die entsprechenden LUA Module vorhanden sind. Wer ganz wild drauf ist, kompiliert es sich nach... :) In der entsprechenden Site-Konfiguration: location / { default_type &#39;text/plain&#39;; content_by_lua_block { local handle = io.popen(&#34;/opt …"/>
+  <meta property="og:description" content="Hi, ein Snippet (mal wieder). Daher ganz kurz und knapp. Unter Debian benötigt ihr die Pakete nginx-full sowie subnetcalc, da hier die entsprechenden LUA Module vorhanden sind. Wer ganz wild drauf ist, kompiliert es sich nach... :) In der entsprechenden Site-Konfiguration: location / { default_type &#39;text/plain&#39;; content_by_lua_block { local handle = io.popen(&#34;/opt ...weiterlesen"/>
   <meta property="og:locale" content="de_DE"/>
   <meta property="og:url" content="./ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php.html"/>
   <meta property="og:type" content="article"/>
@@ -186,7 +186,7 @@ subnetcalc $(curl -6 ip6.mailcow.email -s) 64 -n | grep Network | cut -d= -f2 | 
 
     <footer>
 <p>
-  &copy; 2021  - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.en_US" target="_blank">Creative Commons Attribution-ShareAlike</a>
+  &copy; 2022  - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.en_US" target="_blank">Creative Commons Attribution-ShareAlike</a>
 </p>
 <p>
 Gebaut mit <a href="http://getpelican.com" target="_blank">Pelican</a> und dem <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a>theme
