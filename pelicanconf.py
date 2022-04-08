@@ -55,9 +55,10 @@ MENUITEMS = (
 BROWSER_COLOR = "#333"
 ROBOTS = "index, follow"
 
-COPYRIGHT_YEAR = 2021
+COPYRIGHT_YEAR = 2022
 
-PLUGINS = ["i18n_subsites", "tipue_search"]
+PLUGINS = ["i18n_subsites", "tipue_search", "read-more"]
+
 JINJA_ENVIRONMENT = {"extensions": ["jinja2.ext.i18n"]}
 
 # Default theme language.
@@ -87,3 +88,8 @@ CC_LICENSE = {
     "version": "4.0",
     "slug": "by-sa"
 }
+READ_MORE_LINK_FORMAT = '<a class="read-more" href="/{url}">{text}</a>'
+SUMMARY_END_SUFFIX = "..."
+SUMMARY_MAX_LENGTH = 50
+READ_MORE_LINK = '<span>weiterlesen</span>'
+
