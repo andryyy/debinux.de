@@ -140,15 +140,7 @@
   RewriteEngine on
   RewriteCond %{HTTPS} !=on
   RewriteRule ^/?(.*) https://%{HTTP_HOST}/$1 [R=301,L]
-  ProxyPass / http://127.0.0.1:8090/
-  ProxyPassReverse / http://127.0.0.1:8090/
-  ProxyPreserveHost On
-  ProxyAddHeaders On
-  RequestHeader set X-Forwarded-Proto "http"
-<span class="nt">&lt;/VirtualHost&gt;</span>
-<span class="nt">&lt;VirtualHost</span> <span class="err">*:443</span><span class="nt">&gt;</span>
-  ServerName ticket.domain.tld
-  ProxyPass /ws ws ...</code></pre><a class="read-more" href="/template-zammad-reverse-proxy-mit-apache.html"><span>weiterlesen</span></a></div></div>
+  ProxyPass / http ...</code></pre><a class="read-more" href="/template-zammad-reverse-proxy-mit-apache.html"><span>weiterlesen</span></a></div></div>
         <br>
         <a class="btn"
            href="../template-zammad-reverse-proxy-mit-apache.html#template-zammad-reverse-proxy-mit-apache">

@@ -136,7 +136,7 @@
   </header>
   <div>
       <div><p>Ich m&#246;chte Firefox Next auf einem Linux Mint 20.x installieren.</p>
-<p>Das Mint-Branding vom Firefox sorgte f&#252;r &#220;berraschungen. Es bewirkt beispielsweise, dass Suchvorschl&#228;ge mit Startpage nicht funktionieren, was an den Standard "searchplugins" liegen k&#246;nnte. Sehr &#228;rgerlich, nicht weiter debugged, denn - Punkt zwei: Ich mag den Browser lieber so, wie Mozilla ...<a class="read-more" href="/firefox-next-ohne-branding-auf-linux-mint.html"><span>weiterlesen</span></a></p></div>
+<p>Das Mint-Branding vom Firefox sorgte f&#252;r &#220;berraschungen. Es bewirkt ...<a class="read-more" href="/firefox-next-ohne-branding-auf-linux-mint.html"><span>weiterlesen</span></a></p></div>
         <br>
         <a class="btn"
            href="../firefox-next-ohne-branding-auf-linux-mint.html#firefox-next-ohne-branding-auf-linux-mint">
@@ -157,12 +157,7 @@
   </header>
   <div>
       <div><h2>Was passiert?</h2>
-<p>Es wird eine Rechtsklick-Aktion zu Nemo (Linux Mint Datei-Manager) hinzugf&#252;gt, die eine oder mehrere Bilder (Scans) begradigt, zu PDFs konvertiert, OCR (Texterkennung) ausf&#252;hrt und anschlie&#223;end:</p>
-<ul>
-<li>pro Bild eine PDF erstellt und beh&#228;lt.</li>
-<li>alle PDFs zu einer gro&#223;en PDF zusammenf&#252;hrt.</li>
-</ul>
-<p>Das ist, was ich ben&#246;tige. Wenn ihr die einzelnen ...<a class="read-more" href="/ocr-per-rechtsklick-auf-dokument-in-nemo-ausfuhren.html"><span>weiterlesen</span></a></p></div>
+<p>Es wird eine Rechtsklick-Aktion zu Nemo (Linux Mint Datei-Manager) hinzugf&#252;gt, die eine oder mehrere Bilder (Scans) begradigt, zu ...<a class="read-more" href="/ocr-per-rechtsklick-auf-dokument-in-nemo-ausfuhren.html"><span>weiterlesen</span></a></p></div>
         <br>
         <a class="btn"
            href="../ocr-per-rechtsklick-auf-dokument-in-nemo-ausfuhren.html#ocr-per-rechtsklick-auf-dokument-in-nemo-ausfuhren">
@@ -186,7 +181,12 @@
 <div class="highlight"><pre><span></span><code>sudo apt install heif-gdk-pixbuf heif-thumbnailer libheif1
 </code></pre></div>
 
-<p>Das war's schon.</p></div>
+<p>Das war's schon ...<a class="read-more" href="/heic-dateien-in-linux-mintubuntu-bildbetrachter-offnen-und-thumbnails-anzeigen.html"><span>weiterlesen</span></a></p></div>
+        <br>
+        <a class="btn"
+           href="../heic-dateien-in-linux-mintubuntu-bildbetrachter-offnen-und-thumbnails-anzeigen.html#heic-dateien-in-linux-mintubuntu-bildbetrachter-offnen-und-thumbnails-anzeigen">
+          Weiterlesen
+        </a>
   </div>
   <hr />
 </article>
@@ -201,8 +201,7 @@
     </p>
   </header>
   <div>
-      <div><p>Da es scheinbar vorkommt, dass Dateien trotz Wunsch zur lokalen Verf&#252;gbarkeit nicht heruntergeladen werden, habe ich mir kurzerhand die Attribute der Dateien angeschaut, verglichen und festgestellt, dass OneDrive als auch iCloud das Attribut "525344" bzw. "0x00080420" setzen, wenn "Always keep on this device" gesetzt ist.</p>
-<p>Das Attribute f&#252;r "Free up ...<a class="read-more" href="/icloud-onedrive-attribut-always-keep-on-device-per-ps-setzen.html"><span>weiterlesen</span></a></p></div>
+      <div><p>Da es scheinbar vorkommt, dass Dateien trotz Wunsch zur lokalen Verf&#252;gbarkeit nicht heruntergeladen werden, habe ich mir kurzerhand die Attribute ...<a class="read-more" href="/icloud-onedrive-attribut-always-keep-on-device-per-ps-setzen.html"><span>weiterlesen</span></a></p></div>
         <br>
         <a class="btn"
            href="../icloud-onedrive-attribut-always-keep-on-device-per-ps-setzen.html#icloud-onedrive-attribut-always-keep-on-device-per-ps-setzen">
@@ -224,13 +223,7 @@
   <div>
       <div><p>Hi,</p>
 <p>ein Snippet (mal wieder). Daher ganz kurz und knapp.</p>
-<p>Unter Debian ben&#246;tigt ihr die Pakete <code>nginx-full</code> sowie <code>subnetcalc</code>, da hier die entsprechenden LUA Module vorhanden sind.
-Wer ganz wild drauf ist, kompiliert es sich nach... :)</p>
-<p>In der entsprechenden Site-Konfiguration:</p>
-<div class="highlight"><pre><span></span><code>  location / {
-    default_type 'text/plain';
-    content_by_lua_block {
-        local handle = io.popen("/opt ...</code></pre><a class="read-more" href="/ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php.html"><span>weiterlesen</span></a></div></div>
+<p>Unter Debian ben&#246;tigt ihr die Pakete <code>nginx-full</code> sowie <code>subnetcalc</code>, da ...<a class="read-more" href="/ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php.html"><span>weiterlesen</span></a></p></div>
         <br>
         <a class="btn"
            href="../ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php.html#ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php">
@@ -288,15 +281,12 @@ Wer ganz wild drauf ist, kompiliert es sich nach... :)</p>
   </header>
   <div>
       <div><p>Ein kleiner Helfer, der gerne beim Backup vergessen wird: <code>getfacl</code> - <em>get file acl</em>.
-Das Tool sichert die Dateiberechtigungen (auch rekursiv: -R):</p>
-<div class="highlight"><pre><span></span><code>getfacl -R /ein/pfad &gt; acl_ein_pfad_$(date +&quot;%d.%m.%Y_%H%M&quot;).acl
-</code></pre></div>
-
-<p>Und zurück:</p>
-<div class="highlight"><pre><span></span><code>setfacl --restore=datei.acl
-</code></pre></div>
-
-<p>Für Debian und Ubuntu lautet der Paketname "acl".</p></div>
+Das Tool sichert die Dateiberechtigungen (auch rekursiv ...<a class="read-more" href="/dateiberechtigungen-sichern.html"><span>weiterlesen</span></a></p></div>
+        <br>
+        <a class="btn"
+           href="../dateiberechtigungen-sichern.html#dateiberechtigungen-sichern">
+          Weiterlesen
+        </a>
   </div>
   <hr />
 </article>
@@ -312,12 +302,16 @@ Das Tool sichert die Dateiberechtigungen (auch rekursiv: -R):</p>
   </header>
   <div>
       <div><p>Deaktivieren:</p>
-<div class="highlight"><pre><span></span><code><span class="kt">reg</span> <span class="n">add</span> <span class="s">&quot;HKLM\System\CurrentControlSet\Services\Dnscache&quot;</span> <span class="o">/</span><span class="n">v</span> <span class="s">&quot;Start&quot;</span> <span class="o">/</span><span class="n">t</span> <span class="n">REG_DWORD</span> <span class="o">/</span><span class="n">d</span> <span class="s">&quot;4&quot;</span> <span class="o">/</span><span class="n">f</span>
+<div class="highlight"><pre><span></span><code><span class="kt">reg</span> <span class="n">add</span> <span class="s">"HKLM\System\CurrentControlSet\Services\Dnscache"</span> <span class="o">/</span><span class="n">v</span> <span class="s">"Start"</span> <span class="o">/</span><span class="n">t</span> <span class="n">REG_DWORD</span> <span class="o">/</span><span class="n">d</span> <span class="s">"4"</span> <span class="o">/</span><span class="n">f</span>
 </code></pre></div>
 
 <p>Aktivieren:</p>
-<div class="highlight"><pre><span></span><code><span class="kt">reg</span> <span class="n">add</span> <span class="s">&quot;HKLM\System\CurrentControlSet\Services\Dnscache&quot;</span> <span class="o">/</span><span class="n">v</span> <span class="s">&quot;Start&quot;</span> <span class="o">/</span><span class="n">t</span> <span class="n">REG_DWORD</span> <span class="o">/</span><span class="n">d</span> <span class="s">&quot;2&quot;</span> <span class="o">/</span><span class="n">f</span>
-</code></pre></div></div>
+<div class="highlight"><pre><span></span><code><span class="kt">reg</span> <span class="n">add</span> <span class="s">"HKLM\System ...</span></code></pre><a class="read-more" href="/windows-dns-cache-deaktivierenaktivieren.html"><span>weiterlesen</span></a></div></div>
+        <br>
+        <a class="btn"
+           href="../windows-dns-cache-deaktivierenaktivieren.html#windows-dns-cache-deaktivierenaktivieren">
+          Weiterlesen
+        </a>
   </div>
   <hr />
 </article>
@@ -337,16 +331,7 @@ Das Tool sichert die Dateiberechtigungen (auch rekursiv: -R):</p>
 <span class="n">yum</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">openssl</span><span class="o">-</span><span class="n">devel</span><span class="w"> </span><span class="n">fuse</span><span class="w"></span>
 
 <span class="err">#</span><span class="w"> </span><span class="mf">2.</span><span class="w"></span>
-<span class="k">go</span><span class="w"> </span><span class="k">get</span><span class="w"> </span><span class="o">-</span><span class="n">d</span><span class="w"> </span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">rfjakob</span><span class="o">/</span><span class="n">gocryptfs</span><span class="w"></span>
-<span class="n">cd</span><span class="w"> </span><span class="err">$</span><span class="p">(</span><span class="k">go</span><span class="w"> </span><span class="n">env</span><span class="w"> </span><span class="n">GOPATH</span><span class="p">)</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">rfjakob</span><span class="o">/</span><span class="n">gocryptfs</span><span class="w"></span>
-<span class="p">.</span><span class="o">/</span><span class="n">build</span><span class="p">.</span><span class="n">bash</span><span class="w"></span>
-<span class="n">cp</span><span class="w"> </span><span class="n">gocryptfs</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="w"></span>
-
-<span class="err">#</span><span class="w"> </span><span class="mf">3.</span><span class="w"></span>
-<span class="n">mkdir</span><span class="w"> </span><span class="o">-</span><span class="n">p</span><span class="w"> </span><span class="o">/</span><span class="k">data</span><span class="o">/</span><span class="err">{</span><span class="n">crypted</span><span class="p">,</span><span class="n">decrypted</span><span class="err">}</span><span class="w"></span>
-
-<span class="err">#</span><span class="w"> </span><span class="mf">4.</span><span class="w"></span>
-<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="n"> ! -f /data/crypted/gocryptfs ...</span></code></pre><a class="read-more" href="/gocryptfs-kompilieren-fur-hw-beschleunigtes-aes-und-systemd-dienst-einrichten.html"><span>weiterlesen</span></a></div></div>
+<span class="k">go</span><span class="w"> </span><span class="k">get</span><span class="w"> </span><span class="o">-</span><span class="n">d</span><span class="w"> </span><span class="n">github</span><span class="p">.</span><span class="n">com ...</span></code></pre><a class="read-more" href="/gocryptfs-kompilieren-fur-hw-beschleunigtes-aes-und-systemd-dienst-einrichten.html"><span>weiterlesen</span></a></div></div>
         <br>
         <a class="btn"
            href="../gocryptfs-kompilieren-fur-hw-beschleunigtes-aes-und-systemd-dienst-einrichten.html#gocryptfs-kompilieren-fur-hw-beschleunigtes-aes-und-systemd-dienst-einrichten">

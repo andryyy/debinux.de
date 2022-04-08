@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>debinux.de - Linux, Ubuntu</title><link href="https://debinux.de/" rel="alternate"></link><link href="https://debinux.de/feeds/linux-ubuntu.atom.xml" rel="self"></link><id>https://debinux.de/</id><updated>2022-04-05T07:10:00+02:00</updated><subtitle>an admins notepad</subtitle><entry><title>Ein paar Ubuntu Dock Quickies mit gsettings</title><link href="https://debinux.de/ein-paar-ubuntu-dock-quickies-mit-gsettings.html" rel="alternate"></link><published>2022-04-05T07:10:00+02:00</published><updated>2022-04-05T07:10:00+02:00</updated><author><name>André Peters</name></author><id>tag:debinux.de,2022-04-05:/ein-paar-ubuntu-dock-quickies-mit-gsettings.html</id><summary type="html">&lt;p&gt;Etwas, an das ich mich bei Ubuntu nie gew&amp;#246;hnt habe, ist das Verhalten der Icons im Dock per Standard.&lt;/p&gt;
-&lt;p&gt;Vielleicht ist das Folgende f&amp;#252;r den ein oder anderen Leser ebenfalls brauchbar.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;# Den Modifier auf ALT zur&amp;#252;ckstellen (sonst: Super)
-gsettings set org.gnome.desktop.wm.preferences mouse-button-modifier '&amp;lt;Alt&amp;gt;'
-
-# Fenster mit Modifier ...&lt;/code&gt;&lt;/pre&gt;&lt;a class="read-more" href="/ein-paar-ubuntu-dock-quickies-mit-gsettings.html"&gt;&lt;span&gt;weiterlesen&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;Etwas, an das ich mich bei Ubuntu nie gewöhnt habe, ist das Verhalten der Icons im Dock per Standard.&lt;/p&gt;
+&lt;p&gt;Vielleicht ...&lt;a class="read-more" href="/ein-paar-ubuntu-dock-quickies-mit-gsettings.html"&gt;&lt;span&gt;weiterlesen&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Etwas, an das ich mich bei Ubuntu nie gewöhnt habe, ist das Verhalten der Icons im Dock per Standard.&lt;/p&gt;
 &lt;p&gt;Vielleicht ist das Folgende für den ein oder anderen Leser ebenfalls brauchbar.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;# Den Modifier auf ALT zurückstellen (sonst: Super)
 gsettings set org.gnome.desktop.wm.preferences mouse-button-modifier &amp;#39;&amp;lt;Alt&amp;gt;&amp;#39;
@@ -22,12 +18,7 @@ gsettings set org.gnome.shell.extensions.dash-to-dock scroll-action &amp;#39;cyc
 gsettings set org.gnome.shell.extensions.dash-to-dock isolate-workspaces true
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="Linux, Ubuntu"></category><category term="linux"></category><category term="gsettings"></category><category term="dock"></category></entry><entry><title>Wenn AnyDesk unter Ubuntu Jammy (Beta) nicht startet</title><link href="https://debinux.de/wenn-anydesk-unter-ubuntu-jammy-beta-nicht-startet.html" rel="alternate"></link><published>2022-04-02T12:54:00+02:00</published><updated>2022-04-03T10:23:00+02:00</updated><author><name>André Peters</name></author><id>tag:debinux.de,2022-04-02:/wenn-anydesk-unter-ubuntu-jammy-beta-nicht-startet.html</id><summary type="html">&lt;p&gt;...solltet ihr auf eine angepasste Version von AnyDesk f&amp;#252;r Jammy warten oder eben &lt;code&gt;libpangox-1.0-0&lt;/code&gt; nachinstallieren.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;cd
-wget http://de.archive.ubuntu.com/ubuntu/pool/universe/p/pangox-compat/libpangox-1.0-0_0.0.2-5ubuntu1_amd64.deb
-dpkg -i libpangox-1.0-0_0.0.2-5ubuntu1_amd64.deb
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Das war's schon.&lt;/p&gt;
-&lt;p&gt;Das ist nicht die feine Art, denkt ...&lt;a class="read-more" href="/wenn-anydesk-unter-ubuntu-jammy-beta-nicht-startet.html"&gt;&lt;span&gt;weiterlesen&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;...solltet ihr auf eine angepasste Version von AnyDesk für Jammy warten oder eben &lt;code&gt;libpangox-1.0-0&lt;/code&gt; nachinstallieren.&lt;/p&gt;
+wget http://de ...&lt;/code&gt;&lt;/pre&gt;&lt;a class="read-more" href="/wenn-anydesk-unter-ubuntu-jammy-beta-nicht-startet.html"&gt;&lt;span&gt;weiterlesen&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;</summary><content type="html">&lt;p&gt;...solltet ihr auf eine angepasste Version von AnyDesk für Jammy warten oder eben &lt;code&gt;libpangox-1.0-0&lt;/code&gt; nachinstallieren.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;cd
 wget http://de.archive.ubuntu.com/ubuntu/pool/universe/p/pangox-compat/libpangox-1.0-0_0.0.2-5ubuntu1_amd64.deb
 dpkg -i libpangox-1.0-0_0.0.2-5ubuntu1_amd64.deb

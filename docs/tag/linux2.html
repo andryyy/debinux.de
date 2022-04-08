@@ -136,12 +136,7 @@
   </header>
   <div>
       <div><h2>Was passiert?</h2>
-<p>Es wird eine Rechtsklick-Aktion zu Nemo (Linux Mint Datei-Manager) hinzugf&#252;gt, die eine oder mehrere Bilder (Scans) begradigt, zu PDFs konvertiert, OCR (Texterkennung) ausf&#252;hrt und anschlie&#223;end:</p>
-<ul>
-<li>pro Bild eine PDF erstellt und beh&#228;lt.</li>
-<li>alle PDFs zu einer gro&#223;en PDF zusammenf&#252;hrt.</li>
-</ul>
-<p>Das ist, was ich ben&#246;tige. Wenn ihr die einzelnen ...<a class="read-more" href="/ocr-per-rechtsklick-auf-dokument-in-nemo-ausfuhren.html"><span>weiterlesen</span></a></p></div>
+<p>Es wird eine Rechtsklick-Aktion zu Nemo (Linux Mint Datei-Manager) hinzugf&#252;gt, die eine oder mehrere Bilder (Scans) begradigt, zu ...<a class="read-more" href="/ocr-per-rechtsklick-auf-dokument-in-nemo-ausfuhren.html"><span>weiterlesen</span></a></p></div>
         <br>
         <a class="btn"
            href="../ocr-per-rechtsklick-auf-dokument-in-nemo-ausfuhren.html#ocr-per-rechtsklick-auf-dokument-in-nemo-ausfuhren">
@@ -165,7 +160,12 @@
 <div class="highlight"><pre><span></span><code>sudo apt install heif-gdk-pixbuf heif-thumbnailer libheif1
 </code></pre></div>
 
-<p>Das war's schon.</p></div>
+<p>Das war's schon ...<a class="read-more" href="/heic-dateien-in-linux-mintubuntu-bildbetrachter-offnen-und-thumbnails-anzeigen.html"><span>weiterlesen</span></a></p></div>
+        <br>
+        <a class="btn"
+           href="../heic-dateien-in-linux-mintubuntu-bildbetrachter-offnen-und-thumbnails-anzeigen.html#heic-dateien-in-linux-mintubuntu-bildbetrachter-offnen-und-thumbnails-anzeigen">
+          Weiterlesen
+        </a>
   </div>
   <hr />
 </article>
@@ -182,13 +182,7 @@
   <div>
       <div><p>Hi,</p>
 <p>ein Snippet (mal wieder). Daher ganz kurz und knapp.</p>
-<p>Unter Debian ben&#246;tigt ihr die Pakete <code>nginx-full</code> sowie <code>subnetcalc</code>, da hier die entsprechenden LUA Module vorhanden sind.
-Wer ganz wild drauf ist, kompiliert es sich nach... :)</p>
-<p>In der entsprechenden Site-Konfiguration:</p>
-<div class="highlight"><pre><span></span><code>  location / {
-    default_type 'text/plain';
-    content_by_lua_block {
-        local handle = io.popen("/opt ...</code></pre><a class="read-more" href="/ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php.html"><span>weiterlesen</span></a></div></div>
+<p>Unter Debian ben&#246;tigt ihr die Pakete <code>nginx-full</code> sowie <code>subnetcalc</code>, da ...<a class="read-more" href="/ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php.html"><span>weiterlesen</span></a></p></div>
         <br>
         <a class="btn"
            href="../ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php.html#ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php">
@@ -227,15 +221,12 @@ Wer ganz wild drauf ist, kompiliert es sich nach... :)</p>
   </header>
   <div>
       <div><p>Ein kleiner Helfer, der gerne beim Backup vergessen wird: <code>getfacl</code> - <em>get file acl</em>.
-Das Tool sichert die Dateiberechtigungen (auch rekursiv: -R):</p>
-<div class="highlight"><pre><span></span><code>getfacl -R /ein/pfad &gt; acl_ein_pfad_$(date +&quot;%d.%m.%Y_%H%M&quot;).acl
-</code></pre></div>
-
-<p>Und zurück:</p>
-<div class="highlight"><pre><span></span><code>setfacl --restore=datei.acl
-</code></pre></div>
-
-<p>Für Debian und Ubuntu lautet der Paketname "acl".</p></div>
+Das Tool sichert die Dateiberechtigungen (auch rekursiv ...<a class="read-more" href="/dateiberechtigungen-sichern.html"><span>weiterlesen</span></a></p></div>
+        <br>
+        <a class="btn"
+           href="../dateiberechtigungen-sichern.html#dateiberechtigungen-sichern">
+          Weiterlesen
+        </a>
   </div>
   <hr />
 </article>
@@ -255,16 +246,7 @@ Das Tool sichert die Dateiberechtigungen (auch rekursiv: -R):</p>
 <span class="n">yum</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">openssl</span><span class="o">-</span><span class="n">devel</span><span class="w"> </span><span class="n">fuse</span><span class="w"></span>
 
 <span class="err">#</span><span class="w"> </span><span class="mf">2.</span><span class="w"></span>
-<span class="k">go</span><span class="w"> </span><span class="k">get</span><span class="w"> </span><span class="o">-</span><span class="n">d</span><span class="w"> </span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">rfjakob</span><span class="o">/</span><span class="n">gocryptfs</span><span class="w"></span>
-<span class="n">cd</span><span class="w"> </span><span class="err">$</span><span class="p">(</span><span class="k">go</span><span class="w"> </span><span class="n">env</span><span class="w"> </span><span class="n">GOPATH</span><span class="p">)</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">rfjakob</span><span class="o">/</span><span class="n">gocryptfs</span><span class="w"></span>
-<span class="p">.</span><span class="o">/</span><span class="n">build</span><span class="p">.</span><span class="n">bash</span><span class="w"></span>
-<span class="n">cp</span><span class="w"> </span><span class="n">gocryptfs</span><span class="w"> </span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="w"></span>
-
-<span class="err">#</span><span class="w"> </span><span class="mf">3.</span><span class="w"></span>
-<span class="n">mkdir</span><span class="w"> </span><span class="o">-</span><span class="n">p</span><span class="w"> </span><span class="o">/</span><span class="k">data</span><span class="o">/</span><span class="err">{</span><span class="n">crypted</span><span class="p">,</span><span class="n">decrypted</span><span class="err">}</span><span class="w"></span>
-
-<span class="err">#</span><span class="w"> </span><span class="mf">4.</span><span class="w"></span>
-<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="n"> ! -f /data/crypted/gocryptfs ...</span></code></pre><a class="read-more" href="/gocryptfs-kompilieren-fur-hw-beschleunigtes-aes-und-systemd-dienst-einrichten.html"><span>weiterlesen</span></a></div></div>
+<span class="k">go</span><span class="w"> </span><span class="k">get</span><span class="w"> </span><span class="o">-</span><span class="n">d</span><span class="w"> </span><span class="n">github</span><span class="p">.</span><span class="n">com ...</span></code></pre><a class="read-more" href="/gocryptfs-kompilieren-fur-hw-beschleunigtes-aes-und-systemd-dienst-einrichten.html"><span>weiterlesen</span></a></div></div>
         <br>
         <a class="btn"
            href="../gocryptfs-kompilieren-fur-hw-beschleunigtes-aes-und-systemd-dienst-einrichten.html#gocryptfs-kompilieren-fur-hw-beschleunigtes-aes-und-systemd-dienst-einrichten">
@@ -309,15 +291,7 @@ Das Tool sichert die Dateiberechtigungen (auch rekursiv: -R):</p>
   RewriteEngine on
   RewriteCond %{HTTPS} !=on
   RewriteRule ^/?(.*) https://%{HTTP_HOST}/$1 [R=301,L]
-  ProxyPass / http://127.0.0.1:8090/
-  ProxyPassReverse / http://127.0.0.1:8090/
-  ProxyPreserveHost On
-  ProxyAddHeaders On
-  RequestHeader set X-Forwarded-Proto "http"
-<span class="nt">&lt;/VirtualHost&gt;</span>
-<span class="nt">&lt;VirtualHost</span> <span class="err">*:443</span><span class="nt">&gt;</span>
-  ServerName ticket.domain.tld
-  ProxyPass /ws ws ...</code></pre><a class="read-more" href="/template-zammad-reverse-proxy-mit-apache.html"><span>weiterlesen</span></a></div></div>
+  ProxyPass / http ...</code></pre><a class="read-more" href="/template-zammad-reverse-proxy-mit-apache.html"><span>weiterlesen</span></a></div></div>
         <br>
         <a class="btn"
            href="../template-zammad-reverse-proxy-mit-apache.html#template-zammad-reverse-proxy-mit-apache">
@@ -339,13 +313,7 @@ Das Tool sichert die Dateiberechtigungen (auch rekursiv: -R):</p>
   <div>
       <div><p>&#196;ndert Subject auf "[Tag] Altes-Subject" und f&#252;gt einen Reply-To "moo@moo.com" hinzu.</p>
 <p>Die alten Headerfelder werden vorher entfernt.</p>
-<p>Nur ein Snippet.</p>
-<p><code>remove_headers { X = 0 }</code> sollte alle Header entfernen, nicht nur den ersten. Beim Subject und Reply-To eher unn&#246;tig.</p>
-<div class="highlight"><pre><span></span><code><span class="n">rspamd_config</span><span class="o">:</span><span class="n">register_symbol</span><span class="o">({</span>
-  <span class="n">name</span> <span class="o">=</span> <span class="s1">'SUBJECT_REWRITE_ADD_HEADER'</span><span class="o">,</span>
-  <span class="n">type</span> <span class="o">=</span> <span class="s1">'postfilter'</span><span class="o">,</span>
-  <span class="n">callback</span> <span class="o">=</span> <span class="kd">function</span><span class="o">(</span><span class="n">task</span><span class="o">)</span>
-    <span class="n">local</span> <span class="n">util ...</span></code></pre><a class="read-more" href="/rspamd-subject-umschreiben-und-reply-to-hinzufugen.html"><span>weiterlesen</span></a></div></div>
+<p>Nur ...<a class="read-more" href="/rspamd-subject-umschreiben-und-reply-to-hinzufugen.html"><span>weiterlesen</span></a></p></div>
         <br>
         <a class="btn"
            href="../rspamd-subject-umschreiben-und-reply-to-hinzufugen.html#rspamd-subject-umschreiben-und-reply-to-hinzufugen">
@@ -368,10 +336,7 @@ Das Tool sichert die Dateiberechtigungen (auch rekursiv: -R):</p>
       <div><p>Hallo,</p>
 <p>Long time no read.</p>
 <p>Mehr ein Snippet als ein echter Beitrag.</p>
-<p>Verwendet wird der der metadata_exporter von Rspamd. Eine Mail wird gesendet, wenn das Ratelimit ausl&#246;st und die Mail von einem authentifizierten Benutzer kommt. Das kann im LUA-Script entsprechend angepasst werden.</p>
-<p>Hier die "local.d/metadata_exporter.conf":</p>
-<div class="highlight"><pre><span></span><code><span class="n">rules</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">RLINFO ...</span></code></pre><a class="read-more" href="/rspamd-ratelimit-uberschreitung-in-slack-channel-teilen.html"><span>weiterlesen</span></a></div></div>
+<p>Verwendet wird der der metadata_exporter von Rspamd. Eine ...<a class="read-more" href="/rspamd-ratelimit-uberschreitung-in-slack-channel-teilen.html"><span>weiterlesen</span></a></p></div>
         <br>
         <a class="btn"
            href="../rspamd-ratelimit-uberschreitung-in-slack-channel-teilen.html#rspamd-ratelimit-uberschreitung-in-slack-channel-teilen">

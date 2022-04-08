@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>debinux.de - Linux, Python</title><link href="https://debinux.de/" rel="alternate"></link><link href="https://debinux.de/feeds/linux-python.atom.xml" rel="self"></link><id>https://debinux.de/</id><updated>2022-04-08T08:58:00+02:00</updated><subtitle>an admins notepad</subtitle><entry><title>Pushover Benachrichtigung bei USB Anschluss</title><link href="https://debinux.de/pushover-benachrichtigung-bei-usb-anschluss.html" rel="alternate"></link><published>2022-04-08T08:58:00+02:00</published><updated>2022-04-08T08:58:00+02:00</updated><author><name>André Peters</name></author><id>tag:debinux.de,2022-04-08:/pushover-benachrichtigung-bei-usb-anschluss.html</id><summary type="html">&lt;p&gt;Kommt her, meine Kinder, und nehmt euch einen Aluhut.&lt;/p&gt;
-&lt;p&gt;Mal nicht zu Hause und besorgt, dass jemand den Computer infiltriert?&lt;/p&gt;
-&lt;p&gt;Ganz schnell und easy, so getestet auf einem Ubuntu Jammy:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt install python3-pip
-pip install pyudev
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Eine Datei &lt;code&gt;/usr/local/sbin/pyudev_notify.py&lt;/code&gt; anlegen:&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;&lt;span class="normal"&gt; 1&lt;/span&gt;
-&lt;span class="normal"&gt; 2&lt;/span&gt;
-&lt;span class="normal"&gt; 3&lt;/span&gt;
-&lt;span class="normal"&gt; 4&lt;/span&gt;
-&lt;span class="normal"&gt; 5 ...&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;a class="read-more" href="/pushover-benachrichtigung-bei-usb-anschluss.html"&gt;&lt;span&gt;weiterlesen&lt;/span&gt;&lt;/a&gt;&lt;/table&gt;</summary><content type="html">&lt;p&gt;Kommt her, meine Kinder, und nehmt euch einen Aluhut.&lt;/p&gt;
+&lt;p&gt;Mal nicht zu Hause und besorgt, dass jemand den Computer infiltriert ...&lt;a class="read-more" href="/pushover-benachrichtigung-bei-usb-anschluss.html"&gt;&lt;span&gt;weiterlesen&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Kommt her, meine Kinder, und nehmt euch einen Aluhut.&lt;/p&gt;
 &lt;p&gt;Mal nicht zu Hause und besorgt, dass jemand den Computer infiltriert?&lt;/p&gt;
 &lt;p&gt;Ganz schnell und easy, so getestet auf einem Ubuntu Jammy:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;sudo apt install python3-pip

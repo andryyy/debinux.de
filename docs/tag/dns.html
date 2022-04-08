@@ -152,8 +152,7 @@
   </header>
   <div>
       <div><p>Es kann durchaus Vorteile haben viele oder gar alle Anfragen &#252;ber einen vertrauten Tunnel zu schicken.</p>
-<p>Bevorzugen und empfehlen m&#246;chte ich, die weiterzuleitenden Zonen oder Hosts selber auszuw&#228;hlen und an entsprechender Stelle einzupflegen (Stichwort DNS-Overrides).</p>
-<p>Weiterhin ist es ratsam nicht den gesamten Traffic &#252;ber ein VPN-Profil zu jagen und stattdessen ...<a class="read-more" href="/openvpn-clients-dns-einstellungen-und-routen-ignorieren.html"><span>weiterlesen</span></a></p></div>
+<p>Bevorzugen und empfehlen m&#246;chte ...<a class="read-more" href="/openvpn-clients-dns-einstellungen-und-routen-ignorieren.html"><span>weiterlesen</span></a></p></div>
         <br>
         <a class="btn"
            href="../openvpn-clients-dns-einstellungen-und-routen-ignorieren.html#openvpn-clients-dns-einstellungen-und-routen-ignorieren">
@@ -174,7 +173,7 @@
   </header>
   <div>
       <div><p>Neben Suchanfragen via GET-Methode geh&#246;rt auch DNS zu einem ewigen Klassiker f&#252;r Daten-Leaks.</p>
-<p>Da keiner Netzwerkschn&#252;ffler mag, verwendet man heute DNS-over-TLS. Neben einem TLS-Kanal auf Port 853 funktioniert das &#252;brigens auch mit etwas mehr Overhead &#252;ber HTTPS, es scheint mir aber so, als sie hat sich alles in Richtung DNS-over-TLS ...<a class="read-more" href="/dns-uber-tls-dns-over-https.html"><span>weiterlesen</span></a></p></div>
+<p>Da keiner Netzwerkschn&#252;ffler mag, verwendet man heute ...<a class="read-more" href="/dns-uber-tls-dns-over-https.html"><span>weiterlesen</span></a></p></div>
         <br>
         <a class="btn"
            href="../dns-uber-tls-dns-over-https.html#dns-uber-tls-dns-over-https">
@@ -195,12 +194,16 @@
   </header>
   <div>
       <div><p>Deaktivieren:</p>
-<div class="highlight"><pre><span></span><code><span class="kt">reg</span> <span class="n">add</span> <span class="s">&quot;HKLM\System\CurrentControlSet\Services\Dnscache&quot;</span> <span class="o">/</span><span class="n">v</span> <span class="s">&quot;Start&quot;</span> <span class="o">/</span><span class="n">t</span> <span class="n">REG_DWORD</span> <span class="o">/</span><span class="n">d</span> <span class="s">&quot;4&quot;</span> <span class="o">/</span><span class="n">f</span>
+<div class="highlight"><pre><span></span><code><span class="kt">reg</span> <span class="n">add</span> <span class="s">"HKLM\System\CurrentControlSet\Services\Dnscache"</span> <span class="o">/</span><span class="n">v</span> <span class="s">"Start"</span> <span class="o">/</span><span class="n">t</span> <span class="n">REG_DWORD</span> <span class="o">/</span><span class="n">d</span> <span class="s">"4"</span> <span class="o">/</span><span class="n">f</span>
 </code></pre></div>
 
 <p>Aktivieren:</p>
-<div class="highlight"><pre><span></span><code><span class="kt">reg</span> <span class="n">add</span> <span class="s">&quot;HKLM\System\CurrentControlSet\Services\Dnscache&quot;</span> <span class="o">/</span><span class="n">v</span> <span class="s">&quot;Start&quot;</span> <span class="o">/</span><span class="n">t</span> <span class="n">REG_DWORD</span> <span class="o">/</span><span class="n">d</span> <span class="s">&quot;2&quot;</span> <span class="o">/</span><span class="n">f</span>
-</code></pre></div></div>
+<div class="highlight"><pre><span></span><code><span class="kt">reg</span> <span class="n">add</span> <span class="s">"HKLM\System ...</span></code></pre><a class="read-more" href="/windows-dns-cache-deaktivierenaktivieren.html"><span>weiterlesen</span></a></div></div>
+        <br>
+        <a class="btn"
+           href="../windows-dns-cache-deaktivierenaktivieren.html#windows-dns-cache-deaktivierenaktivieren">
+          Weiterlesen
+        </a>
   </div>
 </article>
 

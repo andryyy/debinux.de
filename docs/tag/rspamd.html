@@ -137,13 +137,7 @@
   <div>
       <div><p>&#196;ndert Subject auf "[Tag] Altes-Subject" und f&#252;gt einen Reply-To "moo@moo.com" hinzu.</p>
 <p>Die alten Headerfelder werden vorher entfernt.</p>
-<p>Nur ein Snippet.</p>
-<p><code>remove_headers { X = 0 }</code> sollte alle Header entfernen, nicht nur den ersten. Beim Subject und Reply-To eher unn&#246;tig.</p>
-<div class="highlight"><pre><span></span><code><span class="n">rspamd_config</span><span class="o">:</span><span class="n">register_symbol</span><span class="o">({</span>
-  <span class="n">name</span> <span class="o">=</span> <span class="s1">'SUBJECT_REWRITE_ADD_HEADER'</span><span class="o">,</span>
-  <span class="n">type</span> <span class="o">=</span> <span class="s1">'postfilter'</span><span class="o">,</span>
-  <span class="n">callback</span> <span class="o">=</span> <span class="kd">function</span><span class="o">(</span><span class="n">task</span><span class="o">)</span>
-    <span class="n">local</span> <span class="n">util ...</span></code></pre><a class="read-more" href="/rspamd-subject-umschreiben-und-reply-to-hinzufugen.html"><span>weiterlesen</span></a></div></div>
+<p>Nur ...<a class="read-more" href="/rspamd-subject-umschreiben-und-reply-to-hinzufugen.html"><span>weiterlesen</span></a></p></div>
         <br>
         <a class="btn"
            href="../rspamd-subject-umschreiben-und-reply-to-hinzufugen.html#rspamd-subject-umschreiben-und-reply-to-hinzufugen">
@@ -166,10 +160,7 @@
       <div><p>Hallo,</p>
 <p>Long time no read.</p>
 <p>Mehr ein Snippet als ein echter Beitrag.</p>
-<p>Verwendet wird der der metadata_exporter von Rspamd. Eine Mail wird gesendet, wenn das Ratelimit ausl&#246;st und die Mail von einem authentifizierten Benutzer kommt. Das kann im LUA-Script entsprechend angepasst werden.</p>
-<p>Hier die "local.d/metadata_exporter.conf":</p>
-<div class="highlight"><pre><span></span><code><span class="n">rules</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">RLINFO ...</span></code></pre><a class="read-more" href="/rspamd-ratelimit-uberschreitung-in-slack-channel-teilen.html"><span>weiterlesen</span></a></div></div>
+<p>Verwendet wird der der metadata_exporter von Rspamd. Eine ...<a class="read-more" href="/rspamd-ratelimit-uberschreitung-in-slack-channel-teilen.html"><span>weiterlesen</span></a></p></div>
         <br>
         <a class="btn"
            href="../rspamd-ratelimit-uberschreitung-in-slack-channel-teilen.html#rspamd-ratelimit-uberschreitung-in-slack-channel-teilen">

@@ -90,6 +90,5 @@ CC_LICENSE = {
 }
 READ_MORE_LINK_FORMAT = '<a class="read-more" href="/{url}">{text}</a>'
 SUMMARY_END_SUFFIX = "..."
-SUMMARY_MAX_LENGTH = 50
+SUMMARY_MAX_LENGTH = 20
 READ_MORE_LINK = '<span>weiterlesen</span>'
-

@@ -136,18 +136,7 @@
   </header>
   <div>
       <div><p>Kommt her, meine Kinder, und nehmt euch einen Aluhut.</p>
-<p>Mal nicht zu Hause und besorgt, dass jemand den Computer infiltriert?</p>
-<p>Ganz schnell und easy, so getestet auf einem Ubuntu Jammy:</p>
-<div class="highlight"><pre><span></span><code>sudo apt install python3-pip
-pip install pyudev
-</code></pre></div>
-
-<p>Eine Datei <code>/usr/local/sbin/pyudev_notify.py</code> anlegen:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5 ...</span></pre></div></td></tr><a class="read-more" href="/pushover-benachrichtigung-bei-usb-anschluss.html"><span>weiterlesen</span></a></table></div>
+<p>Mal nicht zu Hause und besorgt, dass jemand den Computer infiltriert ...<a class="read-more" href="/pushover-benachrichtigung-bei-usb-anschluss.html"><span>weiterlesen</span></a></p></div>
         <br>
         <a class="btn"
            href="./pushover-benachrichtigung-bei-usb-anschluss.html#pushover-benachrichtigung-bei-usb-anschluss">
@@ -168,11 +157,7 @@ pip install pyudev
   </header>
   <div>
       <div><p>Etwas, an das ich mich bei Ubuntu nie gew&#246;hnt habe, ist das Verhalten der Icons im Dock per Standard.</p>
-<p>Vielleicht ist das Folgende f&#252;r den ein oder anderen Leser ebenfalls brauchbar.</p>
-<div class="highlight"><pre><span></span><code># Den Modifier auf ALT zur&#252;ckstellen (sonst: Super)
-gsettings set org.gnome.desktop.wm.preferences mouse-button-modifier '&lt;Alt&gt;'
-
-# Fenster mit Modifier ...</code></pre><a class="read-more" href="/ein-paar-ubuntu-dock-quickies-mit-gsettings.html"><span>weiterlesen</span></a></div></div>
+<p>Vielleicht ...<a class="read-more" href="/ein-paar-ubuntu-dock-quickies-mit-gsettings.html"><span>weiterlesen</span></a></p></div>
         <br>
         <a class="btn"
            href="./ein-paar-ubuntu-dock-quickies-mit-gsettings.html#ein-paar-ubuntu-dock-quickies-mit-gsettings">
@@ -194,12 +179,7 @@ gsettings set org.gnome.desktop.wm.preferences mouse-button-modifier '&lt;Alt&gt
   <div>
       <div><p>...solltet ihr auf eine angepasste Version von AnyDesk f&#252;r Jammy warten oder eben <code>libpangox-1.0-0</code> nachinstallieren.</p>
 <div class="highlight"><pre><span></span><code>cd
-wget http://de.archive.ubuntu.com/ubuntu/pool/universe/p/pangox-compat/libpangox-1.0-0_0.0.2-5ubuntu1_amd64.deb
-dpkg -i libpangox-1.0-0_0.0.2-5ubuntu1_amd64.deb
-</code></pre></div>
-
-<p>Das war's schon.</p>
-<p>Das ist nicht die feine Art, denkt ...<a class="read-more" href="/wenn-anydesk-unter-ubuntu-jammy-beta-nicht-startet.html"><span>weiterlesen</span></a></p></div>
+wget http://de ...</code></pre><a class="read-more" href="/wenn-anydesk-unter-ubuntu-jammy-beta-nicht-startet.html"><span>weiterlesen</span></a></div></div>
         <br>
         <a class="btn"
            href="./wenn-anydesk-unter-ubuntu-jammy-beta-nicht-startet.html#wenn-anydesk-unter-ubuntu-jammy-beta-nicht-startet">
@@ -220,9 +200,7 @@ dpkg -i libpangox-1.0-0_0.0.2-5ubuntu1_amd64.deb
   </header>
   <div>
       <div><p>Ob AppImage, Flatpak oder Snap; es gilt die &#220;bersicht zu behalten.</p>
-<p>Was bei Flatpak und Snap noch aus dem CLI relativ komfortabel gelingt, wird bei AppImages kompliziert.</p>
-<p>Ein guter Tipp ist <a href="https://github.com/vinifmor/bauh#installation">bauh</a>, das sich schnell als Python Anwendung installieren l&#228;sst.</p>
-<p>Ich habe daf&#252;r ein virtualenv unter <code>~/virtualenvs/bauh</code> verwendet. Wichtig ...<a class="read-more" href="/appimages-mit-bauh-installieren-und-verwalten.html"><span>weiterlesen</span></a></p></div>
+<p>Was bei Flatpak und Snap noch aus dem CLI ...<a class="read-more" href="/appimages-mit-bauh-installieren-und-verwalten.html"><span>weiterlesen</span></a></p></div>
         <br>
         <a class="btn"
            href="./appimages-mit-bauh-installieren-und-verwalten.html#appimages-mit-bauh-installieren-und-verwalten">
@@ -243,8 +221,12 @@ dpkg -i libpangox-1.0-0_0.0.2-5ubuntu1_amd64.deb
   </header>
   <div>
       <div><p>Ein Quickie.</p>
-<p>Einen FS-Check sowie die Reparatur erzwingen. Geht mit <code>touch /forcefsck</code>, klar, oft viel angenehmer: über die Boot-Parameter des Kernels.</p>
-<p>In Grub den Boot-Parameter ändern und <code>fsck.mode=force fsck.repair=yes</code> anhängen, booten, happy sein.</p></div>
+<p>Einen FS-Check sowie die Reparatur erzwingen. Geht mit <code>touch /forcefsck</code>, klar, oft viel angenehmer: &#252;ber die Boot-Parameter des ...<a class="read-more" href="/fsck-via-boot-parameter.html"><span>weiterlesen</span></a></p></div>
+        <br>
+        <a class="btn"
+           href="./fsck-via-boot-parameter.html#fsck-via-boot-parameter">
+          Weiterlesen
+        </a>
   </div>
   <hr />
 </article>
@@ -264,14 +246,7 @@ dpkg -i libpangox-1.0-0_0.0.2-5ubuntu1_amd64.deb
 <div class="highlight"><pre><span></span><code>~$ flatpak list --columns=name,application --app
 Name                          Application ID
 Delta Chat                    chat.delta.desktop
-Pinta                         com.github.PintaProject.Pinta
-PDF Arranger                  com.github.jeromerobert.pdfarranger
-Flameshot                     org.flameshot.Flameshot
-KeePassXC                     org.keepassxc.KeePassXC
-Telegram Desktop              org.telegram.desktop
-</code></pre></div>
-
-<p>Im User-Kontext Zugriff auf <code>~/.icons</code> geben: <code>flatpak --user ...</code><a class="read-more" href="/flatpak-cursor-theme-fur-apps-lesbar-machen.html"><span>weiterlesen</span></a></p></div>
+Pinta                         com ...</code></pre><a class="read-more" href="/flatpak-cursor-theme-fur-apps-lesbar-machen.html"><span>weiterlesen</span></a></div></div>
         <br>
         <a class="btn"
            href="./flatpak-cursor-theme-fur-apps-lesbar-machen.html#flatpak-cursor-theme-fur-apps-lesbar-machen">
@@ -308,11 +283,7 @@ Telegram Desktop              org.telegram.desktop
   </header>
   <div>
       <div><p>F&#252;r mich prim&#228;r aus einem Grund wichtig: Autostart und Keyboard Shortcuts.</p>
-<p>Runtimes interessieren uns herzlich wenig, daher listen wir nur Anwendungen auf.</p>
-<p>Der Scope ist per Standard <code>--system</code>. Anwendungen, die in den User-Scope installiert wurden, seht ihr mit <code>--user</code>.</p>
-<div class="highlight"><pre><span></span><code>~$ flatpak list --columns=name,application --app
-Name                          Application ID
-Delta Chat ...</code></pre><a class="read-more" href="/flatpak-anwendungen-aus-cli-verwenden.html"><span>weiterlesen</span></a></div></div>
+<p>Runtimes interessieren uns herzlich wenig, daher listen wir nur ...<a class="read-more" href="/flatpak-anwendungen-aus-cli-verwenden.html"><span>weiterlesen</span></a></p></div>
         <br>
         <a class="btn"
            href="./flatpak-anwendungen-aus-cli-verwenden.html#flatpak-anwendungen-aus-cli-verwenden">
@@ -333,8 +304,7 @@ Delta Chat ...</code></pre><a class="read-more" href="/flatpak-anwendungen-aus-c
   </header>
   <div>
       <div><p>Es kann durchaus Vorteile haben viele oder gar alle Anfragen &#252;ber einen vertrauten Tunnel zu schicken.</p>
-<p>Bevorzugen und empfehlen m&#246;chte ich, die weiterzuleitenden Zonen oder Hosts selber auszuw&#228;hlen und an entsprechender Stelle einzupflegen (Stichwort DNS-Overrides).</p>
-<p>Weiterhin ist es ratsam nicht den gesamten Traffic &#252;ber ein VPN-Profil zu jagen und stattdessen ...<a class="read-more" href="/openvpn-clients-dns-einstellungen-und-routen-ignorieren.html"><span>weiterlesen</span></a></p></div>
+<p>Bevorzugen und empfehlen m&#246;chte ...<a class="read-more" href="/openvpn-clients-dns-einstellungen-und-routen-ignorieren.html"><span>weiterlesen</span></a></p></div>
         <br>
         <a class="btn"
            href="./openvpn-clients-dns-einstellungen-und-routen-ignorieren.html#openvpn-clients-dns-einstellungen-und-routen-ignorieren">
@@ -355,7 +325,7 @@ Delta Chat ...</code></pre><a class="read-more" href="/flatpak-anwendungen-aus-c
   </header>
   <div>
       <div><p>Neben Suchanfragen via GET-Methode geh&#246;rt auch DNS zu einem ewigen Klassiker f&#252;r Daten-Leaks.</p>
-<p>Da keiner Netzwerkschn&#252;ffler mag, verwendet man heute DNS-over-TLS. Neben einem TLS-Kanal auf Port 853 funktioniert das &#252;brigens auch mit etwas mehr Overhead &#252;ber HTTPS, es scheint mir aber so, als sie hat sich alles in Richtung DNS-over-TLS ...<a class="read-more" href="/dns-uber-tls-dns-over-https.html"><span>weiterlesen</span></a></p></div>
+<p>Da keiner Netzwerkschn&#252;ffler mag, verwendet man heute ...<a class="read-more" href="/dns-uber-tls-dns-over-https.html"><span>weiterlesen</span></a></p></div>
         <br>
         <a class="btn"
            href="./dns-uber-tls-dns-over-https.html#dns-uber-tls-dns-over-https">

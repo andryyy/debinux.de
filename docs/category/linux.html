@@ -136,9 +136,7 @@
   </header>
   <div>
       <div><p>Ob AppImage, Flatpak oder Snap; es gilt die &#220;bersicht zu behalten.</p>
-<p>Was bei Flatpak und Snap noch aus dem CLI relativ komfortabel gelingt, wird bei AppImages kompliziert.</p>
-<p>Ein guter Tipp ist <a href="https://github.com/vinifmor/bauh#installation">bauh</a>, das sich schnell als Python Anwendung installieren l&#228;sst.</p>
-<p>Ich habe daf&#252;r ein virtualenv unter <code>~/virtualenvs/bauh</code> verwendet. Wichtig ...<a class="read-more" href="/appimages-mit-bauh-installieren-und-verwalten.html"><span>weiterlesen</span></a></p></div>
+<p>Was bei Flatpak und Snap noch aus dem CLI ...<a class="read-more" href="/appimages-mit-bauh-installieren-und-verwalten.html"><span>weiterlesen</span></a></p></div>
         <br>
         <a class="btn"
            href="../appimages-mit-bauh-installieren-und-verwalten.html#appimages-mit-bauh-installieren-und-verwalten">
@@ -159,8 +157,12 @@
   </header>
   <div>
       <div><p>Ein Quickie.</p>
-<p>Einen FS-Check sowie die Reparatur erzwingen. Geht mit <code>touch /forcefsck</code>, klar, oft viel angenehmer: über die Boot-Parameter des Kernels.</p>
-<p>In Grub den Boot-Parameter ändern und <code>fsck.mode=force fsck.repair=yes</code> anhängen, booten, happy sein.</p></div>
+<p>Einen FS-Check sowie die Reparatur erzwingen. Geht mit <code>touch /forcefsck</code>, klar, oft viel angenehmer: &#252;ber die Boot-Parameter des ...<a class="read-more" href="/fsck-via-boot-parameter.html"><span>weiterlesen</span></a></p></div>
+        <br>
+        <a class="btn"
+           href="../fsck-via-boot-parameter.html#fsck-via-boot-parameter">
+          Weiterlesen
+        </a>
   </div>
   <hr />
 </article>
@@ -180,14 +182,7 @@
 <div class="highlight"><pre><span></span><code>~$ flatpak list --columns=name,application --app
 Name                          Application ID
 Delta Chat                    chat.delta.desktop
-Pinta                         com.github.PintaProject.Pinta
-PDF Arranger                  com.github.jeromerobert.pdfarranger
-Flameshot                     org.flameshot.Flameshot
-KeePassXC                     org.keepassxc.KeePassXC
-Telegram Desktop              org.telegram.desktop
-</code></pre></div>
-
-<p>Im User-Kontext Zugriff auf <code>~/.icons</code> geben: <code>flatpak --user ...</code><a class="read-more" href="/flatpak-cursor-theme-fur-apps-lesbar-machen.html"><span>weiterlesen</span></a></p></div>
+Pinta                         com ...</code></pre><a class="read-more" href="/flatpak-cursor-theme-fur-apps-lesbar-machen.html"><span>weiterlesen</span></a></div></div>
         <br>
         <a class="btn"
            href="../flatpak-cursor-theme-fur-apps-lesbar-machen.html#flatpak-cursor-theme-fur-apps-lesbar-machen">
@@ -208,11 +203,7 @@ Telegram Desktop              org.telegram.desktop
   </header>
   <div>
       <div><p>F&#252;r mich prim&#228;r aus einem Grund wichtig: Autostart und Keyboard Shortcuts.</p>
-<p>Runtimes interessieren uns herzlich wenig, daher listen wir nur Anwendungen auf.</p>
-<p>Der Scope ist per Standard <code>--system</code>. Anwendungen, die in den User-Scope installiert wurden, seht ihr mit <code>--user</code>.</p>
-<div class="highlight"><pre><span></span><code>~$ flatpak list --columns=name,application --app
-Name                          Application ID
-Delta Chat ...</code></pre><a class="read-more" href="/flatpak-anwendungen-aus-cli-verwenden.html"><span>weiterlesen</span></a></div></div>
+<p>Runtimes interessieren uns herzlich wenig, daher listen wir nur ...<a class="read-more" href="/flatpak-anwendungen-aus-cli-verwenden.html"><span>weiterlesen</span></a></p></div>
         <br>
         <a class="btn"
            href="../flatpak-anwendungen-aus-cli-verwenden.html#flatpak-anwendungen-aus-cli-verwenden">
@@ -233,8 +224,7 @@ Delta Chat ...</code></pre><a class="read-more" href="/flatpak-anwendungen-aus-c
   </header>
   <div>
       <div><p>Es kann durchaus Vorteile haben viele oder gar alle Anfragen &#252;ber einen vertrauten Tunnel zu schicken.</p>
-<p>Bevorzugen und empfehlen m&#246;chte ich, die weiterzuleitenden Zonen oder Hosts selber auszuw&#228;hlen und an entsprechender Stelle einzupflegen (Stichwort DNS-Overrides).</p>
-<p>Weiterhin ist es ratsam nicht den gesamten Traffic &#252;ber ein VPN-Profil zu jagen und stattdessen ...<a class="read-more" href="/openvpn-clients-dns-einstellungen-und-routen-ignorieren.html"><span>weiterlesen</span></a></p></div>
+<p>Bevorzugen und empfehlen m&#246;chte ...<a class="read-more" href="/openvpn-clients-dns-einstellungen-und-routen-ignorieren.html"><span>weiterlesen</span></a></p></div>
         <br>
         <a class="btn"
            href="../openvpn-clients-dns-einstellungen-und-routen-ignorieren.html#openvpn-clients-dns-einstellungen-und-routen-ignorieren">
@@ -255,7 +245,7 @@ Delta Chat ...</code></pre><a class="read-more" href="/flatpak-anwendungen-aus-c
   </header>
   <div>
       <div><p>Neben Suchanfragen via GET-Methode geh&#246;rt auch DNS zu einem ewigen Klassiker f&#252;r Daten-Leaks.</p>
-<p>Da keiner Netzwerkschn&#252;ffler mag, verwendet man heute DNS-over-TLS. Neben einem TLS-Kanal auf Port 853 funktioniert das &#252;brigens auch mit etwas mehr Overhead &#252;ber HTTPS, es scheint mir aber so, als sie hat sich alles in Richtung DNS-over-TLS ...<a class="read-more" href="/dns-uber-tls-dns-over-https.html"><span>weiterlesen</span></a></p></div>
+<p>Da keiner Netzwerkschn&#252;ffler mag, verwendet man heute ...<a class="read-more" href="/dns-uber-tls-dns-over-https.html"><span>weiterlesen</span></a></p></div>
         <br>
         <a class="btn"
            href="../dns-uber-tls-dns-over-https.html#dns-uber-tls-dns-over-https">
@@ -276,7 +266,7 @@ Delta Chat ...</code></pre><a class="read-more" href="/flatpak-anwendungen-aus-c
   </header>
   <div>
       <div><p>Ich m&#246;chte Firefox Next auf einem Linux Mint 20.x installieren.</p>
-<p>Das Mint-Branding vom Firefox sorgte f&#252;r &#220;berraschungen. Es bewirkt beispielsweise, dass Suchvorschl&#228;ge mit Startpage nicht funktionieren, was an den Standard "searchplugins" liegen k&#246;nnte. Sehr &#228;rgerlich, nicht weiter debugged, denn - Punkt zwei: Ich mag den Browser lieber so, wie Mozilla ...<a class="read-more" href="/firefox-next-ohne-branding-auf-linux-mint.html"><span>weiterlesen</span></a></p></div>
+<p>Das Mint-Branding vom Firefox sorgte f&#252;r &#220;berraschungen. Es bewirkt ...<a class="read-more" href="/firefox-next-ohne-branding-auf-linux-mint.html"><span>weiterlesen</span></a></p></div>
         <br>
         <a class="btn"
            href="../firefox-next-ohne-branding-auf-linux-mint.html#firefox-next-ohne-branding-auf-linux-mint">
@@ -297,12 +287,7 @@ Delta Chat ...</code></pre><a class="read-more" href="/flatpak-anwendungen-aus-c
   </header>
   <div>
       <div><h2>Was passiert?</h2>
-<p>Es wird eine Rechtsklick-Aktion zu Nemo (Linux Mint Datei-Manager) hinzugf&#252;gt, die eine oder mehrere Bilder (Scans) begradigt, zu PDFs konvertiert, OCR (Texterkennung) ausf&#252;hrt und anschlie&#223;end:</p>
-<ul>
-<li>pro Bild eine PDF erstellt und beh&#228;lt.</li>
-<li>alle PDFs zu einer gro&#223;en PDF zusammenf&#252;hrt.</li>
-</ul>
-<p>Das ist, was ich ben&#246;tige. Wenn ihr die einzelnen ...<a class="read-more" href="/ocr-per-rechtsklick-auf-dokument-in-nemo-ausfuhren.html"><span>weiterlesen</span></a></p></div>
+<p>Es wird eine Rechtsklick-Aktion zu Nemo (Linux Mint Datei-Manager) hinzugf&#252;gt, die eine oder mehrere Bilder (Scans) begradigt, zu ...<a class="read-more" href="/ocr-per-rechtsklick-auf-dokument-in-nemo-ausfuhren.html"><span>weiterlesen</span></a></p></div>
         <br>
         <a class="btn"
            href="../ocr-per-rechtsklick-auf-dokument-in-nemo-ausfuhren.html#ocr-per-rechtsklick-auf-dokument-in-nemo-ausfuhren">
@@ -326,7 +311,12 @@ Delta Chat ...</code></pre><a class="read-more" href="/flatpak-anwendungen-aus-c
 <div class="highlight"><pre><span></span><code>sudo apt install heif-gdk-pixbuf heif-thumbnailer libheif1
 </code></pre></div>
 
-<p>Das war's schon.</p></div>
+<p>Das war's schon ...<a class="read-more" href="/heic-dateien-in-linux-mintubuntu-bildbetrachter-offnen-und-thumbnails-anzeigen.html"><span>weiterlesen</span></a></p></div>
+        <br>
+        <a class="btn"
+           href="../heic-dateien-in-linux-mintubuntu-bildbetrachter-offnen-und-thumbnails-anzeigen.html#heic-dateien-in-linux-mintubuntu-bildbetrachter-offnen-und-thumbnails-anzeigen">
+          Weiterlesen
+        </a>
   </div>
   <hr />
 </article>
@@ -343,13 +333,7 @@ Delta Chat ...</code></pre><a class="read-more" href="/flatpak-anwendungen-aus-c
   <div>
       <div><p>Hi,</p>
 <p>ein Snippet (mal wieder). Daher ganz kurz und knapp.</p>
-<p>Unter Debian ben&#246;tigt ihr die Pakete <code>nginx-full</code> sowie <code>subnetcalc</code>, da hier die entsprechenden LUA Module vorhanden sind.
-Wer ganz wild drauf ist, kompiliert es sich nach... :)</p>
-<p>In der entsprechenden Site-Konfiguration:</p>
-<div class="highlight"><pre><span></span><code>  location / {
-    default_type 'text/plain';
-    content_by_lua_block {
-        local handle = io.popen("/opt ...</code></pre><a class="read-more" href="/ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php.html"><span>weiterlesen</span></a></div></div>
+<p>Unter Debian ben&#246;tigt ihr die Pakete <code>nginx-full</code> sowie <code>subnetcalc</code>, da ...<a class="read-more" href="/ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php.html"><span>weiterlesen</span></a></p></div>
         <br>
         <a class="btn"
            href="../ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php.html#ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php">
