@@ -43,17 +43,28 @@
 
  
 
-    <meta name="author" content="André Peters" />
-    <meta name="description" content="" />
+<meta name="author" content="André Peters" />
+<meta name="description" content="Bei Verwendung von iCloud als Mail-Relay auf einer OPNsense ist eine Umschreibung des Absenders notwendig, sollte der interne Postfix-Service der ...weiterlesen" />
+<meta name="keywords" content="opnsense, apple, icloud, mail">
+
+
   <meta property="og:site_name" content="debinux.de"/>
-  <meta property="og:type" content="blog"/>
-  <meta property="og:title" content="debinux.de"/>
-  <meta property="og:description" content=""/>
+  <meta property="og:title" content="Apple iCloud Mail als Relay in OPNsense verwenden"/>
+  <meta property="og:description" content="Bei Verwendung von iCloud als Mail-Relay auf einer OPNsense ist eine Umschreibung des Absenders notwendig, sollte der interne Postfix-Service der ...weiterlesen"/>
   <meta property="og:locale" content="de_DE"/>
-  <meta property="og:url" content="."/>
+  <meta property="og:url" content="./apple-icloud-mail-als-relay-in-opnsense-verwenden.html"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2022-07-12 07:15:00+02:00"/>
+  <meta property="article:modified_time" content=""/>
+  <meta property="article:author" content="./author/andre-peters.html">
+  <meta property="article:section" content="Firewall"/>
+  <meta property="article:tag" content="opnsense"/>
+  <meta property="article:tag" content="apple"/>
+  <meta property="article:tag" content="icloud"/>
+  <meta property="article:tag" content="mail"/>
   <meta property="og:image" content="https://debinux.de/images/robot.svg">
 
-  <title>debinux.de &ndash; Autoren</title>
+  <title>debinux.de &ndash; Apple iCloud Mail als Relay in OPNsense verwenden</title>
 
 </head>
 <body class="light-theme">
@@ -124,13 +135,73 @@
 
 <article class="single">
   <header>
-    <h1 id="authors">Autoren</h1>
+      
+    <h1 id="apple-icloud-mail-als-relay-in-opnsense-verwenden">Apple iCloud Mail als Relay in OPNsense verwenden</h1>
+    <p>
+      Online seit Di 12 Juli 2022 in <a href="./category/firewall.html">Firewall</a>
+
+    </p>
   </header>
+
+
   <div>
-    <ul class="list">
-      <li><a href="./author/andre-peters.html">André Peters</a> (26)</li>
-    </ul>
+    <p>Bei Verwendung von iCloud als Mail-Relay auf einer OPNsense ist eine Umschreibung des Absenders notwendig, sollte der interne Postfix-Service der Firewall zum Einsatz kommen.</p>
+<p>Vorab muss eine App in den Apple-Account Einstellungen erstellt werden, siehe <a href="https://support.apple.com/de-de/HT204397">hier</a>.</p>
+<p>Apple prüft den Envelope-From in der SMTP-Session (<code>MAIL FROM: X</code>) sowie den From-Header aus dem Inhalt der Mail (<code>From: Ich &lt;ich@woanders&gt;</code>) auf eine gültige/dem Account zugeordnete E-Mail-Absenderadresse. Ich kann auch unter Verwendung der eigenen Domain nicht jeden belieben Absender @meinedomain verwenden - finde ich gut.</p>
+<p>Ich verwende eine eigene Domain, wenig überraschend debinux.de, via Apple Mail und muss daher den Envelope-From als auch den Header auf meine private E-Mail-Adresse <code>geheim@debinux.de</code> ändern.</p>
+<ul>
+<li>System Hostname<ul>
+<li>Der Hostname des Mailservers, in meinem Fall <code>opnsense.hai.internal</code></li>
+</ul>
+</li>
+<li>System Domain<ul>
+<li>In meinem Fall <code>hai.internal</code></li>
+</ul>
+</li>
+<li>System Origin<ul>
+<li>Entspricht dem System Hostnamen <code>opnsense.hai.internal</code></li>
+</ul>
+</li>
+<li>Trusted Networks<ul>
+<li>Hinzufügen von internem Netzwerk, falls gewünscht, etwa <code>192.168.2.0/24</code></li>
+</ul>
+</li>
+<li>Smart Host<ul>
+<li>Für iCloud <code>[smtp.mail.me.com]:587</code></li>
+<li>Enable SMTP Authentication aktivieren</li>
+<li>Authentication Username entsprechend dem Login für Apps setzen. In den meisten Fällen ist es die me.com E-Mailadresse ohne Domain, also etwa <code>meinbenutzer</code> bei <code>meinbenutzer@me.com</code></li>
+<li>Authentication Password entsprechend dem Login des App Passworts setzen</li>
+</ul>
+</li>
+<li>Sender Canonical Rewriting (Umschreibung des Senders beim Eingang der Mail)
+    Diese Map ist eine <strong>regexp Map</strong> in Postfix.<ul>
+<li>Rewrite From <code>/^.*@.*\.hai.internal/i</code>, um alle Mails eines Absenders in meiner lokalen Domain umzuschreiben</li>
+<li>Rewrite To <code>geheim@debinux.de</code> - ich verwende wie eingangs erwähnt meine eigene Domain mit iCloud Mail, daher entspricht der Rewrite To <code>meineadresse@debinux.de</code></li>
+</ul>
+</li>
+<li>Header Checks (Umschreibung des <code>From:</code> Headers bei Ausgang)
+    Ebenfalls eine <strong>regexp Map</strong> in Postfix.<ul>
+<li>Expression <code>/From:.*/ REPLACE From: andre.peters@debinux.de</code></li>
+<li>Filter <code>while delivering mail</code></li>
+</ul>
+</li>
+</ul>
+<p>Andere Einstellungen sind in OPNsense 22.1.10-amd64 nicht zu setzen.</p>
+<p>Die E-Mail-Alerts des HAProxys einer OPNsense Firewall werden übrigens auch ohne Rewrites funktionieren, da die Alerts korrekterweise sowohl den Envelope-From als auch den From-Header auf den Wert der in den Einstellungen des Checks definierten E-Mail-Absenderadresse setzen. Puh, was ein Satz.</p>
   </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="./tag/opnsense.html">opnsense</a>
+      <a href="./tag/apple.html">apple</a>
+      <a href="./tag/icloud.html">icloud</a>
+      <a href="./tag/mail.html">mail</a>
+    </p>
+  </div>
+
+
+
+
+
 </article>
 
     <footer>

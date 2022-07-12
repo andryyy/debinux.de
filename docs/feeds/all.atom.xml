@@ -1,5 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>debinux.de</title><link href="https://debinux.de/" rel="alternate"></link><link href="https://debinux.de/feeds/all.atom.xml" rel="self"></link><id>https://debinux.de/</id><updated>2022-06-24T08:29:00+02:00</updated><subtitle>an admins notepad</subtitle><entry><title>Noson, der SONOS Controller für Linux</title><link href="https://debinux.de/noson-der-sonos-controller-fur-linux.html" rel="alternate"></link><published>2022-06-24T08:29:00+02:00</published><updated>2022-06-24T08:29:00+02:00</updated><author><name>André Peters</name></author><id>tag:debinux.de,2022-06-24:/noson-der-sonos-controller-fur-linux.html</id><content type="html">&lt;p&gt;Ich habe mit &lt;a href="https://janbar.github.io/noson-app/"&gt;Noson&lt;/a&gt; endlich einen SONOS Controller gefunden, der für mich funktioniert.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>debinux.de</title><link href="https://debinux.de/" rel="alternate"></link><link href="https://debinux.de/feeds/all.atom.xml" rel="self"></link><id>https://debinux.de/</id><updated>2022-07-12T07:15:00+02:00</updated><subtitle>an admins notepad</subtitle><entry><title>Apple iCloud Mail als Relay in OPNsense verwenden</title><link href="https://debinux.de/apple-icloud-mail-als-relay-in-opnsense-verwenden.html" rel="alternate"></link><published>2022-07-12T07:15:00+02:00</published><updated>2022-07-12T07:15:00+02:00</updated><author><name>André Peters</name></author><id>tag:debinux.de,2022-07-12:/apple-icloud-mail-als-relay-in-opnsense-verwenden.html</id><summary type="html">&lt;p&gt;Bei Verwendung von iCloud als Mail-Relay auf einer OPNsense ist eine Umschreibung des Absenders notwendig, sollte der interne Postfix-Service der ...&lt;a class="read-more" href="/apple-icloud-mail-als-relay-in-opnsense-verwenden.html"&gt;&lt;span&gt;weiterlesen&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Bei Verwendung von iCloud als Mail-Relay auf einer OPNsense ist eine Umschreibung des Absenders notwendig, sollte der interne Postfix-Service der Firewall zum Einsatz kommen.&lt;/p&gt;
+&lt;p&gt;Vorab muss eine App in den Apple-Account Einstellungen erstellt werden, siehe &lt;a href="https://support.apple.com/de-de/HT204397"&gt;hier&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Apple prüft den Envelope-From in der SMTP-Session (&lt;code&gt;MAIL FROM: X&lt;/code&gt;) sowie den From-Header aus dem Inhalt der Mail (&lt;code&gt;From: Ich &amp;lt;ich@woanders&amp;gt;&lt;/code&gt;) auf eine gültige/dem Account zugeordnete E-Mail-Absenderadresse. Ich kann auch unter Verwendung der eigenen Domain nicht jeden belieben Absender @meinedomain verwenden - finde ich gut.&lt;/p&gt;
+&lt;p&gt;Ich verwende eine eigene Domain, wenig überraschend debinux.de, via Apple Mail und muss daher den Envelope-From als auch den Header auf meine private E-Mail-Adresse &lt;code&gt;geheim@debinux.de&lt;/code&gt; ändern.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;System Hostname&lt;ul&gt;
+&lt;li&gt;Der Hostname des Mailservers, in meinem Fall &lt;code&gt;opnsense.hai.internal&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;System Domain&lt;ul&gt;
+&lt;li&gt;In meinem Fall &lt;code&gt;hai.internal&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;System Origin&lt;ul&gt;
+&lt;li&gt;Entspricht dem System Hostnamen &lt;code&gt;opnsense.hai.internal&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Trusted Networks&lt;ul&gt;
+&lt;li&gt;Hinzufügen von internem Netzwerk, falls gewünscht, etwa &lt;code&gt;192.168.2.0/24&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Smart Host&lt;ul&gt;
+&lt;li&gt;Für iCloud &lt;code&gt;[smtp.mail.me.com]:587&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Enable SMTP Authentication aktivieren&lt;/li&gt;
+&lt;li&gt;Authentication Username entsprechend dem Login für Apps setzen. In den meisten Fällen ist es die me.com E-Mailadresse ohne Domain, also etwa &lt;code&gt;meinbenutzer&lt;/code&gt; bei &lt;code&gt;meinbenutzer@me.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Authentication Password entsprechend dem Login des App Passworts setzen&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Sender Canonical Rewriting (Umschreibung des Senders beim Eingang der Mail)
+    Diese Map ist eine &lt;strong&gt;regexp Map&lt;/strong&gt; in Postfix.&lt;ul&gt;
+&lt;li&gt;Rewrite From &lt;code&gt;/^.*@.*\.hai.internal/i&lt;/code&gt;, um alle Mails eines Absenders in meiner lokalen Domain umzuschreiben&lt;/li&gt;
+&lt;li&gt;Rewrite To &lt;code&gt;geheim@debinux.de&lt;/code&gt; - ich verwende wie eingangs erwähnt meine eigene Domain mit iCloud Mail, daher entspricht der Rewrite To &lt;code&gt;meineadresse@debinux.de&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Header Checks (Umschreibung des &lt;code&gt;From:&lt;/code&gt; Headers bei Ausgang)
+    Ebenfalls eine &lt;strong&gt;regexp Map&lt;/strong&gt; in Postfix.&lt;ul&gt;
+&lt;li&gt;Expression &lt;code&gt;/From:.*/ REPLACE From: andre.peters@debinux.de&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Filter &lt;code&gt;while delivering mail&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Andere Einstellungen sind in OPNsense 22.1.10-amd64 nicht zu setzen.&lt;/p&gt;
+&lt;p&gt;Die E-Mail-Alerts des HAProxys einer OPNsense Firewall werden übrigens auch ohne Rewrites funktionieren, da die Alerts korrekterweise sowohl den Envelope-From als auch den From-Header auf den Wert der in den Einstellungen des Checks definierten E-Mail-Absenderadresse setzen. Puh, was ein Satz.&lt;/p&gt;</content><category term="Firewall"></category><category term="opnsense"></category><category term="apple"></category><category term="icloud"></category><category term="mail"></category></entry><entry><title>Noson, der SONOS Controller für Linux</title><link href="https://debinux.de/noson-der-sonos-controller-fur-linux.html" rel="alternate"></link><published>2022-06-24T08:29:00+02:00</published><updated>2022-06-24T08:29:00+02:00</updated><author><name>André Peters</name></author><id>tag:debinux.de,2022-06-24:/noson-der-sonos-controller-fur-linux.html</id><content type="html">&lt;p&gt;Ich habe mit &lt;a href="https://janbar.github.io/noson-app/"&gt;Noson&lt;/a&gt; endlich einen SONOS Controller gefunden, der für mich funktioniert.&lt;/p&gt;
 &lt;p&gt;Super Sache.&lt;/p&gt;</content><category term="Linux"></category><category term="linux"></category><category term="sonos"></category><category term="audio"></category></entry><entry><title>Pushover Benachrichtigung bei USB Anschluss</title><link href="https://debinux.de/pushover-benachrichtigung-bei-usb-anschluss.html" rel="alternate"></link><published>2022-04-08T08:58:00+02:00</published><updated>2022-04-08T08:58:00+02:00</updated><author><name>André Peters</name></author><id>tag:debinux.de,2022-04-08:/pushover-benachrichtigung-bei-usb-anschluss.html</id><summary type="html">&lt;p&gt;Kommt her, meine Kinder, und nehmt euch einen Aluhut.&lt;/p&gt;
 &lt;p&gt;Mal nicht zu Hause und besorgt, dass jemand den Computer infiltriert ...&lt;a class="read-more" href="/pushover-benachrichtigung-bei-usb-anschluss.html"&gt;&lt;span&gt;weiterlesen&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Kommt her, meine Kinder, und nehmt euch einen Aluhut.&lt;/p&gt;
 &lt;p&gt;Mal nicht zu Hause und besorgt, dass jemand den Computer infiltriert?&lt;/p&gt;
