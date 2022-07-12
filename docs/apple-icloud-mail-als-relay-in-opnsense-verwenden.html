@@ -184,7 +184,7 @@
 <p>Diese Map ist eine <strong>regexp Map</strong> in Postfix.</p>
 <ul>
 <li>Rewrite From <code>/^.*@.*\.hai.internal/i</code>, um alle E-Mails eines Absenders in meiner lokalen Domain umzuschreiben</li>
-<li>Rewrite To <code>geheim@debinux.de</code> - ich verwende wie eingangs erwähnt meine eigene Domain mit iCloud Mail, daher entspricht der Rewrite To <code>meineadresse@debinux.de</code></li>
+<li>Rewrite To <code>geheim@debinux.de</code> - ich verwende wie eingangs erwähnt meine eigene Domain mit iCloud Mail, daher entspricht der Rewrite To <code>geheim@debinux.de</code></li>
 </ul>
 </li>
 </ul>
@@ -194,7 +194,7 @@
 <p>Header Checks (Umschreibung des <code>From:</code> Headers bei Ausgang) Regel erstellen</p>
 <p>Ebenfalls eine <strong>regexp Map</strong> in Postfix.</p>
 <ul>
-<li>Expression <code>/From:.*/ REPLACE From: andre.peters@debinux.de</code></li>
+<li>Expression <code>/From:.*/ REPLACE From: geheim@debinux.de</code></li>
 <li>Filter <code>while delivering mail</code></li>
 </ul>
 </li>

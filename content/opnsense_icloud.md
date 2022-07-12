@@ -36,7 +36,7 @@ Ich verwende eine eigene Domain, wenig überraschend debinux.de, via Apple Mail 
 	Diese Map ist eine **regexp Map** in Postfix.
 
 	- Rewrite From `/^.*@.*\.hai.internal/i`, um alle E-Mails eines Absenders in meiner lokalen Domain umzuschreiben
-	- Rewrite To `geheim@debinux.de` - ich verwende wie eingangs erwähnt meine eigene Domain mit iCloud Mail, daher entspricht der Rewrite To `meineadresse@debinux.de`
+	- Rewrite To `geheim@debinux.de` - ich verwende wie eingangs erwähnt meine eigene Domain mit iCloud Mail, daher entspricht der Rewrite To `geheim@debinux.de`
 
 ### Services: Postfix: Header Checks
 
@@ -44,7 +44,7 @@ Ich verwende eine eigene Domain, wenig überraschend debinux.de, via Apple Mail 
 
 	Ebenfalls eine **regexp Map** in Postfix.
 
-	- Expression `/From:.*/ REPLACE From: andre.peters@debinux.de`
+	- Expression `/From:.*/ REPLACE From: geheim@debinux.de`
 	- Filter `while delivering mail`
 
 Andere Einstellungen sind in OPNsense 22.1.10-amd64 nicht zu setzen.

@@ -38,7 +38,7 @@
 &lt;p&gt;Diese Map ist eine &lt;strong&gt;regexp Map&lt;/strong&gt; in Postfix.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Rewrite From &lt;code&gt;/^.*@.*\.hai.internal/i&lt;/code&gt;, um alle E-Mails eines Absenders in meiner lokalen Domain umzuschreiben&lt;/li&gt;
-&lt;li&gt;Rewrite To &lt;code&gt;geheim@debinux.de&lt;/code&gt; - ich verwende wie eingangs erwähnt meine eigene Domain mit iCloud Mail, daher entspricht der Rewrite To &lt;code&gt;meineadresse@debinux.de&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Rewrite To &lt;code&gt;geheim@debinux.de&lt;/code&gt; - ich verwende wie eingangs erwähnt meine eigene Domain mit iCloud Mail, daher entspricht der Rewrite To &lt;code&gt;geheim@debinux.de&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -48,7 +48,7 @@
 &lt;p&gt;Header Checks (Umschreibung des &lt;code&gt;From:&lt;/code&gt; Headers bei Ausgang) Regel erstellen&lt;/p&gt;
 &lt;p&gt;Ebenfalls eine &lt;strong&gt;regexp Map&lt;/strong&gt; in Postfix.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Expression &lt;code&gt;/From:.*/ REPLACE From: andre.peters@debinux.de&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Expression &lt;code&gt;/From:.*/ REPLACE From: geheim@debinux.de&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Filter &lt;code&gt;while delivering mail&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
