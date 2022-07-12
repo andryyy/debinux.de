@@ -169,16 +169,20 @@
 </li>
 <li>Smart Host<ul>
 <li>Für iCloud <code>[smtp.mail.me.com]:587</code></li>
-<li>Enable SMTP Authentication aktivieren</li>
-<li>Authentication Username entsprechend dem Login für Apps setzen. In den meisten Fällen ist es die me.com E-Mailadresse ohne Domain, also etwa <code>meinbenutzer</code> bei <code>meinbenutzer@me.com</code></li>
-<li>Authentication Password entsprechend dem Login des App Passworts setzen</li>
 </ul>
 </li>
+<li>Enable SMTP Authentication aktivieren</li>
+<li>Authentication Username</li>
+<li>Entsprechend dem Login für Apps setzen. In den meisten Fällen ist es die me.com E-Mail-Adresse ohne Domain, also etwa <code>meinbenutzer</code> bei <code>meinbenutzer@me.com</code></li>
+<li>Authentication Password</li>
+<li>Entsprechend dem Login des App Passworts setzen</li>
 </ul>
 <h3>Services: Postfix: Sender Canonical Rewriting</h3>
 <ul>
-<li>Sender Canonical Rewriting (Umschreibung des Senders beim Eingang der E-Mail)
-    Diese Map ist eine <strong>regexp Map</strong> in Postfix.<ul>
+<li>
+<p>Sender Canonical Rewriting (Umschreibung des Senders beim Eingang der E-Mail) Regel erstellen</p>
+<p>Diese Map ist eine <strong>regexp Map</strong> in Postfix.</p>
+<ul>
 <li>Rewrite From <code>/^.*@.*\.hai.internal/i</code>, um alle E-Mails eines Absenders in meiner lokalen Domain umzuschreiben</li>
 <li>Rewrite To <code>geheim@debinux.de</code> - ich verwende wie eingangs erwähnt meine eigene Domain mit iCloud Mail, daher entspricht der Rewrite To <code>meineadresse@debinux.de</code></li>
 </ul>
@@ -186,8 +190,10 @@
 </ul>
 <h3>Services: Postfix: Header Checks</h3>
 <ul>
-<li>Header Checks (Umschreibung des <code>From:</code> Headers bei Ausgang)
-    Ebenfalls eine <strong>regexp Map</strong> in Postfix.<ul>
+<li>
+<p>Header Checks (Umschreibung des <code>From:</code> Headers bei Ausgang) Regel erstellen</p>
+<p>Ebenfalls eine <strong>regexp Map</strong> in Postfix.</p>
+<ul>
 <li>Expression <code>/From:.*/ REPLACE From: andre.peters@debinux.de</code></li>
 <li>Filter <code>while delivering mail</code></li>
 </ul>

@@ -24,20 +24,26 @@ Ich verwende eine eigene Domain, wenig überraschend debinux.de, via Apple Mail 
 	- Hinzufügen von internem Netzwerk, falls gewünscht, etwa `192.168.2.0/24`
 - Smart Host
 	- Für iCloud `[smtp.mail.me.com]:587`
-	- Enable SMTP Authentication aktivieren
-	- Authentication Username entsprechend dem Login für Apps setzen. In den meisten Fällen ist es die me.com E-Mailadresse ohne Domain, also etwa `meinbenutzer` bei `meinbenutzer@me.com`
-	- Authentication Password entsprechend dem Login des App Passworts setzen
+- Enable SMTP Authentication aktivieren
+- Authentication Username
+  - Entsprechend dem Login für Apps setzen. In den meisten Fällen ist es die me.com E-Mail-Adresse ohne Domain, also etwa `meinbenutzer` bei `meinbenutzer@me.com`
+- Authentication Password
+  - Entsprechend dem Login des App Passworts setzen
 
 ### Services: Postfix: Sender Canonical Rewriting
-- Sender Canonical Rewriting (Umschreibung des Senders beim Eingang der E-Mail)
+- Sender Canonical Rewriting (Umschreibung des Senders beim Eingang der E-Mail) Regel erstellen
+
 	Diese Map ist eine **regexp Map** in Postfix.
+
 	- Rewrite From `/^.*@.*\.hai.internal/i`, um alle E-Mails eines Absenders in meiner lokalen Domain umzuschreiben
 	- Rewrite To `geheim@debinux.de` - ich verwende wie eingangs erwähnt meine eigene Domain mit iCloud Mail, daher entspricht der Rewrite To `meineadresse@debinux.de`
 
 ### Services: Postfix: Header Checks
 
-- Header Checks (Umschreibung des `From:` Headers bei Ausgang)
+- Header Checks (Umschreibung des `From:` Headers bei Ausgang) Regel erstellen
+
 	Ebenfalls eine **regexp Map** in Postfix.
+
 	- Expression `/From:.*/ REPLACE From: andre.peters@debinux.de`
 	- Filter `while delivering mail`
 
