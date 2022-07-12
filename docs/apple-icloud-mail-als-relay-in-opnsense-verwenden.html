@@ -44,13 +44,13 @@
  
 
 <meta name="author" content="André Peters" />
-<meta name="description" content="Bei Verwendung von iCloud als Mail-Relay auf einer OPNsense ist eine Umschreibung des Absenders notwendig, sollte der interne Postfix-Service der ...weiterlesen" />
+<meta name="description" content="Bei Verwendung von iCloud als E-Mail-Relay auf einer OPNsense ist eine Umschreibung des Absenders notwendig, sollte der interne Postfix-Service der ...weiterlesen" />
 <meta name="keywords" content="opnsense, apple, icloud, mail">
 
 
   <meta property="og:site_name" content="debinux.de"/>
   <meta property="og:title" content="Apple iCloud Mail als Relay in OPNsense verwenden"/>
-  <meta property="og:description" content="Bei Verwendung von iCloud als Mail-Relay auf einer OPNsense ist eine Umschreibung des Absenders notwendig, sollte der interne Postfix-Service der ...weiterlesen"/>
+  <meta property="og:description" content="Bei Verwendung von iCloud als E-Mail-Relay auf einer OPNsense ist eine Umschreibung des Absenders notwendig, sollte der interne Postfix-Service der ...weiterlesen"/>
   <meta property="og:locale" content="de_DE"/>
   <meta property="og:url" content="./apple-icloud-mail-als-relay-in-opnsense-verwenden.html"/>
   <meta property="og:type" content="article"/>
@@ -145,10 +145,11 @@
 
 
   <div>
-    <p>Bei Verwendung von iCloud als Mail-Relay auf einer OPNsense ist eine Umschreibung des Absenders notwendig, sollte der interne Postfix-Service der Firewall zum Einsatz kommen.</p>
+    <p>Bei Verwendung von iCloud als E-Mail-Relay auf einer OPNsense ist eine Umschreibung des Absenders notwendig, sollte der interne Postfix-Service der Firewall zum Einsatz kommen.</p>
 <p>Vorab muss eine App in den Apple-Account Einstellungen erstellt werden, siehe <a href="https://support.apple.com/de-de/HT204397">hier</a>.</p>
-<p>Apple prüft den Envelope-From in der SMTP-Session (<code>MAIL FROM: X</code>) sowie den From-Header aus dem Inhalt der Mail (<code>From: Ich &lt;ich@woanders&gt;</code>) auf eine gültige/dem Account zugeordnete E-Mail-Absenderadresse. Ich kann auch unter Verwendung der eigenen Domain nicht jeden belieben Absender @meinedomain verwenden - finde ich gut.</p>
+<p>Apple prüft den Envelope-From in der SMTP-Session (<code>MAIL FROM: X</code>) sowie den From-Header aus dem Inhalt der E-Mail (<code>From: Ich &lt;ich@woanders&gt;</code>) auf eine gültige/dem Account zugeordnete E-Mail-Absenderadresse. Ich kann auch unter Verwendung der eigenen Domain nicht jeden belieben Absender @meinedomain verwenden - finde ich gut.</p>
 <p>Ich verwende eine eigene Domain, wenig überraschend debinux.de, via Apple Mail und muss daher den Envelope-From als auch den Header auf meine private E-Mail-Adresse <code>geheim@debinux.de</code> ändern.</p>
+<h3>Services: Postfix: General</h3>
 <ul>
 <li>System Hostname<ul>
 <li>Der Hostname des Mailservers, in meinem Fall <code>opnsense.hai.internal</code></li>
@@ -173,12 +174,18 @@
 <li>Authentication Password entsprechend dem Login des App Passworts setzen</li>
 </ul>
 </li>
-<li>Sender Canonical Rewriting (Umschreibung des Senders beim Eingang der Mail)
+</ul>
+<h3>Services: Postfix: Sender Canonical Rewriting</h3>
+<ul>
+<li>Sender Canonical Rewriting (Umschreibung des Senders beim Eingang der E-Mail)
     Diese Map ist eine <strong>regexp Map</strong> in Postfix.<ul>
-<li>Rewrite From <code>/^.*@.*\.hai.internal/i</code>, um alle Mails eines Absenders in meiner lokalen Domain umzuschreiben</li>
+<li>Rewrite From <code>/^.*@.*\.hai.internal/i</code>, um alle E-Mails eines Absenders in meiner lokalen Domain umzuschreiben</li>
 <li>Rewrite To <code>geheim@debinux.de</code> - ich verwende wie eingangs erwähnt meine eigene Domain mit iCloud Mail, daher entspricht der Rewrite To <code>meineadresse@debinux.de</code></li>
 </ul>
 </li>
+</ul>
+<h3>Services: Postfix: Header Checks</h3>
+<ul>
 <li>Header Checks (Umschreibung des <code>From:</code> Headers bei Ausgang)
     Ebenfalls eine <strong>regexp Map</strong> in Postfix.<ul>
 <li>Expression <code>/From:.*/ REPLACE From: andre.peters@debinux.de</code></li>

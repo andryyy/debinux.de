@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>debinux.de - André Peters</title><link href="https://debinux.de/" rel="alternate"></link><link href="https://debinux.de/feeds/andre-peters.atom.xml" rel="self"></link><id>https://debinux.de/</id><updated>2022-07-12T07:15:00+02:00</updated><subtitle>an admins notepad</subtitle><entry><title>Apple iCloud Mail als Relay in OPNsense verwenden</title><link href="https://debinux.de/apple-icloud-mail-als-relay-in-opnsense-verwenden.html" rel="alternate"></link><published>2022-07-12T07:15:00+02:00</published><updated>2022-07-12T07:15:00+02:00</updated><author><name>André Peters</name></author><id>tag:debinux.de,2022-07-12:/apple-icloud-mail-als-relay-in-opnsense-verwenden.html</id><summary type="html">&lt;p&gt;Bei Verwendung von iCloud als Mail-Relay auf einer OPNsense ist eine Umschreibung des Absenders notwendig, sollte der interne Postfix-Service der ...&lt;a class="read-more" href="/apple-icloud-mail-als-relay-in-opnsense-verwenden.html"&gt;&lt;span&gt;weiterlesen&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Bei Verwendung von iCloud als Mail-Relay auf einer OPNsense ist eine Umschreibung des Absenders notwendig, sollte der interne Postfix-Service der Firewall zum Einsatz kommen.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>debinux.de - André Peters</title><link href="https://debinux.de/" rel="alternate"></link><link href="https://debinux.de/feeds/andre-peters.atom.xml" rel="self"></link><id>https://debinux.de/</id><updated>2022-07-12T07:15:00+02:00</updated><subtitle>an admins notepad</subtitle><entry><title>Apple iCloud Mail als Relay in OPNsense verwenden</title><link href="https://debinux.de/apple-icloud-mail-als-relay-in-opnsense-verwenden.html" rel="alternate"></link><published>2022-07-12T07:15:00+02:00</published><updated>2022-07-12T07:15:00+02:00</updated><author><name>André Peters</name></author><id>tag:debinux.de,2022-07-12:/apple-icloud-mail-als-relay-in-opnsense-verwenden.html</id><summary type="html">&lt;p&gt;Bei Verwendung von iCloud als E-Mail-Relay auf einer OPNsense ist eine Umschreibung des Absenders notwendig, sollte der interne Postfix-Service der ...&lt;a class="read-more" href="/apple-icloud-mail-als-relay-in-opnsense-verwenden.html"&gt;&lt;span&gt;weiterlesen&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Bei Verwendung von iCloud als E-Mail-Relay auf einer OPNsense ist eine Umschreibung des Absenders notwendig, sollte der interne Postfix-Service der Firewall zum Einsatz kommen.&lt;/p&gt;
 &lt;p&gt;Vorab muss eine App in den Apple-Account Einstellungen erstellt werden, siehe &lt;a href="https://support.apple.com/de-de/HT204397"&gt;hier&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Apple prüft den Envelope-From in der SMTP-Session (&lt;code&gt;MAIL FROM: X&lt;/code&gt;) sowie den From-Header aus dem Inhalt der Mail (&lt;code&gt;From: Ich &amp;lt;ich@woanders&amp;gt;&lt;/code&gt;) auf eine gültige/dem Account zugeordnete E-Mail-Absenderadresse. Ich kann auch unter Verwendung der eigenen Domain nicht jeden belieben Absender @meinedomain verwenden - finde ich gut.&lt;/p&gt;
+&lt;p&gt;Apple prüft den Envelope-From in der SMTP-Session (&lt;code&gt;MAIL FROM: X&lt;/code&gt;) sowie den From-Header aus dem Inhalt der E-Mail (&lt;code&gt;From: Ich &amp;lt;ich@woanders&amp;gt;&lt;/code&gt;) auf eine gültige/dem Account zugeordnete E-Mail-Absenderadresse. Ich kann auch unter Verwendung der eigenen Domain nicht jeden belieben Absender @meinedomain verwenden - finde ich gut.&lt;/p&gt;
 &lt;p&gt;Ich verwende eine eigene Domain, wenig überraschend debinux.de, via Apple Mail und muss daher den Envelope-From als auch den Header auf meine private E-Mail-Adresse &lt;code&gt;geheim@debinux.de&lt;/code&gt; ändern.&lt;/p&gt;
+&lt;h3&gt;Services: Postfix: General&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;System Hostname&lt;ul&gt;
 &lt;li&gt;Der Hostname des Mailservers, in meinem Fall &lt;code&gt;opnsense.hai.internal&lt;/code&gt;&lt;/li&gt;
@@ -27,12 +28,18 @@
 &lt;li&gt;Authentication Password entsprechend dem Login des App Passworts setzen&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Sender Canonical Rewriting (Umschreibung des Senders beim Eingang der Mail)
+&lt;/ul&gt;
+&lt;h3&gt;Services: Postfix: Sender Canonical Rewriting&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Sender Canonical Rewriting (Umschreibung des Senders beim Eingang der E-Mail)
     Diese Map ist eine &lt;strong&gt;regexp Map&lt;/strong&gt; in Postfix.&lt;ul&gt;
-&lt;li&gt;Rewrite From &lt;code&gt;/^.*@.*\.hai.internal/i&lt;/code&gt;, um alle Mails eines Absenders in meiner lokalen Domain umzuschreiben&lt;/li&gt;
+&lt;li&gt;Rewrite From &lt;code&gt;/^.*@.*\.hai.internal/i&lt;/code&gt;, um alle E-Mails eines Absenders in meiner lokalen Domain umzuschreiben&lt;/li&gt;
 &lt;li&gt;Rewrite To &lt;code&gt;geheim@debinux.de&lt;/code&gt; - ich verwende wie eingangs erwähnt meine eigene Domain mit iCloud Mail, daher entspricht der Rewrite To &lt;code&gt;meineadresse@debinux.de&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Services: Postfix: Header Checks&lt;/h3&gt;
+&lt;ul&gt;
 &lt;li&gt;Header Checks (Umschreibung des &lt;code&gt;From:&lt;/code&gt; Headers bei Ausgang)
     Ebenfalls eine &lt;strong&gt;regexp Map&lt;/strong&gt; in Postfix.&lt;ul&gt;
 &lt;li&gt;Expression &lt;code&gt;/From:.*/ REPLACE From: andre.peters@debinux.de&lt;/code&gt;&lt;/li&gt;
