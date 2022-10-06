@@ -154,23 +154,7 @@
 <p>Das ist, was ich benötige. Wenn ihr die einzelnen PDFs nicht benötigt oder das Zusammenführen auslassen möchtet, passt gerne das Script an.</p>
 <h2>Wie es geht...</h2>
 <p>Zuerst das Script für das Verarbeiten der Bilder erstellen: <code>/usr/local/bin/nemo_ocr</code></p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
 <span class="nb">cd</span> <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
 <span class="nb">shift</span>
@@ -188,7 +172,7 @@
 <span class="c1"># Auskommentieren, wenn keine kombinierte PDF benötigt wird.</span>
 pdftk *_ocr.pdf cat output combined_<span class="k">$(</span>date +<span class="s2">&quot;%Y_%m_%d_%I_%M&quot;</span><span class="k">)</span>.pdf
 </code></pre></div>
-</td></tr></table>
+
 <p>Anschließend ausführbar markieren: <code>chmod +x /usr/local/bin/nemo_ocr</code></p>
 <p>Nun das Script für die Nemo Aktion anlegen:</p>
 <div class="highlight"><pre><span></span><code><span class="n">cd</span><span class="w"> </span><span class="o">~/</span><span class="p">.</span><span class="n">local</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">nemo</span><span class="o">/</span><span class="n">actions</span><span class="w"></span>

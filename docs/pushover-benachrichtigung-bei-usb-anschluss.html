@@ -153,26 +153,7 @@ pip install pyudev
 </code></pre></div>
 
 <p>Eine Datei <code>/usr/local/sbin/pyudev_notify.py</code> anlegen:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python3</span>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python3</span>
 
 <span class="kn">import</span> <span class="nn">pyudev</span>
 <span class="kn">import</span> <span class="nn">http.client</span>
@@ -193,23 +174,23 @@ pip install pyudev
       <span class="p">}),</span> <span class="p">{</span><span class="s2">&quot;Content-type&quot;</span><span class="p">:</span> <span class="s2">&quot;application/x-www-form-urlencoded&quot;</span><span class="p">})</span>
     <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
 </code></pre></div>
-</td></tr></table>
+
 <p>Die Werte <code>APP_TOKEN</code> und <code>USER_TOKEN</code> abändern, ebenso die Nachricht anpassen.</p>
 <p>Das Script kann natürlich wesentlich verbessert werden, es ist ziemlich roh.</p>
 <p>Die Datei <code>/usr/local/sbin/pyudev_notify.py</code> noch durch <code>chmod 700 /usr/local/sbin/pyudev_notify.py</code> vor fremden Blicken schützen und ausführbar markieren.</p>
 <p>Anschließend den Dienst anlegen:</p>
 <p>Eine Datei <code>/etc/systemd/system/pyudev_notify.service</code> anlegen:</p>
-<div class="highlight"><pre><span></span><code><span class="k">[Unit]</span>
-<span class="na">Description</span><span class="o">=</span><span class="s">pyudev_notify</span>
-<span class="na">After</span><span class="o">=</span><span class="s">network-online.target</span>
-<span class="na">Wants</span><span class="o">=</span><span class="s">network-online.target systemd-networkd-wait-online.service</span>
+<div class="highlight"><pre><span></span><code><span class="k">[Unit]</span><span class="w"></span>
+<span class="na">Description</span><span class="o">=</span><span class="s">pyudev_notify</span><span class="w"></span>
+<span class="na">After</span><span class="o">=</span><span class="s">network-online.target</span><span class="w"></span>
+<span class="na">Wants</span><span class="o">=</span><span class="s">network-online.target systemd-networkd-wait-online.service</span><span class="w"></span>
 
-<span class="k">[Service]</span>
-<span class="na">Type</span><span class="o">=</span><span class="s">simple</span>
-<span class="na">ExecStart</span><span class="o">=</span><span class="s">/usr/local/sbin/pyudev_notify.py</span>
+<span class="k">[Service]</span><span class="w"></span>
+<span class="na">Type</span><span class="o">=</span><span class="s">simple</span><span class="w"></span>
+<span class="na">ExecStart</span><span class="o">=</span><span class="s">/usr/local/sbin/pyudev_notify.py</span><span class="w"></span>
 
-<span class="k">[Install]</span>
-<span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span>
+<span class="k">[Install]</span><span class="w"></span>
+<span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span><span class="w"></span>
 </code></pre></div>
 
 <p>Nun den Dienst aktivieren und starten: <code>systemctl enable --now pyudev_notify.service</code></p>

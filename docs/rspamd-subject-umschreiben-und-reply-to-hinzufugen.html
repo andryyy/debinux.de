@@ -147,32 +147,32 @@
 <p>Die alten Headerfelder werden vorher entfernt.</p>
 <p>Nur ein Snippet.</p>
 <p><code>remove_headers { X = 0 }</code> sollte alle Header entfernen, nicht nur den ersten. Beim Subject und Reply-To eher unnötig.</p>
-<div class="highlight"><pre><span></span><code><span class="n">rspamd_config</span><span class="o">:</span><span class="n">register_symbol</span><span class="o">({</span>
-  <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;SUBJECT_REWRITE_ADD_HEADER&#39;</span><span class="o">,</span>
-  <span class="n">type</span> <span class="o">=</span> <span class="s1">&#39;postfilter&#39;</span><span class="o">,</span>
-  <span class="n">callback</span> <span class="o">=</span> <span class="kd">function</span><span class="o">(</span><span class="n">task</span><span class="o">)</span>
-    <span class="n">local</span> <span class="n">util</span> <span class="o">=</span> <span class="n">require</span><span class="o">(</span><span class="s2">&quot;rspamd_util&quot;</span><span class="o">)</span>
-    <span class="n">local</span> <span class="n">rspamd_logger</span> <span class="o">=</span> <span class="n">require</span> <span class="s2">&quot;rspamd_logger&quot;</span>
-    <span class="n">local</span> <span class="n">mailcow_domain</span> <span class="o">=</span> <span class="n">task</span><span class="o">:</span><span class="n">get_symbol</span><span class="o">(</span><span class="s2">&quot;RCPT_MAILCOW_DOMAIN&quot;</span><span class="o">)</span>
-    <span class="k">if</span> <span class="n">mailcow_domain</span> <span class="n">then</span>
-      <span class="n">local</span> <span class="n">tag</span> <span class="o">=</span> <span class="s2">&quot;Tag&quot;</span>
-      <span class="n">rspamd_logger</span><span class="o">.</span><span class="na">infox</span><span class="o">(</span><span class="s2">&quot;add fancy list header&quot;</span><span class="o">)</span>
-      <span class="n">local</span> <span class="n">sbj</span> <span class="o">=</span> <span class="n">task</span><span class="o">:</span><span class="n">get_header</span><span class="o">(</span><span class="s1">&#39;Subject&#39;</span><span class="o">)</span>
-      <span class="n">new_sbj</span> <span class="o">=</span> <span class="s1">&#39;=?UTF-8?B?&#39;</span> <span class="o">..</span> <span class="n">tostring</span><span class="o">(</span><span class="n">util</span><span class="o">.</span><span class="na">encode_base64</span><span class="o">(</span><span class="s1">&#39;[&#39;</span> <span class="o">..</span> <span class="n">tag</span> <span class="o">..</span> <span class="s1">&#39;] &#39;</span> <span class="o">..</span> <span class="n">sbj</span><span class="o">))</span> <span class="o">..</span> <span class="s1">&#39;?=&#39;</span>
-      <span class="n">task</span><span class="o">:</span><span class="n">set_milter_reply</span><span class="o">({</span>
-        <span class="n">remove_headers</span> <span class="o">=</span> <span class="o">{</span>
-          <span class="o">[</span><span class="s1">&#39;Subject&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="mi">1</span><span class="o">,</span>
-          <span class="o">[</span><span class="s1">&#39;Reply-To&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="mi">1</span><span class="o">,</span>
-        <span class="o">},</span>
-        <span class="n">add_headers</span> <span class="o">=</span> <span class="o">{</span>
-          <span class="o">[</span><span class="s1">&#39;Subject&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="n">new_sbj</span><span class="o">,</span>
-          <span class="o">[</span><span class="s1">&#39;Reply-To&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;moo@moo.com&#39;</span>
-        <span class="o">}</span>
-      <span class="o">})</span>
-    <span class="n">end</span>
-  <span class="n">end</span><span class="o">,</span>
-  <span class="n">priority</span> <span class="o">=</span> <span class="mi">11</span>
-<span class="o">})</span>
+<div class="highlight"><pre><span></span><code><span class="n">rspamd_config</span><span class="o">:</span><span class="n">register_symbol</span><span class="o">({</span><span class="w"></span>
+<span class="w">  </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;SUBJECT_REWRITE_ADD_HEADER&#39;</span><span class="o">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;postfilter&#39;</span><span class="o">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">callback</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="o">(</span><span class="n">task</span><span class="o">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">local</span><span class="w"> </span><span class="n">util</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">require</span><span class="o">(</span><span class="s2">&quot;rspamd_util&quot;</span><span class="o">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">local</span><span class="w"> </span><span class="n">rspamd_logger</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">require</span><span class="w"> </span><span class="s2">&quot;rspamd_logger&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="n">local</span><span class="w"> </span><span class="n">mailcow_domain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">task</span><span class="o">:</span><span class="n">get_symbol</span><span class="o">(</span><span class="s2">&quot;RCPT_MAILCOW_DOMAIN&quot;</span><span class="o">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">mailcow_domain</span><span class="w"> </span><span class="n">then</span><span class="w"></span>
+<span class="w">      </span><span class="n">local</span><span class="w"> </span><span class="n">tag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Tag&quot;</span><span class="w"></span>
+<span class="w">      </span><span class="n">rspamd_logger</span><span class="o">.</span><span class="na">infox</span><span class="o">(</span><span class="s2">&quot;add fancy list header&quot;</span><span class="o">)</span><span class="w"></span>
+<span class="w">      </span><span class="n">local</span><span class="w"> </span><span class="n">sbj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">task</span><span class="o">:</span><span class="n">get_header</span><span class="o">(</span><span class="s1">&#39;Subject&#39;</span><span class="o">)</span><span class="w"></span>
+<span class="w">      </span><span class="n">new_sbj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;=?UTF-8?B?&#39;</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="n">tostring</span><span class="o">(</span><span class="n">util</span><span class="o">.</span><span class="na">encode_base64</span><span class="o">(</span><span class="s1">&#39;[&#39;</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="n">tag</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="s1">&#39;] &#39;</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="n">sbj</span><span class="o">))</span><span class="w"> </span><span class="o">..</span><span class="w"> </span><span class="s1">&#39;?=&#39;</span><span class="w"></span>
+<span class="w">      </span><span class="n">task</span><span class="o">:</span><span class="n">set_milter_reply</span><span class="o">({</span><span class="w"></span>
+<span class="w">        </span><span class="n">remove_headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
+<span class="w">          </span><span class="o">[</span><span class="s1">&#39;Subject&#39;</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">,</span><span class="w"></span>
+<span class="w">          </span><span class="o">[</span><span class="s1">&#39;Reply-To&#39;</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">,</span><span class="w"></span>
+<span class="w">        </span><span class="o">},</span><span class="w"></span>
+<span class="w">        </span><span class="n">add_headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
+<span class="w">          </span><span class="o">[</span><span class="s1">&#39;Subject&#39;</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new_sbj</span><span class="o">,</span><span class="w"></span>
+<span class="w">          </span><span class="o">[</span><span class="s1">&#39;Reply-To&#39;</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;moo@moo.com&#39;</span><span class="w"></span>
+<span class="w">        </span><span class="o">}</span><span class="w"></span>
+<span class="w">      </span><span class="o">})</span><span class="w"></span>
+<span class="w">    </span><span class="n">end</span><span class="w"></span>
+<span class="w">  </span><span class="n">end</span><span class="o">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">priority</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">11</span><span class="w"></span>
+<span class="o">})</span><span class="w"></span>
 </code></pre></div>
   </div>
   <div class="tag-cloud">

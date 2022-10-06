@@ -147,19 +147,19 @@
     <p>Da es scheinbar vorkommt, dass Dateien trotz Wunsch zur lokalen Verfügbarkeit nicht heruntergeladen werden, habe ich mir kurzerhand die Attribute der Dateien angeschaut, verglichen und festgestellt, dass OneDrive als auch iCloud das Attribut "525344" bzw. "0x00080420" setzen, wenn "Always keep on this device" gesetzt ist.</p>
 <p>Das Attribute für "Free up space" ist demnach wohl "5248544" bzw. "0x5248544", das habe ich jedoch nicht weiter getestet.</p>
 <p>Um alle nicht sofort lokal verfügbaren Dateien anzupassen, habe ich mir folgendes Script erstellt:</p>
-<div class="highlight"><pre><span></span><code><span class="nv">get</span><span class="o">-</span><span class="nv">childitem</span> <span class="mh">$e</span><span class="nv">nv</span>:<span class="nv">userprofile</span><span class="s1">&#39;</span><span class="s">\Pictures\iCloud Photos\Photos</span><span class="s1">&#39;</span> <span class="o">-</span><span class="nv">Force</span> <span class="o">-</span><span class="nv">File</span> <span class="o">-</span><span class="nv">Recurse</span> <span class="o">-</span><span class="k">Include</span> <span class="o">*</span><span class="nv">heic</span>,<span class="o">*</span><span class="nv">jpg</span>,<span class="o">*</span><span class="nv">jpeg</span>,<span class="o">*</span><span class="nv">png</span>,<span class="o">*</span><span class="nv">gif</span>,<span class="o">*</span><span class="nv">mp4</span>,<span class="o">*</span><span class="nv">mov</span> <span class="o">|</span> <span class="nv">where</span> <span class="nv">Attributes</span> <span class="o">-</span><span class="nv">ne</span> <span class="s1">&#39;</span><span class="s">525344</span><span class="s1">&#39;</span> <span class="o">|</span> <span class="nv">foreach</span> {
-    $<span class="nv">prop</span> <span class="o">=</span> <span class="nv">Get</span><span class="o">-</span><span class="nv">ItemProperty</span> <span class="o">-</span><span class="nv">Path</span> $<span class="nv">_</span>.<span class="nv">fullname</span>
-    $<span class="nv">prop</span>.<span class="nv">Attributes</span> <span class="o">=</span> $<span class="nv">prop</span>.<span class="nv">Attributes</span> <span class="o">-</span><span class="nv">bor</span> <span class="mi">525344</span>
-}
+<div class="highlight"><pre><span></span><code><span class="nv">get</span><span class="o">-</span><span class="nv">childitem</span><span class="w"> </span><span class="mh">$e</span><span class="nv">nv</span>:<span class="nv">userprofile</span><span class="s1">&#39;\Pictures\iCloud Photos\Photos&#39;</span><span class="w"> </span><span class="o">-</span><span class="nv">Force</span><span class="w"> </span><span class="o">-</span><span class="nv">File</span><span class="w"> </span><span class="o">-</span><span class="nv">Recurse</span><span class="w"> </span><span class="o">-</span><span class="k">Include</span><span class="w"> </span><span class="o">*</span><span class="nv">heic</span>,<span class="o">*</span><span class="nv">jpg</span>,<span class="o">*</span><span class="nv">jpeg</span>,<span class="o">*</span><span class="nv">png</span>,<span class="o">*</span><span class="nv">gif</span>,<span class="o">*</span><span class="nv">mp4</span>,<span class="o">*</span><span class="nv">mov</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nv">where</span><span class="w"> </span><span class="nv">Attributes</span><span class="w"> </span><span class="o">-</span><span class="nv">ne</span><span class="w"> </span><span class="s1">&#39;525344&#39;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nv">foreach</span><span class="w"> </span>{<span class="w"></span>
+<span class="w">    </span>$<span class="nv">prop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">Get</span><span class="o">-</span><span class="nv">ItemProperty</span><span class="w"> </span><span class="o">-</span><span class="nv">Path</span><span class="w"> </span>$<span class="nv">_</span>.<span class="nv">fullname</span><span class="w"></span>
+<span class="w">    </span>$<span class="nv">prop</span>.<span class="nv">Attributes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>$<span class="nv">prop</span>.<span class="nv">Attributes</span><span class="w"> </span><span class="o">-</span><span class="nv">bor</span><span class="w"> </span><span class="mi">525344</span><span class="w"></span>
+}<span class="w"></span>
 </code></pre></div>
 
 <p>Ein Aufgabenplaner-Job könnte so aussehen:</p>
-<div class="highlight"><pre><span></span><code><span class="k">[...]</span>
-    <span class="na">&lt;Exec&gt;</span>
-      <span class="na">&lt;Command&gt;powershell&lt;/Command&gt;</span>
-      <span class="na">&lt;Arguments&gt;-executionpolicy bypass -file c:\fix_sync_icloud.ps1&lt;/Arguments&gt;</span>
-    <span class="na">&lt;/Exec&gt;</span>
-<span class="k">[...]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[...]</span><span class="w"></span>
+<span class="w">    </span><span class="na">&lt;Exec&gt;</span><span class="w"></span>
+<span class="w">      </span><span class="na">&lt;Command&gt;powershell&lt;/Command&gt;</span><span class="w"></span>
+<span class="w">      </span><span class="na">&lt;Arguments&gt;-executionpolicy bypass -file c:\fix_sync_icloud.ps1&lt;/Arguments&gt;</span><span class="w"></span>
+<span class="w">    </span><span class="na">&lt;/Exec&gt;</span><span class="w"></span>
+<span class="k">[...]</span><span class="w"></span>
 </code></pre></div>
   </div>
   <div class="tag-cloud">

@@ -126,6 +126,24 @@
 
 <article>
   <header>
+    <h2><a href="../for-loop-zum-mounten-vor-chroot.html#for-loop-zum-mounten-vor-chroot">for-loop zum Mounten vor chroot</a></h2>
+    <p>
+      Online seit Do 01 April 2021 in <a href="../category/linux.html">Linux</a>
+
+          &#8226; Stichw&ouml;rter
+              <a href="../tag/linux.html">linux</a>
+    </p>
+  </header>
+  <div>
+      <div><div class="highlight"><pre><span></span><code>#<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">proc</span><span class="w"> </span><span class="nv">sys</span><span class="w"> </span><span class="nv">dev</span><span class="c1">; do mount --rbind /$i /mnt/$i ; done</span><span class="w"></span>
+</code></pre></div>
+
+<p>Scharmlos geklaut aus dem SUSE Wiki. :)</p></div>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="../dateiberechtigungen-sichern.html#dateiberechtigungen-sichern">Dateiberechtigungen sichern</a></h2>
     <p>
       Online seit Di 16 Februar 2021 in <a href="../category/linux.html">Linux</a>
@@ -157,11 +175,11 @@ Das Tool sichert die Dateiberechtigungen (auch rekursiv ...<a class="read-more" 
   </header>
   <div>
       <div><p>Deaktivieren:</p>
-<div class="highlight"><pre><span></span><code><span class="kt">reg</span> <span class="n">add</span> <span class="s">"HKLM\System\CurrentControlSet\Services\Dnscache"</span> <span class="o">/</span><span class="n">v</span> <span class="s">"Start"</span> <span class="o">/</span><span class="n">t</span> <span class="n">REG_DWORD</span> <span class="o">/</span><span class="n">d</span> <span class="s">"4"</span> <span class="o">/</span><span class="n">f</span>
+<div class="highlight"><pre><span></span><code><span class="kt">reg</span><span class="w"> </span><span class="n">add</span><span class="w"> </span><span class="s">"HKLM\System\CurrentControlSet\Services\Dnscache"</span><span class="w"> </span><span class="o">/</span><span class="n">v</span><span class="w"> </span><span class="s">"Start"</span><span class="w"> </span><span class="o">/</span><span class="n">t</span><span class="w"> </span><span class="n">REG_DWORD</span><span class="w"> </span><span class="o">/</span><span class="n">d</span><span class="w"> </span><span class="s">"4"</span><span class="w"> </span><span class="o">/</span><span class="n">f</span><span class="w"></span>
 </code></pre></div>
 
 <p>Aktivieren:</p>
-<div class="highlight"><pre><span></span><code><span class="kt">reg</span> <span class="n">add</span> <span class="s">"HKLM\System ...</span></code></pre><a class="read-more" href="/windows-dns-cache-deaktivierenaktivieren.html"><span>weiterlesen</span></a></div></div>
+<div class="highlight"><pre><span></span><code><span class="kt">reg</span><span class="w"> </span><span class="n">add</span><span class="w"> </span><span class="s">"HKLM\System ...</span></code></pre><a class="read-more" href="/windows-dns-cache-deaktivierenaktivieren.html"><span>weiterlesen</span></a></div></div>
         <br>
         <a class="btn"
            href="../windows-dns-cache-deaktivierenaktivieren.html#windows-dns-cache-deaktivierenaktivieren">
@@ -206,9 +224,9 @@ Das Tool sichert die Dateiberechtigungen (auch rekursiv ...<a class="read-more" 
     </p>
   </header>
   <div>
-      <div><div class="highlight"><pre><span></span><code><span class="o">$</span><span class="n">template</span> <span class="n">RemoteUDP</span><span class="p">,</span><span class="s2">&quot;/var/log/remote-udp.log&quot;</span>
-<span class="p">:</span><span class="n">inputname</span><span class="p">,</span> <span class="n">isequal</span><span class="p">,</span> <span class="s2">&quot;imudp&quot;</span> <span class="err">?</span><span class="n">RemoteUDP</span>
-<span class="o">&amp;</span> <span class="o">~</span>
+      <div><div class="highlight"><pre><span></span><code><span class="o">$</span><span class="n">template</span><span class="w"> </span><span class="n">RemoteUDP</span><span class="p">,</span><span class="s2">&quot;/var/log/remote-udp.log&quot;</span><span class="w"></span>
+<span class="p">:</span><span class="n">inputname</span><span class="p">,</span><span class="w"> </span><span class="n">isequal</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;imudp&quot;</span><span class="w"> </span><span class="err">?</span><span class="n">RemoteUDP</span><span class="w"></span>
+<span class="o">&amp;</span><span class="w"> </span><span class="o">~</span><span class="w"></span>
 </code></pre></div>
 
 <p><code>&amp; ~</code> beendet die Verarbeitung der Regel.</p></div>
