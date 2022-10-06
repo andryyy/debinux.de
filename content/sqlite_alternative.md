@@ -1,4 +1,4 @@
-Title: sqlite3 CLI alternative: litecli
+Title: sqlite3 CLI Alternative: litecli
 Category: Linux
 Date: 2022-10-06 08:10
 Tags: linux, sqlite
