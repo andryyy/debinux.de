@@ -1,0 +1,148 @@
+[input]
+html_selector = "main"
+base_directory = "/home/user/venvs/pelican/debinux.de/docs"
+
+[[input.files]]
+path = "pages/impressum-datenschutz.html"
+url = "/pages/impressum-datenschutz.html"
+title = "Impressum & Datenschutz"
+
+[[input.files]]
+path = "sqlite3-cli-alternative-litecli.html"
+url = "/sqlite3-cli-alternative-litecli.html"
+title = "sqlite3 CLI Alternative: litecli"
+
+[[input.files]]
+path = "sudo-aliases-beibehalten-beispiel-sudo-ll.html"
+url = "/sudo-aliases-beibehalten-beispiel-sudo-ll.html"
+title = "sudo: Aliases beibehalten (Beispiel: `sudo ll`)"
+
+[[input.files]]
+path = "apple-icloud-mail-als-relay-in-opnsense-verwenden.html"
+url = "/apple-icloud-mail-als-relay-in-opnsense-verwenden.html"
+title = "Apple iCloud Mail als Relay in OPNsense verwenden"
+
+[[input.files]]
+path = "noson-der-sonos-controller-fur-linux.html"
+url = "/noson-der-sonos-controller-fur-linux.html"
+title = "Noson, der SONOS Controller für Linux"
+
+[[input.files]]
+path = "pushover-benachrichtigung-bei-usb-anschluss.html"
+url = "/pushover-benachrichtigung-bei-usb-anschluss.html"
+title = "Pushover Benachrichtigung bei USB Anschluss"
+
+[[input.files]]
+path = "ein-paar-ubuntu-dock-quickies-mit-gsettings.html"
+url = "/ein-paar-ubuntu-dock-quickies-mit-gsettings.html"
+title = "Ein paar Ubuntu Dock Quickies mit gsettings"
+
+[[input.files]]
+path = "wenn-anydesk-unter-ubuntu-jammy-beta-nicht-startet.html"
+url = "/wenn-anydesk-unter-ubuntu-jammy-beta-nicht-startet.html"
+title = "Wenn AnyDesk unter Ubuntu Jammy (Beta) nicht startet"
+
+[[input.files]]
+path = "appimages-mit-bauh-installieren-und-verwalten.html"
+url = "/appimages-mit-bauh-installieren-und-verwalten.html"
+title = "AppImages mit bauh installieren und verwalten"
+
+[[input.files]]
+path = "fsck-via-boot-parameter.html"
+url = "/fsck-via-boot-parameter.html"
+title = "fsck via Boot-Parameter"
+
+[[input.files]]
+path = "flatpak-cursor-theme-fur-apps-lesbar-machen.html"
+url = "/flatpak-cursor-theme-fur-apps-lesbar-machen.html"
+title = "Flatpak: Cursor Theme für Apps lesbar machen"
+
+[[input.files]]
+path = "yogadns-als-flexibler-dns-client-fur-windows-mit-doh-und-dot.html"
+url = "/yogadns-als-flexibler-dns-client-fur-windows-mit-doh-und-dot.html"
+title = "YogaDNS als flexibler DNS-Client für Windows mit DoH und DoT"
+
+[[input.files]]
+path = "flatpak-anwendungen-aus-cli-verwenden.html"
+url = "/flatpak-anwendungen-aus-cli-verwenden.html"
+title = "Flatpak-Anwendungen aus CLI verwenden"
+
+[[input.files]]
+path = "openvpn-clients-dns-einstellungen-und-routen-ignorieren.html"
+url = "/openvpn-clients-dns-einstellungen-und-routen-ignorieren.html"
+title = "OpenVPN-Clients: DNS-Einstellungen und Routen ignorieren"
+
+[[input.files]]
+path = "dns-uber-tls-dns-over-https.html"
+url = "/dns-uber-tls-dns-over-https.html"
+title = "DNS über TLS, DNS over HTTPS"
+
+[[input.files]]
+path = "firefox-next-ohne-branding-auf-linux-mint.html"
+url = "/firefox-next-ohne-branding-auf-linux-mint.html"
+title = "Firefox Next ohne Branding auf Linux Mint"
+
+[[input.files]]
+path = "ocr-per-rechtsklick-auf-dokument-in-nemo-ausfuhren.html"
+url = "/ocr-per-rechtsklick-auf-dokument-in-nemo-ausfuhren.html"
+title = "OCR per Rechtsklick auf Dokument in Nemo ausführen"
+
+[[input.files]]
+path = "heic-dateien-in-linux-mintubuntu-bildbetrachter-offnen-und-thumbnails-anzeigen.html"
+url = "/heic-dateien-in-linux-mintubuntu-bildbetrachter-offnen-und-thumbnails-anzeigen.html"
+title = "HEIC Dateien in Linux Mint/Ubuntu Bildbetrachter öffnen und Thumbnails anzeigen"
+
+[[input.files]]
+path = "icloud-onedrive-attribut-always-keep-on-device-per-ps-setzen.html"
+url = "/icloud-onedrive-attribut-always-keep-on-device-per-ps-setzen.html"
+title = "iCloud, OneDrive: Attribut \\\"Always keep on device\\\" per PS setzen"
+
+[[input.files]]
+path = "ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php.html"
+url = "/ipv6-prefix-via-nginx-lua-und-einem-einfachen-bash-script-ausgeben-ohne-php.html"
+title = "IPv6 Prefix via Nginx, LUA und einem einfachen Bash-Script ausgeben (ohne PHP)"
+
+[[input.files]]
+path = "firefox-einzelne-zonen-uber-ipv4-auflosen.html"
+url = "/firefox-einzelne-zonen-uber-ipv4-auflosen.html"
+title = "Firefox: Einzelne Zonen über IPv4 auflösen"
+
+[[input.files]]
+path = "for-loop-zum-mounten-vor-chroot.html"
+url = "/for-loop-zum-mounten-vor-chroot.html"
+title = "for-loop zum Mounten vor chroot"
+
+[[input.files]]
+path = "dateiberechtigungen-sichern.html"
+url = "/dateiberechtigungen-sichern.html"
+title = "Dateiberechtigungen sichern"
+
+[[input.files]]
+path = "windows-dns-cache-deaktivierenaktivieren.html"
+url = "/windows-dns-cache-deaktivierenaktivieren.html"
+title = "Windows DNS Cache deaktivieren/aktivieren"
+
+[[input.files]]
+path = "gocryptfs-kompilieren-fur-hw-beschleunigtes-aes-und-systemd-dienst-einrichten.html"
+url = "/gocryptfs-kompilieren-fur-hw-beschleunigtes-aes-und-systemd-dienst-einrichten.html"
+title = "GoCryptFS kompilieren (für HW-beschleunigtes AES) und Systemd Dienst einrichten"
+
+[[input.files]]
+path = "rsyslog-via-udp-erhaltene-logs-in-eine-datei-schreiben.html"
+url = "/rsyslog-via-udp-erhaltene-logs-in-eine-datei-schreiben.html"
+title = "Rsyslog: via UDP erhaltene Logs in eine Datei schreiben"
+
+[[input.files]]
+path = "template-zammad-reverse-proxy-mit-apache.html"
+url = "/template-zammad-reverse-proxy-mit-apache.html"
+title = "Template Zammad Reverse Proxy mit Apache"
+
+[[input.files]]
+path = "rspamd-subject-umschreiben-und-reply-to-hinzufugen.html"
+url = "/rspamd-subject-umschreiben-und-reply-to-hinzufugen.html"
+title = "Rspamd: Subject umschreiben und Reply-To hinzufügen"
+
+[[input.files]]
+path = "rspamd-ratelimit-uberschreitung-in-slack-channel-teilen.html"
+url = "/rspamd-ratelimit-uberschreitung-in-slack-channel-teilen.html"
+title = "Rspamd: Ratelimit-Überschreitung in Slack Channel teilen"

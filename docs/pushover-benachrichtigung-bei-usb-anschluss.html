@@ -15,13 +15,12 @@
     <link id="pygments-light-theme" rel="stylesheet" type="text/css"
           href="./theme/pygments/github.min.css">
 
-    <link rel="stylesheet" href="./theme/tipuesearch/tipuesearch.min.css" />
 
   <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/fontawesome.css">
   <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/brands.css">
   <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/solid.css">
 
-  <link rel="stylesheet" type="text/css" href="/static/custom.css">
+  <link rel="stylesheet" type="text/css" href="./static/custom.css">
 
     <link href="https://debinux.de/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="debinux.de Atom">
 
@@ -79,9 +78,6 @@
       </h1>
 
 <p>an admins notepad</p>
-        <form class="navbar-search" action="./search.html" role="search">
-          <input type="text" name="q" id="tipue_search_input" placeholder="Suchbegriff eingeben...">
-        </form>
 
       <nav>
         <ul class="list">
@@ -94,12 +90,6 @@
                 </a>
               </li>
 
-            <li>
-              <a target="_blank" href="https://mailcow.email/" >mailcow</a>
-            </li>
-            <li>
-              <a target="_blank" href="https://www.servercow.de/" >Servercow</a>
-            </li>
             <li>
               <a target="_blank" href="https://keybase.io/debinux" >Keybase.io/debinux</a>
             </li>
@@ -124,9 +114,9 @@
     <nav>
       <a href="./">Home</a>
 
-      <a href="/archives.html">Archive</a>
-      <a href="/categories.html">Kategorien</a>
-      <a href="/tags.html">Stichw&ouml;rter</a>
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
       <a href="/pages/impressum-datenschutz.html#impressum-datenschutz">Impressum / Datenschutz</a>
 
       <a href="https://debinux.de/feeds/all.atom.xml">Atom</a>
@@ -138,7 +128,7 @@
       
     <h1 id="pushover-benachrichtigung-bei-usb-anschluss">Pushover Benachrichtigung bei USB Anschluss</h1>
     <p>
-      Online seit Fr 08 April 2022 in <a href="./category/linux-python.html">Linux, Python</a>
+      Posted on Fr 08 April 2022 in <a href="./category/linux-python.html">Linux, Python</a>
 
     </p>
   </header>
@@ -180,17 +170,17 @@ pip install pyudev
 <p>Die Datei <code>/usr/local/sbin/pyudev_notify.py</code> noch durch <code>chmod 700 /usr/local/sbin/pyudev_notify.py</code> vor fremden Blicken schützen und ausführbar markieren.</p>
 <p>Anschließend den Dienst anlegen:</p>
 <p>Eine Datei <code>/etc/systemd/system/pyudev_notify.service</code> anlegen:</p>
-<div class="highlight"><pre><span></span><code><span class="k">[Unit]</span><span class="w"></span>
-<span class="na">Description</span><span class="o">=</span><span class="s">pyudev_notify</span><span class="w"></span>
-<span class="na">After</span><span class="o">=</span><span class="s">network-online.target</span><span class="w"></span>
-<span class="na">Wants</span><span class="o">=</span><span class="s">network-online.target systemd-networkd-wait-online.service</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="k">[Unit]</span>
+<span class="na">Description</span><span class="o">=</span><span class="s">pyudev_notify</span>
+<span class="na">After</span><span class="o">=</span><span class="s">network-online.target</span>
+<span class="na">Wants</span><span class="o">=</span><span class="s">network-online.target systemd-networkd-wait-online.service</span>
 
-<span class="k">[Service]</span><span class="w"></span>
-<span class="na">Type</span><span class="o">=</span><span class="s">simple</span><span class="w"></span>
-<span class="na">ExecStart</span><span class="o">=</span><span class="s">/usr/local/sbin/pyudev_notify.py</span><span class="w"></span>
+<span class="k">[Service]</span>
+<span class="na">Type</span><span class="o">=</span><span class="s">simple</span>
+<span class="na">ExecStart</span><span class="o">=</span><span class="s">/usr/local/sbin/pyudev_notify.py</span>
 
-<span class="k">[Install]</span><span class="w"></span>
-<span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span><span class="w"></span>
+<span class="k">[Install]</span>
+<span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span>
 </code></pre></div>
 
 <p>Nun den Dienst aktivieren und starten: <code>systemctl enable --now pyudev_notify.service</code></p>
@@ -215,7 +205,7 @@ pip install pyudev
   &copy; 2022  - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.en_US" target="_blank">Creative Commons Attribution-ShareAlike</a>
 </p>
 <p>
-Gebaut mit <a href="http://getpelican.com" target="_blank">Pelican</a> und dem <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a>theme
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
 </p><p>
   <a rel="license"
      href="http://creativecommons.org/licenses/by-sa/4.0/"

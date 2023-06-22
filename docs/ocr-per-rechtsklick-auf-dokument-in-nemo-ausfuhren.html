@@ -15,13 +15,12 @@
     <link id="pygments-light-theme" rel="stylesheet" type="text/css"
           href="./theme/pygments/github.min.css">
 
-    <link rel="stylesheet" href="./theme/tipuesearch/tipuesearch.min.css" />
 
   <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/fontawesome.css">
   <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/brands.css">
   <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/solid.css">
 
-  <link rel="stylesheet" type="text/css" href="/static/custom.css">
+  <link rel="stylesheet" type="text/css" href="./static/custom.css">
 
     <link href="https://debinux.de/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="debinux.de Atom">
 
@@ -79,9 +78,6 @@
       </h1>
 
 <p>an admins notepad</p>
-        <form class="navbar-search" action="./search.html" role="search">
-          <input type="text" name="q" id="tipue_search_input" placeholder="Suchbegriff eingeben...">
-        </form>
 
       <nav>
         <ul class="list">
@@ -94,12 +90,6 @@
                 </a>
               </li>
 
-            <li>
-              <a target="_blank" href="https://mailcow.email/" >mailcow</a>
-            </li>
-            <li>
-              <a target="_blank" href="https://www.servercow.de/" >Servercow</a>
-            </li>
             <li>
               <a target="_blank" href="https://keybase.io/debinux" >Keybase.io/debinux</a>
             </li>
@@ -124,9 +114,9 @@
     <nav>
       <a href="./">Home</a>
 
-      <a href="/archives.html">Archive</a>
-      <a href="/categories.html">Kategorien</a>
-      <a href="/tags.html">Stichw&ouml;rter</a>
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
       <a href="/pages/impressum-datenschutz.html#impressum-datenschutz">Impressum / Datenschutz</a>
 
       <a href="https://debinux.de/feeds/all.atom.xml">Atom</a>
@@ -138,7 +128,7 @@
       
     <h1 id="ocr-per-rechtsklick-auf-dokument-in-nemo-ausfuhren">OCR per Rechtsklick auf Dokument in Nemo ausführen</h1>
     <p>
-      Online seit Di 17 August 2021 in <a href="./category/linux.html">Linux</a>
+      Posted on Di 17 August 2021 in <a href="./category/linux.html">Linux</a>
 
     </p>
   </header>
@@ -156,38 +146,38 @@
 <p>Zuerst das Script für das Verarbeiten der Bilder erstellen: <code>/usr/local/bin/nemo_ocr</code></p>
 <div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
 
-<span class="nb">cd</span> <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
+<span class="nb">cd</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span>
 <span class="nb">shift</span>
 
-<span class="k">while</span> <span class="o">((</span><span class="si">${#}</span><span class="o">))</span><span class="p">;</span> <span class="k">do</span>
-  <span class="nv">IFS</span><span class="o">=</span><span class="s1">&#39;;&#39;</span> <span class="nb">read</span> -a files <span class="o">&lt;&lt;&lt;</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">1</span><span class="si">}</span><span class="s2">&quot;</span>
-  <span class="k">for</span> word <span class="k">in</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">files</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span> <span class="k">do</span>
-    deskew -b ffffff <span class="s2">&quot;</span><span class="si">${</span><span class="nv">word</span><span class="si">}</span><span class="s2">&quot;</span> -o <span class="s2">&quot;</span><span class="si">${</span><span class="nv">word</span><span class="si">}</span><span class="s2">_deskew.jpg&quot;</span>
-    tesseract <span class="s2">&quot;</span><span class="si">${</span><span class="nv">word</span><span class="si">}</span><span class="s2">_deskew.jpg&quot;</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">word</span><span class="si">}</span><span class="s2">_ocr&quot;</span> -l deu pdf
-    rm <span class="s2">&quot;</span><span class="si">${</span><span class="nv">word</span><span class="si">}</span><span class="s2">_deskew.jpg&quot;</span>
-  <span class="k">done</span>
-  <span class="nb">shift</span>
+<span class="k">while</span><span class="w"> </span><span class="o">((</span><span class="si">${#}</span><span class="o">))</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="nv">IFS</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>-a<span class="w"> </span>files<span class="w"> </span><span class="o">&lt;&lt;&lt;</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">1</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span>word<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">files</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span>deskew<span class="w"> </span>-b<span class="w"> </span>ffffff<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">word</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">word</span><span class="si">}</span><span class="s2">_deskew.jpg&quot;</span>
+<span class="w">    </span>tesseract<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">word</span><span class="si">}</span><span class="s2">_deskew.jpg&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">word</span><span class="si">}</span><span class="s2">_ocr&quot;</span><span class="w"> </span>-l<span class="w"> </span>deu<span class="w"> </span>pdf
+<span class="w">    </span>rm<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">word</span><span class="si">}</span><span class="s2">_deskew.jpg&quot;</span>
+<span class="w">  </span><span class="k">done</span>
+<span class="w">  </span><span class="nb">shift</span>
 <span class="k">done</span>
 
 <span class="c1"># Auskommentieren, wenn keine kombinierte PDF benötigt wird.</span>
-pdftk *_ocr.pdf cat output combined_<span class="k">$(</span>date +<span class="s2">&quot;%Y_%m_%d_%I_%M&quot;</span><span class="k">)</span>.pdf
+pdftk<span class="w"> </span>*_ocr.pdf<span class="w"> </span>cat<span class="w"> </span>output<span class="w"> </span>combined_<span class="k">$(</span>date<span class="w"> </span>+<span class="s2">&quot;%Y_%m_%d_%I_%M&quot;</span><span class="k">)</span>.pdf
 </code></pre></div>
 
 <p>Anschließend ausführbar markieren: <code>chmod +x /usr/local/bin/nemo_ocr</code></p>
 <p>Nun das Script für die Nemo Aktion anlegen:</p>
-<div class="highlight"><pre><span></span><code><span class="n">cd</span><span class="w"> </span><span class="o">~/</span><span class="p">.</span><span class="n">local</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">nemo</span><span class="o">/</span><span class="n">actions</span><span class="w"></span>
-<span class="n">cat</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">EOF</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">OCR</span><span class="p">.</span><span class="n">nemo_action</span><span class="w"></span>
-<span class="p">[</span><span class="n">Nemo</span><span class="w"> </span><span class="n">Action</span><span class="p">]</span><span class="w"></span>
-<span class="n">Active</span><span class="o">=</span><span class="nb">true</span><span class="w"></span>
-<span class="n">Name</span><span class="o">=</span><span class="n">OCR</span><span class="w"> </span><span class="n">zu</span><span class="w"> </span><span class="n">PDF</span><span class="w"> </span><span class="p">(</span><span class="n">deu</span><span class="p">)</span><span class="w"></span>
-<span class="n">Comment</span><span class="o">=</span><span class="n">OCR</span><span class="w"> </span><span class="n">auf</span><span class="w"> </span><span class="n">Dokument</span><span class="w"> </span><span class="n">ausführen</span><span class="w"> </span><span class="n">und</span><span class="w"> </span><span class="n">PDF</span><span class="w"> </span><span class="n">erstellen</span><span class="w"> </span><span class="p">(</span><span class="n">deu</span><span class="p">)</span><span class="w"></span>
-<span class="n">Exec</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">nemo_ocr</span><span class="w"> </span><span class="s">&quot;%P&quot;</span><span class="w"> </span><span class="s">&quot;%F&quot;</span><span class="w"></span>
-<span class="n">Icon</span><span class="o">-</span><span class="n">Name</span><span class="o">=</span><span class="n">pdf</span><span class="w"></span>
-<span class="n">Selection</span><span class="o">=</span><span class="n">any</span><span class="w"></span>
-<span class="n">Extensions</span><span class="o">=</span><span class="n">any</span><span class="w"></span>
-<span class="n">EscapeSpaces</span><span class="o">=</span><span class="nb">false</span><span class="w"></span>
-<span class="n">Separator</span><span class="o">=</span><span class="p">;</span><span class="w"></span>
-<span class="n">EOF</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="n">cd</span><span class="w"> </span><span class="o">~/</span><span class="p">.</span><span class="n">local</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">nemo</span><span class="o">/</span><span class="n">actions</span>
+<span class="n">cat</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">EOF</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">OCR</span><span class="p">.</span><span class="n">nemo_action</span>
+<span class="p">[</span><span class="n">Nemo</span><span class="w"> </span><span class="n">Action</span><span class="p">]</span>
+<span class="n">Active</span><span class="o">=</span><span class="nb">true</span>
+<span class="n">Name</span><span class="o">=</span><span class="n">OCR</span><span class="w"> </span><span class="n">zu</span><span class="w"> </span><span class="n">PDF</span><span class="w"> </span><span class="p">(</span><span class="n">deu</span><span class="p">)</span>
+<span class="n">Comment</span><span class="o">=</span><span class="n">OCR</span><span class="w"> </span><span class="n">auf</span><span class="w"> </span><span class="n">Dokument</span><span class="w"> </span><span class="n">ausführen</span><span class="w"> </span><span class="n">und</span><span class="w"> </span><span class="n">PDF</span><span class="w"> </span><span class="n">erstellen</span><span class="w"> </span><span class="p">(</span><span class="n">deu</span><span class="p">)</span>
+<span class="n">Exec</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">nemo_ocr</span><span class="w"> </span><span class="s">&quot;%P&quot;</span><span class="w"> </span><span class="s">&quot;%F&quot;</span>
+<span class="n">Icon</span><span class="o">-</span><span class="n">Name</span><span class="o">=</span><span class="n">pdf</span>
+<span class="n">Selection</span><span class="o">=</span><span class="n">any</span>
+<span class="n">Extensions</span><span class="o">=</span><span class="n">any</span>
+<span class="n">EscapeSpaces</span><span class="o">=</span><span class="nb">false</span>
+<span class="n">Separator</span><span class="o">=</span><span class="p">;</span>
+<span class="n">EOF</span>
 </code></pre></div>
 
 <p>Diese Action kann entsprechend auf Extensions limitiert werden (<code>Extensions=jpeg;jpg;png;</code> etwa).</p>
@@ -219,7 +209,7 @@ pdftk *_ocr.pdf cat output combined_<span class="k">$(</span>date +<span class="
   &copy; 2022  - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.en_US" target="_blank">Creative Commons Attribution-ShareAlike</a>
 </p>
 <p>
-Gebaut mit <a href="http://getpelican.com" target="_blank">Pelican</a> und dem <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a>theme
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
 </p><p>
   <a rel="license"
      href="http://creativecommons.org/licenses/by-sa/4.0/"

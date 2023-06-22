@@ -15,13 +15,12 @@
     <link id="pygments-light-theme" rel="stylesheet" type="text/css"
           href="./theme/pygments/github.min.css">
 
-    <link rel="stylesheet" href="./theme/tipuesearch/tipuesearch.min.css" />
 
   <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/fontawesome.css">
   <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/brands.css">
   <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/solid.css">
 
-  <link rel="stylesheet" type="text/css" href="/static/custom.css">
+  <link rel="stylesheet" type="text/css" href="./static/custom.css">
 
     <link href="https://debinux.de/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="debinux.de Atom">
 
@@ -78,9 +77,6 @@
       </h1>
 
 <p>an admins notepad</p>
-        <form class="navbar-search" action="./search.html" role="search">
-          <input type="text" name="q" id="tipue_search_input" placeholder="Suchbegriff eingeben...">
-        </form>
 
       <nav>
         <ul class="list">
@@ -93,12 +89,6 @@
                 </a>
               </li>
 
-            <li>
-              <a target="_blank" href="https://mailcow.email/" >mailcow</a>
-            </li>
-            <li>
-              <a target="_blank" href="https://www.servercow.de/" >Servercow</a>
-            </li>
             <li>
               <a target="_blank" href="https://keybase.io/debinux" >Keybase.io/debinux</a>
             </li>
@@ -123,9 +113,9 @@
     <nav>
       <a href="./">Home</a>
 
-      <a href="/archives.html">Archive</a>
-      <a href="/categories.html">Kategorien</a>
-      <a href="/tags.html">Stichw&ouml;rter</a>
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
       <a href="/pages/impressum-datenschutz.html#impressum-datenschutz">Impressum / Datenschutz</a>
 
       <a href="https://debinux.de/feeds/all.atom.xml">Atom</a>
@@ -137,7 +127,7 @@
       
     <h1 id="firefox-next-ohne-branding-auf-linux-mint">Firefox Next ohne Branding auf Linux Mint</h1>
     <p>
-      Online seit So 22 August 2021 in <a href="./category/linux.html">Linux</a>
+      Posted on So 22 August 2021 in <a href="./category/linux.html">Linux</a>
 
     </p>
   </header>
@@ -146,31 +136,31 @@
   <div>
     <p>Ich möchte Firefox Next auf einem Linux Mint 20.x installieren.</p>
 <p>Das Mint-Branding vom Firefox sorgte für Überraschungen. Es bewirkt beispielsweise, dass Suchvorschläge mit Startpage nicht funktionieren, was an den Standard "searchplugins" liegen könnte. Sehr ärgerlich, nicht weiter debugged, denn - Punkt zwei: Ich mag den Browser lieber so, wie Mozilla ihn mir gibt. Das soll meine Basis sein.</p>
-<div class="highlight"><pre><span></span><code>#<span class="w"> </span><span class="nv">Firefox</span><span class="w"> </span><span class="nv">schlie</span>ß<span class="nv">en</span><span class="w"> </span><span class="nv">und</span><span class="w"> </span><span class="nv">nochmal</span><span class="w"> </span><span class="nv">nachtreten</span>.<span class="w"> </span>:<span class="ss">)</span><span class="w"></span>
-<span class="nv">sudo</span><span class="w"> </span><span class="nv">kill</span><span class="w"> </span><span class="o">-</span><span class="mi">9</span><span class="w"> </span>$<span class="ss">(</span><span class="nv">pgrep</span><span class="w"> </span><span class="nv">firefox</span><span class="ss">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code>#<span class="w"> </span><span class="nv">Firefox</span><span class="w"> </span><span class="nv">schlie</span>ß<span class="nv">en</span><span class="w"> </span><span class="nv">und</span><span class="w"> </span><span class="nv">nochmal</span><span class="w"> </span><span class="nv">nachtreten</span>.<span class="w"> </span>:<span class="ss">)</span>
+<span class="nv">sudo</span><span class="w"> </span><span class="nv">kill</span><span class="w"> </span><span class="o">-</span><span class="mi">9</span><span class="w"> </span>$<span class="ss">(</span><span class="nv">pgrep</span><span class="w"> </span><span class="nv">firefox</span><span class="ss">)</span>
 
-#<span class="w"> </span><span class="nv">Firefox</span><span class="w"> </span><span class="nv">entfernen</span><span class="w"></span>
-<span class="nv">sudo</span><span class="w"> </span><span class="nv">apt</span><span class="w"> </span><span class="nv">purge</span><span class="w"> </span><span class="nv">firefox</span><span class="w"> </span><span class="s1">&#39;firefox-locale*&#39;</span><span class="w"> </span><span class="nv">xul</span><span class="o">-</span><span class="nv">ext</span><span class="o">-</span><span class="nv">ubufox</span><span class="w"></span>
+#<span class="w"> </span><span class="nv">Firefox</span><span class="w"> </span><span class="nv">entfernen</span>
+<span class="nv">sudo</span><span class="w"> </span><span class="nv">apt</span><span class="w"> </span><span class="nv">purge</span><span class="w"> </span><span class="nv">firefox</span><span class="w"> </span><span class="s1">&#39;firefox-locale*&#39;</span><span class="w"> </span><span class="nv">xul</span><span class="o">-</span><span class="nv">ext</span><span class="o">-</span><span class="nv">ubufox</span>
 
-#<span class="w"> </span><span class="nv">Vorhandene</span><span class="w"> </span><span class="nv">lokale</span><span class="w"> </span><span class="nv">Daten</span><span class="w"> </span><span class="nv">l</span>ö<span class="nv">schen</span>,<span class="w"> </span><span class="nv">falls</span><span class="w"> </span><span class="nv">gew</span>ü<span class="nv">nscht</span><span class="w"></span>
-<span class="nv">cd</span><span class="w"> </span><span class="c1">; rm -rf .mozilla .cache/mozilla</span><span class="w"></span>
+#<span class="w"> </span><span class="nv">Vorhandene</span><span class="w"> </span><span class="nv">lokale</span><span class="w"> </span><span class="nv">Daten</span><span class="w"> </span><span class="nv">l</span>ö<span class="nv">schen</span>,<span class="w"> </span><span class="nv">falls</span><span class="w"> </span><span class="nv">gew</span>ü<span class="nv">nscht</span>
+<span class="nv">cd</span><span class="w"> </span><span class="c1">; rm -rf .mozilla .cache/mozilla</span>
 
-#<span class="w"> </span><span class="nv">Linux</span><span class="w"> </span><span class="nv">Mint</span><span class="w"> </span><span class="nv">Branding</span><span class="o">-</span><span class="nv">Reste</span><span class="w"> </span><span class="nv">entfernen</span><span class="w"></span>
-<span class="nv">sudo</span><span class="w"> </span><span class="nv">rm</span><span class="w"> </span><span class="o">-</span><span class="nv">rf</span><span class="w"> </span><span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">lib</span><span class="o">/</span><span class="nv">firefox</span><span class="w"> </span><span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">lib</span><span class="o">/</span><span class="nv">firefox</span><span class="o">-</span><span class="nv">addons</span><span class="o">/</span><span class="w"></span>
+#<span class="w"> </span><span class="nv">Linux</span><span class="w"> </span><span class="nv">Mint</span><span class="w"> </span><span class="nv">Branding</span><span class="o">-</span><span class="nv">Reste</span><span class="w"> </span><span class="nv">entfernen</span>
+<span class="nv">sudo</span><span class="w"> </span><span class="nv">rm</span><span class="w"> </span><span class="o">-</span><span class="nv">rf</span><span class="w"> </span><span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">lib</span><span class="o">/</span><span class="nv">firefox</span><span class="w"> </span><span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">lib</span><span class="o">/</span><span class="nv">firefox</span><span class="o">-</span><span class="nv">addons</span><span class="o">/</span>
 
-#<span class="w"> </span><span class="nv">Neues</span><span class="w"> </span><span class="nv">Branding</span><span class="w"> </span><span class="nv">verhindern</span><span class="w"> </span><span class="ss">(</span><span class="nv">wird</span><span class="w"> </span><span class="nv">IMMER</span><span class="w"> </span><span class="nv">angewendet</span>,<span class="w"> </span><span class="nv">wenn</span><span class="w"> </span><span class="nv">Datei</span><span class="w"> </span><span class="nv">vorhanden</span><span class="o">!</span><span class="w"> </span><span class="nv">Daher</span><span class="w"> </span><span class="nv">l</span>ö<span class="nv">schen</span><span class="o">!</span><span class="ss">)</span><span class="w"></span>
-<span class="nv">sudo</span><span class="w"> </span><span class="nv">mv</span><span class="w"> </span><span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">share</span><span class="o">/</span><span class="nv">ubuntu</span><span class="o">-</span><span class="nv">system</span><span class="o">-</span><span class="nv">adjustments</span><span class="o">/</span><span class="nv">firefox</span><span class="o">/</span><span class="w"> </span><span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">share</span><span class="o">/</span><span class="nv">ubuntu</span><span class="o">-</span><span class="nv">system</span><span class="o">-</span><span class="nv">adjustments</span><span class="o">/</span><span class="nv">firefox_backup</span><span class="w"></span>
+#<span class="w"> </span><span class="nv">Neues</span><span class="w"> </span><span class="nv">Branding</span><span class="w"> </span><span class="nv">verhindern</span><span class="w"> </span><span class="ss">(</span><span class="nv">wird</span><span class="w"> </span><span class="nv">IMMER</span><span class="w"> </span><span class="nv">angewendet</span>,<span class="w"> </span><span class="nv">wenn</span><span class="w"> </span><span class="nv">Datei</span><span class="w"> </span><span class="nv">vorhanden</span><span class="o">!</span><span class="w"> </span><span class="nv">Daher</span><span class="w"> </span><span class="nv">l</span>ö<span class="nv">schen</span><span class="o">!</span><span class="ss">)</span>
+<span class="nv">sudo</span><span class="w"> </span><span class="nv">mv</span><span class="w"> </span><span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">share</span><span class="o">/</span><span class="nv">ubuntu</span><span class="o">-</span><span class="nv">system</span><span class="o">-</span><span class="nv">adjustments</span><span class="o">/</span><span class="nv">firefox</span><span class="o">/</span><span class="w"> </span><span class="o">/</span><span class="nv">usr</span><span class="o">/</span><span class="nv">share</span><span class="o">/</span><span class="nv">ubuntu</span><span class="o">-</span><span class="nv">system</span><span class="o">-</span><span class="nv">adjustments</span><span class="o">/</span><span class="nv">firefox_backup</span>
 
-#<span class="w"> </span><span class="nv">Repository</span><span class="w"> </span><span class="nv">hinzuf</span>ü<span class="nv">gen</span><span class="w"></span>
-<span class="nv">sudo</span><span class="w"> </span><span class="nv">add</span><span class="o">-</span><span class="nv">apt</span><span class="o">-</span><span class="nv">repository</span><span class="w"> </span><span class="nv">ppa</span>:<span class="nv">mozillateam</span><span class="o">/</span><span class="nv">firefox</span><span class="o">-</span><span class="k">next</span><span class="w"></span>
-<span class="nv">sudo</span><span class="w"> </span><span class="nv">apt</span><span class="w"> </span><span class="nv">update</span><span class="w"></span>
+#<span class="w"> </span><span class="nv">Repository</span><span class="w"> </span><span class="nv">hinzuf</span>ü<span class="nv">gen</span>
+<span class="nv">sudo</span><span class="w"> </span><span class="nv">add</span><span class="o">-</span><span class="nv">apt</span><span class="o">-</span><span class="nv">repository</span><span class="w"> </span><span class="nv">ppa</span>:<span class="nv">mozillateam</span><span class="o">/</span><span class="nv">firefox</span><span class="o">-</span><span class="k">next</span>
+<span class="nv">sudo</span><span class="w"> </span><span class="nv">apt</span><span class="w"> </span><span class="nv">update</span>
 
-#<span class="w"> </span><span class="nv">Firefox</span><span class="w"> </span><span class="nv">aus</span><span class="w"> </span><span class="nv">PPA</span><span class="w"> </span><span class="nv">bevorzugen</span><span class="w"></span>
+#<span class="w"> </span><span class="nv">Firefox</span><span class="w"> </span><span class="nv">aus</span><span class="w"> </span><span class="nv">PPA</span><span class="w"> </span><span class="nv">bevorzugen</span>
 <span class="nv">sudo</span><span class="w"> </span><span class="nv">bash</span><span class="w"> </span><span class="o">-</span><span class="nv">c</span><span class="w"> </span><span class="err">&#39;cat &lt;&lt; EOF &gt; /etc/apt/preferences.d/mozilla-next.pref</span>
 <span class="err">Package: *</span>
 <span class="err">Pin: release o=LP-PPA-mozillateam-firefox-next</span>
-<span class="err">Pin-Priority: 800</span><span class="w"></span>
-<span class="nv">EOF</span><span class="err">&#39;</span><span class="w"></span>
+<span class="err">Pin-Priority: 800</span>
+<span class="nv">EOF</span><span class="err">&#39;</span>
 </code></pre></div>
   </div>
   <div class="tag-cloud">
@@ -192,7 +182,7 @@
   &copy; 2022  - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/deed.en_US" target="_blank">Creative Commons Attribution-ShareAlike</a>
 </p>
 <p>
-Gebaut mit <a href="http://getpelican.com" target="_blank">Pelican</a> und dem <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a>theme
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
 </p><p>
   <a rel="license"
      href="http://creativecommons.org/licenses/by-sa/4.0/"

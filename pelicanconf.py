@@ -29,8 +29,6 @@ CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
 
 # Blogroll
 LINKS = (
-          ('mailcow', 'https://mailcow.email/'),
-          ('Servercow', 'https://www.servercow.de/'),
           ('Keybase.io/debinux', 'https://keybase.io/debinux'),
           ('PGP Public Key', '/static/keys/0x91DFD03726232297.key')
         )
@@ -40,9 +38,7 @@ DEFAULT_PAGINATION = 10
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
 
-THEME = "/home/andre/virtualenvs/pelican/debinux/themes/flex"
-
-PLUGIN_PATHS = ["plugins", "/home/andre/virtualenvs/pelican/debinux/plugins"]
+THEME = "themes/flex"
 
 MAIN_MENU = True
 MENUITEMS = (
@@ -57,12 +53,7 @@ ROBOTS = "index, follow"
 
 COPYRIGHT_YEAR = 2022
 
-PLUGINS = ["i18n_subsites", "tipue_search", "read-more"]
-
-JINJA_ENVIRONMENT = {"extensions": ["jinja2.ext.i18n"]}
-
-# Default theme language.
-I18N_TEMPLATES_LANG = "en"
+PLUGINS = ["search", "read_more"]
 
 # Your language.
 DEFAULT_LANG = "de_DE"
