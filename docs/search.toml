@@ -8,6 +8,11 @@ url = "/pages/impressum-datenschutz.html"
 title = "Impressum & Datenschutz"
 
 [[input.files]]
+path = "firefox-nightly-repository-fur-debian-basierte-systeme-vorgestellt.html"
+url = "/firefox-nightly-repository-fur-debian-basierte-systeme-vorgestellt.html"
+title = "Firefox Nightly Repository für Debian-basierte Systeme vorgestellt"
+
+[[input.files]]
 path = "sqlite3-cli-alternative-litecli.html"
 url = "/sqlite3-cli-alternative-litecli.html"
 title = "sqlite3 CLI Alternative: litecli"
