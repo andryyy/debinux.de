@@ -80,7 +80,7 @@
               </li>
 
             <li>
-              <a target="_blank" href="https://keybase.io/debinux" >Keybase.io/debinux</a>
+              <a target="_blank" href="https://github.com/andryyy/ehlocomputer" >EHLOcomputer</a>
             </li>
             <li>
               <a target="_blank" href="/static/keys/0x91DFD03726232297.key" >PGP Public Key</a>
@@ -114,6 +114,31 @@
 
 
 
+<article>
+  <header>
+    <h2><a href="../template-zammad-reverse-proxy-mit-apache.html#template-zammad-reverse-proxy-mit-apache">Template Zammad Reverse Proxy mit Apache</a></h2>
+    <p>
+      Posted on Do 16 Januar 2020 in <a href="../category/linux.html">Linux</a>
+
+          &#8226; Tagged with
+              <a href="../tag/linux.html">linux</a>,              <a href="../tag/apache2.html">apache2</a>,              <a href="../tag/zammad.html">zammad</a>
+    </p>
+  </header>
+  <div>
+      <div><div class="highlight"><pre><span></span><code><span class="nt">&lt;VirtualHost</span><span class="w"> </span><span class="err">*:80</span><span class="nt">&gt;</span>
+<span class="w">  </span>ServerName<span class="w"> </span>ticket.domain.tld
+<span class="w">  </span>RewriteEngine<span class="w"> </span>on
+<span class="w">  </span>RewriteCond<span class="w"> </span>%{HTTPS}<span class="w"> </span>!=on
+<span class="w">  </span>RewriteRule<span class="w"> </span>^/?(.*)<span class="w"> </span>https://%{HTTP_HOST}/$1<span class="w"> </span>[R=301,L]
+<span class="w">  </span>ProxyPass<span class="w"> </span>/<span class="w"> </span>http ...</code></pre><a class="read-more" href="/template-zammad-reverse-proxy-mit-apache.html"><span>weiterlesen</span></a></div></div>
+        <br>
+        <a class="btn"
+           href="../template-zammad-reverse-proxy-mit-apache.html#template-zammad-reverse-proxy-mit-apache">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
 <article>
   <header>
     <h2><a href="../rspamd-subject-umschreiben-und-reply-to-hinzufugen.html#rspamd-subject-umschreiben-und-reply-to-hinzufugen">Rspamd: Subject umschreiben und Reply-To hinzufügen</a></h2>

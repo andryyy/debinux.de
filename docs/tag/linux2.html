@@ -80,7 +80,7 @@
               </li>
 
             <li>
-              <a target="_blank" href="https://keybase.io/debinux" >Keybase.io/debinux</a>
+              <a target="_blank" href="https://github.com/andryyy/ehlocomputer" >EHLOcomputer</a>
             </li>
             <li>
               <a target="_blank" href="/static/keys/0x91DFD03726232297.key" >PGP Public Key</a>
@@ -114,6 +114,27 @@
 
 
 
+<article>
+  <header>
+    <h2><a href="../openvpn-clients-dns-einstellungen-und-routen-ignorieren.html#openvpn-clients-dns-einstellungen-und-routen-ignorieren">OpenVPN-Clients: DNS-Einstellungen und Routen ignorieren</a></h2>
+    <p>
+      Posted on So 22 August 2021 in <a href="../category/linux.html">Linux</a>
+
+          &#8226; Tagged with
+              <a href="../tag/linux.html">linux</a>,              <a href="../tag/openvpn.html">openvpn</a>,              <a href="../tag/windows.html">windows</a>,              <a href="../tag/dns.html">dns</a>
+    </p>
+  </header>
+  <div>
+      <div><p>Es kann durchaus Vorteile haben viele oder gar alle Anfragen &#252;ber einen vertrauten Tunnel zu schicken.</p>
+<p>Bevorzugen und empfehlen m&#246;chte ...<a class="read-more" href="/openvpn-clients-dns-einstellungen-und-routen-ignorieren.html"><span>weiterlesen</span></a></p></div>
+        <br>
+        <a class="btn"
+           href="../openvpn-clients-dns-einstellungen-und-routen-ignorieren.html#openvpn-clients-dns-einstellungen-und-routen-ignorieren">
+          Continue reading
+        </a>
+  </div>
+  <hr />
+</article>
 <article>
   <header>
     <h2><a href="../dns-uber-tls-dns-over-https.html#dns-uber-tls-dns-over-https">DNS über TLS, DNS over HTTPS</a></h2>
@@ -304,31 +325,6 @@ Das Tool sichert die Dateiberechtigungen (auch rekursiv ...<a class="read-more" 
 </code></pre></div>
 
 <p><code>&amp; ~</code> beendet die Verarbeitung der Regel.</p></div>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="../template-zammad-reverse-proxy-mit-apache.html#template-zammad-reverse-proxy-mit-apache">Template Zammad Reverse Proxy mit Apache</a></h2>
-    <p>
-      Posted on Do 16 Januar 2020 in <a href="../category/linux.html">Linux</a>
-
-          &#8226; Tagged with
-              <a href="../tag/linux.html">linux</a>,              <a href="../tag/apache2.html">apache2</a>,              <a href="../tag/zammad.html">zammad</a>
-    </p>
-  </header>
-  <div>
-      <div><div class="highlight"><pre><span></span><code><span class="nt">&lt;VirtualHost</span><span class="w"> </span><span class="err">*:80</span><span class="nt">&gt;</span>
-<span class="w">  </span>ServerName<span class="w"> </span>ticket.domain.tld
-<span class="w">  </span>RewriteEngine<span class="w"> </span>on
-<span class="w">  </span>RewriteCond<span class="w"> </span>%{HTTPS}<span class="w"> </span>!=on
-<span class="w">  </span>RewriteRule<span class="w"> </span>^/?(.*)<span class="w"> </span>https://%{HTTP_HOST}/$1<span class="w"> </span>[R=301,L]
-<span class="w">  </span>ProxyPass<span class="w"> </span>/<span class="w"> </span>http ...</code></pre><a class="read-more" href="/template-zammad-reverse-proxy-mit-apache.html"><span>weiterlesen</span></a></div></div>
-        <br>
-        <a class="btn"
-           href="../template-zammad-reverse-proxy-mit-apache.html#template-zammad-reverse-proxy-mit-apache">
-          Continue reading
-        </a>
   </div>
 </article>
 

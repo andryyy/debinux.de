@@ -29,7 +29,7 @@ CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
 
 # Blogroll
 LINKS = (
-          ('Keybase.io/debinux', 'https://keybase.io/debinux'),
+          ('EHLOcomputer', 'https://github.com/andryyy/ehlocomputer'),
           ('PGP Public Key', '/static/keys/0x91DFD03726232297.key')
         )
 
