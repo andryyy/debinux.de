@@ -51,7 +51,7 @@ MENUITEMS = (
 BROWSER_COLOR = "#333"
 ROBOTS = "index, follow"
 
-COPYRIGHT_YEAR = 2022
+COPYRIGHT_YEAR = "2022-"
 
 PLUGINS = ["search", "read_more"]
 

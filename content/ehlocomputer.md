@@ -5,7 +5,7 @@ Tags: linux, mta, mailcow, mail, router, ehlo, ehlocomputer
 Authors: André Peters
 
 
-Feel free to follow https://github.com/andryyy/ehlocomputer
+Feel free to follow [https://github.com/andryyy/ehlocomputer](https://github.com/andryyy/ehlocomputer).
 
 More information is about to be released.
 
